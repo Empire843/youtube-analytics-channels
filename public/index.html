@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Channel Analytics Tool</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="/app.js"></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="app-layout">
+        <aside class="main-nav panel">
+          <div class="main-nav-head">
+            <p class="eyebrow">Workspace</p>
+            <h2>YouTube Ops</h2>
+            <p class="summary-text">Choose a core toolset from the main navigation.</p>
+          </div>
+          <nav class="main-nav-links">
+            <a href="#channel-workspace" class="main-nav-link" data-nav-page="channel">
+              <strong>Channel Analysis</strong>
+              <span>Public metrics, estimates, and insights</span>
+            </a>
+            <a href="#video-workspace" class="main-nav-link" data-nav-page="video">
+              <strong>Video Tools</strong>
+              <span>Transcript, thumbnail, and video utilities</span>
+            </a>
+            <a href="#prompt-workspace" class="main-nav-link" data-nav-page="prompt">
+              <strong>Prompt Tools</strong>
+              <span>Studio, AI analysis, variables, and library</span>
+            </a>
+            <a href="#owner-workspace" class="main-nav-link" data-nav-page="owner">
+              <strong>Owner Analytics</strong>
+              <span>Verified revenue and audience analytics</span>
+            </a>
+          </nav>
+          <div class="main-nav-foot">
+            <div id="config-badges" class="config-badges"></div>
+            <button id="toggle-all-btn" class="ghost-button" type="button">
+              Collapse all
+            </button>
+          </div>
+        </aside>
+
+        <div class="app-main">
+          <section class="hero hero-compact">
+            <div class="hero-copy">
+              <p class="eyebrow">YouTube Channel Analyzer</p>
+              <h1>Channel analytics, prompt systems, and video tools</h1>
+              <p class="hero-text">
+                Work through each toolset in a dedicated workspace with cleaner navigation and less visual overlap.
+              </p>
+            </div>
+            <div class="hero-card">
+              <div class="pill-row">
+                <span class="pill">Channel analytics</span>
+                <span class="pill">Prompt library</span>
+                <span class="pill">Gemini insights</span>
+                <span class="pill">Video downloads</span>
+              </div>
+              <p class="hero-note">
+                The main menu now stays on the left, while each workspace can have its own layout and secondary actions.
+              </p>
+            </div>
+          </section>
+
+      <section class="workspace-grid" id="workspace-grid">
+        <aside class="sidebar" id="workspace-sidebar">
+          <section class="panel sticky-panel" id="channel-workspace" data-workspace-page="channel">
+            <div class="panel-head">
+              <h2>Analyze Channel</h2>
+              <p>Enter a channel link, handle, or channel ID.</p>
+            </div>
+            <form id="public-form" class="stack">
+              <label>
+                <span>Channel</span>
+                <input
+                  id="channel-input"
+                  type="text"
+                  placeholder="https://www.youtube.com/@GoogleDevelopers"
+                  required
+                />
+              </label>
+              <label>
+                <span>YouTube Data API Key</span>
+                <input
+                  id="api-key-input"
+                  type="password"
+                  placeholder="Leave blank if the server already has a key"
+                />
+              </label>
+              <div class="button-row">
+                <button type="submit">Analyze now</button>
+                <button id="fill-owner-btn" class="ghost-button" type="button">
+                  Fill channel ID into owner form
+                </button>
+              </div>
+            </form>
+          </section>
+
+          <section class="panel" id="video-workspace" data-workspace-page="video">
+            <div class="panel-head">
+              <h2>Video Tools</h2>
+              <p>Paste a YouTube video link to inspect and download assets.</p>
+            </div>
+            <form id="video-form" class="stack">
+              <label>
+                <span>Video</span>
+                <input
+                  id="video-input"
+                  type="text"
+                  placeholder="https://www.youtube.com/watch?v=..."
+                  required
+                />
+              </label>
+              <div class="button-row">
+                <button type="submit">Load video tools</button>
+                <button id="clear-video-btn" class="ghost-button" type="button">
+                  Clear
+                </button>
+              </div>
+            </form>
+            <div id="video-actions" class="video-actions hidden">
+              <button id="download-transcript-btn" class="ghost-button" type="button">
+                Download transcript
+              </button>
+              <button id="download-thumbnail-btn" class="ghost-button" type="button">
+                Download thumbnail
+              </button>
+              <button id="download-video-btn" class="ghost-button" type="button">
+                Download video
+              </button>
+            </div>
+          </section>
+
+          <section class="panel owner-form-shell" id="owner-workspace" data-workspace-page="owner">
+            <button
+              class="section-toggle section-toggle-alone"
+              type="button"
+              data-target="owner-form-body"
+              data-label-expand="Open owner analytics"
+              data-label-collapse="Collapse owner analytics"
+              aria-expanded="false"
+            >
+              <span>Owner Verified Analytics</span>
+              <span class="toggle-text">Open owner analytics</span>
+            </button>
+            <div id="owner-form-body" class="collapsible hidden">
+              <div class="panel-head compact-head">
+                <p>For channel owners or managers with YouTube Analytics API access.</p>
+              </div>
+              <form id="owner-form" class="stack">
+                <label>
+                  <span>Channel ID</span>
+                  <input id="owner-channel-id" type="text" placeholder="UC..." required />
+                </label>
+                <label>
+                  <span>OAuth Access Token</span>
+                  <textarea
+                    id="access-token-input"
+                    rows="4"
+                    placeholder="Bearer token from Google OAuth flow"
+                    required
+                  ></textarea>
+                </label>
+                <div class="grid-2">
+                  <label>
+                    <span>Start Date</span>
+                    <input id="start-date-input" type="date" />
+                  </label>
+                  <label>
+                    <span>End Date</span>
+                    <input id="end-date-input" type="date" />
+                  </label>
+                </div>
+                <button type="submit">Load owner analytics</button>
+              </form>
+            </div>
+          </section>
+        </aside>
+
+        <main class="content-stack" id="workspace-content">
+          <section id="status-box" class="status hidden"></section>
+
+          <section id="empty-state" class="panel empty-state" data-workspace-page="channel video owner">
+            <p class="eyebrow">Quick Start</p>
+            <h2 id="empty-state-title">Choose a workflow</h2>
+            <p id="empty-state-text">
+              Use <strong>Channel Analysis</strong> for dashboards and audience
+              insights. Use <strong>Video Tools</strong> when you want a script,
+              thumbnail, or downloadable video from a YouTube link.
+            </p>
+          </section>
+
+          <section id="channel-summary" class="panel hidden" data-workspace-page="channel"></section>
+
+          <section class="panel prompt-studio" id="prompt-workspace" data-workspace-page="prompt">
+            <div class="prompt-studio-hero">
+              <div>
+                <p class="eyebrow">Prompt Tools</p>
+                <h2>Prompt Studio</h2>
+                <p class="summary-text">
+                  Build prompt templates, detect variables, and preview the final rendered prompt in a full-width workspace.
+                </p>
+              </div>
+              <div class="prompt-format-cloud">
+                <span class="prompt-format-chip">[&lt;variable&gt;]</span>
+                <span class="prompt-format-chip">{{variable}}</span>
+                <span class="prompt-format-chip">[[variable]]</span>
+              </div>
+            </div>
+
+            <nav class="prompt-submenu">
+              <button class="prompt-submenu-link active" type="button" data-prompt-pane="builder">
+                Template Builder
+              </button>
+              <button class="prompt-submenu-link" type="button" data-prompt-pane="library">
+                Analyze and Save
+              </button>
+            </nav>
+
+            <div class="prompt-studio-grid" data-prompt-pane-section="builder">
+              <article class="prompt-editor-surface">
+                <div class="prompt-surface-head">
+                  <div>
+                    <p class="eyebrow">Template</p>
+                    <h3>Prompt editor</h3>
+                  </div>
+                </div>
+                <label class="prompt-editor-label">
+                  <span>Prompt Template</span>
+                  <textarea
+                    id="prompt-template-input"
+                    rows="14"
+                    placeholder="Example: Write a [<tone>] YouTube script about {{topic}} for [[audience]]."
+                  ></textarea>
+                </label>
+                <div class="button-row prompt-primary-actions">
+                  <button id="scan-prompt-btn" type="button">Scan variables</button>
+                  <button id="normalize-prompt-btn" class="ghost-button" type="button">
+                    Normalize spacing
+                  </button>
+                  <button id="clear-prompt-btn" class="ghost-button" type="button">
+                    Clear
+                  </button>
+                </div>
+                <div class="prompt-helper">
+                  <strong>Template patterns supported</strong>
+                  <p>Use [&lt;variable&gt;], {{variable}}, or [[variable]] anywhere in your prompt.</p>
+                </div>
+              </article>
+
+              <article class="prompt-preview-surface hidden" id="prompt-output-panel">
+                <div class="prompt-surface-head">
+                  <div>
+                    <p class="eyebrow">Preview</p>
+                    <h3>Rendered prompt</h3>
+                  </div>
+                  <div class="button-row compact-buttons">
+                    <button id="copy-rendered-prompt-btn" class="ghost-button" type="button">
+                      Copy rendered prompt
+                    </button>
+                    <button id="copy-variables-json-btn" class="ghost-button" type="button">
+                      Copy variables JSON
+                    </button>
+                    <button id="save-prompt-template-btn" class="ghost-button" type="button">
+                      Save template locally
+                    </button>
+                  </div>
+                </div>
+                <div class="prompt-toolbar">
+                  <div id="prompt-stats" class="prompt-stats"></div>
+                </div>
+                <pre id="prompt-rendered-output" class="prompt-output"></pre>
+              </article>
+            </div>
+
+            <article class="prompt-variables-surface" data-prompt-pane-section="builder">
+              <div class="prompt-surface-head">
+                <div>
+                  <p class="eyebrow">Variables</p>
+                  <h3>Variable inputs</h3>
+                </div>
+                <p class="summary-note">Detected variables will appear here with matching colors.</p>
+              </div>
+              <div id="prompt-variables" class="prompt-variables">
+                <p class="empty">No variables detected yet.</p>
+              </div>
+            </article>
+
+            <article class="prompt-analysis-surface" data-prompt-pane-section="library">
+              <div class="prompt-surface-head">
+                <div>
+                  <p class="eyebrow">Analyze and Save</p>
+                  <h3>Prompt analysis and categorization</h3>
+                </div>
+                <p id="prompt-storage-note" class="summary-note">
+                  Stored locally in the project folder for now.
+                </p>
+              </div>
+              <div class="prompt-library-composer">
+                <div class="prompt-library-main">
+                  <label>
+                    <span>Prompt Title</span>
+                    <input
+                      id="prompt-library-title"
+                      type="text"
+                      placeholder="Optional title. If left blank, the prompt will be numbered automatically."
+                    />
+                  </label>
+                  <label class="prompt-editor-label">
+                    <span>Prompt To Analyze and Save</span>
+                    <textarea
+                      id="prompt-library-input"
+                      rows="12"
+                      placeholder="Paste any collected prompt here to analyze, group, tag, and save into your prompt library."
+                    ></textarea>
+                  </label>
+                  <div class="button-row prompt-primary-actions">
+                    <button id="analyze-prompt-ai-btn" type="button">
+                      Analyze with AI
+                    </button>
+                    <button id="save-prompt-library-btn" class="ghost-button" type="button">
+                      Save to library
+                    </button>
+                    <button id="reset-prompt-library-btn" class="ghost-button" type="button">
+                      New prompt
+                    </button>
+                  </div>
+                </div>
+                <div class="prompt-library-aside">
+                  <div class="prompt-thumbnail-field">
+                    <div class="prompt-thumbnail-head">
+                      <span>Thumbnail</span>
+                      <button id="clear-prompt-thumbnail-btn" class="ghost-button" type="button">
+                        Remove thumbnail
+                      </button>
+                    </div>
+                    <label class="prompt-thumbnail-dropzone" for="prompt-thumbnail-input">
+                      <input
+                        id="prompt-thumbnail-input"
+                        type="file"
+                        accept="image/png,image/jpeg,image/webp,image/gif"
+                      />
+                      <span class="prompt-thumbnail-dropzone-copy">
+                        Choose a thumbnail image or replace the current one.
+                      </span>
+                    </label>
+                    <div id="prompt-thumbnail-preview" class="prompt-thumbnail-preview empty">
+                      <p>No thumbnail selected yet.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="prompt-analysis-content" class="prompt-analysis-content">
+                <p class="empty">Run AI analysis to get a suggested title, group, tags, and usage notes for this prompt.</p>
+              </div>
+            </article>
+
+            <article class="prompt-library-surface" data-prompt-pane-section="library">
+              <div class="prompt-surface-head">
+                <div>
+                  <p class="eyebrow">Prompt Library</p>
+                  <h3>Saved prompt collection</h3>
+                </div>
+                <button id="refresh-prompt-library-btn" class="ghost-button" type="button">
+                  Refresh library
+                </button>
+              </div>
+              <div class="prompt-library-toolbar">
+                <input
+                  id="prompt-library-search"
+                  type="text"
+                  placeholder="Search saved prompts, tags, groups, or use cases"
+                />
+                <select id="prompt-library-group-filter">
+                  <option value="">All groups</option>
+                </select>
+              </div>
+              <div id="prompt-library-list" class="prompt-library-list">
+                <p class="empty">No saved prompts yet.</p>
+              </div>
+            </article>
+          </section>
+
+          <section class="panel hidden" id="video-summary-panel" data-workspace-page="video">
+            <div class="section-header">
+              <div>
+                <p class="eyebrow">Video Tools</p>
+                <h2>Video summary</h2>
+              </div>
+              <button
+                class="section-toggle"
+                type="button"
+                data-target="video-summary-body"
+                data-label-expand="Expand"
+                data-label-collapse="Collapse"
+                aria-expanded="true"
+              >
+                <span class="toggle-text">Collapse</span>
+              </button>
+            </div>
+            <div id="video-summary-body" class="collapsible">
+              <div id="video-summary-content"></div>
+            </div>
+          </section>
+
+          <section class="panel hidden" id="overview-panel" data-workspace-page="channel owner">
+            <div class="section-header">
+              <div>
+                <p class="eyebrow">Overview</p>
+                <h2>Overview snapshot</h2>
+              </div>
+              <button
+                class="section-toggle"
+                type="button"
+                data-target="overview-body"
+                data-label-expand="Expand"
+                data-label-collapse="Collapse"
+                aria-expanded="true"
+              >
+                <span class="toggle-text">Collapse</span>
+              </button>
+            </div>
+            <div id="overview-body" class="collapsible">
+              <section class="stats-grid" id="public-stats"></section>
+            </div>
+          </section>
+
+          <section class="panel hidden" id="ai-insights-panel" data-workspace-page="channel">
+            <div class="section-header">
+              <div>
+                <p class="eyebrow">Gemini</p>
+                <h2>AI Insights</h2>
+              </div>
+              <button
+                class="section-toggle"
+                type="button"
+                data-target="ai-insights-content"
+                data-label-expand="Expand"
+                data-label-collapse="Collapse"
+                aria-expanded="true"
+              >
+                <span class="toggle-text">Collapse</span>
+              </button>
+            </div>
+            <div id="ai-insights-content" class="collapsible"></div>
+          </section>
+
+          <section class="panel chart-panel hidden" id="fallback-chart-panel" data-workspace-page="channel">
+            <div class="section-header">
+              <div>
+                <p class="eyebrow">Performance</p>
+                <h2>Recent Upload Views</h2>
+              </div>
+              <button
+                class="section-toggle"
+                type="button"
+                data-target="fallback-chart-body"
+                data-label-expand="Expand"
+                data-label-collapse="Collapse"
+                aria-expanded="true"
+              >
+                <span class="toggle-text">Collapse</span>
+              </button>
+            </div>
+            <div id="fallback-chart-body" class="collapsible">
+              <canvas id="recent-views-chart"></canvas>
+            </div>
+          </section>
+
+          <section class="panel chart-panel hidden" id="owner-chart-panel" data-workspace-page="owner">
+            <div class="section-header">
+              <div>
+                <p class="eyebrow">Owner Analytics</p>
+                <h2>Views & Subscribers Graph</h2>
+              </div>
+              <button
+                class="section-toggle"
+                type="button"
+                data-target="owner-chart-body"
+                data-label-expand="Expand"
+                data-label-collapse="Collapse"
+                aria-expanded="true"
+              >
+                <span class="toggle-text">Collapse</span>
+              </button>
+            </div>
+            <div id="owner-chart-body" class="collapsible">
+              <canvas id="owner-analytics-chart"></canvas>
+            </div>
+          </section>
+
+          <section class="data-grid hidden" id="tables-section" data-workspace-page="channel">
+            <article class="panel">
+              <div class="section-header">
+                <div>
+                  <p class="eyebrow">Recent Winners</p>
+                  <h2>Top Recent Videos</h2>
+                </div>
+                <button
+                  class="section-toggle"
+                  type="button"
+                  data-target="top-videos-table"
+                  data-label-expand="Expand"
+                  data-label-collapse="Collapse"
+                  aria-expanded="true"
+                >
+                  <span class="toggle-text">Collapse</span>
+                </button>
+              </div>
+              <div id="top-videos-table" class="collapsible"></div>
+            </article>
+
+            <article class="panel">
+              <div class="section-header">
+                <div>
+                  <p class="eyebrow">Cadence</p>
+                  <h2>Recent Uploads</h2>
+                </div>
+                <button
+                  class="section-toggle"
+                  type="button"
+                  data-target="recent-videos-table"
+                  data-label-expand="Expand"
+                  data-label-collapse="Collapse"
+                  aria-expanded="true"
+                >
+                  <span class="toggle-text">Collapse</span>
+                </button>
+              </div>
+              <div id="recent-videos-table" class="collapsible"></div>
+            </article>
+          </section>
+
+          <section class="data-grid hidden" id="owner-tables-section" data-workspace-page="owner">
+            <article class="panel">
+              <div class="section-header">
+                <div>
+                  <p class="eyebrow">Countries</p>
+                  <h2>Geographic</h2>
+                </div>
+                <button
+                  class="section-toggle"
+                  type="button"
+                  data-target="geography-table"
+                  data-label-expand="Expand"
+                  data-label-collapse="Collapse"
+                  aria-expanded="true"
+                >
+                  <span class="toggle-text">Collapse</span>
+                </button>
+              </div>
+              <div id="geography-table" class="collapsible"></div>
+            </article>
+
+            <article class="panel">
+              <div class="section-header">
+                <div>
+                  <p class="eyebrow">Audience</p>
+                  <h2>Age / Gender</h2>
+                </div>
+                <button
+                  class="section-toggle"
+                  type="button"
+                  data-target="demographics-table"
+                  data-label-expand="Expand"
+                  data-label-collapse="Collapse"
+                  aria-expanded="true"
+                >
+                  <span class="toggle-text">Collapse</span>
+                </button>
+              </div>
+              <div id="demographics-table" class="collapsible"></div>
+            </article>
+          </section>
+        </main>
+      </section>
+        </div>
+      </div>
+    </div>
+    <div id="confirm-modal" class="confirm-modal hidden" aria-hidden="true">
+      <div class="confirm-modal-backdrop" data-confirm-close="backdrop"></div>
+      <div class="confirm-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="confirm-modal-title">
+        <p class="eyebrow">Confirm action</p>
+        <h3 id="confirm-modal-title">Delete this prompt?</h3>
+        <p id="confirm-modal-message" class="confirm-modal-message">
+          This action cannot be undone from the current UI.
+        </p>
+        <div class="button-row confirm-modal-actions">
+          <button id="confirm-modal-cancel" class="ghost-button" type="button">Cancel</button>
+          <button id="confirm-modal-confirm" type="button">Delete</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

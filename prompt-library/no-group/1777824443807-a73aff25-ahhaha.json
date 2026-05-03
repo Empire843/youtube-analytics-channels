@@ -1,0 +1,23 @@
+{
+  "id": "1777824443807-a73aff25",
+  "sequence": 4,
+  "createdAt": "2026-05-03T16:07:23.807Z",
+  "updatedAt": "2026-05-03T16:29:33.433Z",
+  "title": "AHhaha",
+  "prompt": "Tesst prompt save",
+  "renderedPrompt": "Tesst prompt save",
+  "variables": [],
+  "primaryGroup": "no-group",
+  "groups": [
+    "no-group"
+  ],
+  "tags": [],
+  "useCases": [],
+  "summary": "",
+  "qualityNotes": [],
+  "risks": [],
+  "analysis": null,
+  "sourceUrl": "",
+  "notes": "",
+  "deletedAt": "2026-05-03T16:29:33.433Z"
+}

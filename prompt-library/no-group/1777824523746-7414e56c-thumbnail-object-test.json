@@ -1,0 +1,23 @@
+{
+  "id": "1777824523746-7414e56c",
+  "sequence": 6,
+  "createdAt": "2026-05-03T16:08:43.746Z",
+  "updatedAt": "2026-05-03T16:09:30.632Z",
+  "title": "Thumbnail object test",
+  "prompt": "thumbnail prompt",
+  "renderedPrompt": "",
+  "variables": [],
+  "primaryGroup": "no-group",
+  "groups": [
+    "no-group"
+  ],
+  "tags": [],
+  "useCases": [],
+  "summary": "",
+  "qualityNotes": [],
+  "risks": [],
+  "analysis": null,
+  "sourceUrl": "",
+  "notes": "",
+  "deletedAt": "2026-05-03T16:09:30.632Z"
+}

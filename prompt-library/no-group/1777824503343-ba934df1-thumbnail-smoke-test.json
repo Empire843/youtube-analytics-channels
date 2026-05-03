@@ -1,0 +1,23 @@
+{
+  "id": "1777824503343-ba934df1",
+  "sequence": 5,
+  "createdAt": "2026-05-03T16:08:23.343Z",
+  "updatedAt": "2026-05-03T16:09:30.611Z",
+  "title": "Thumbnail smoke test",
+  "prompt": "thumbnail prompt",
+  "renderedPrompt": "",
+  "variables": [],
+  "primaryGroup": "no-group",
+  "groups": [
+    "no-group"
+  ],
+  "tags": [],
+  "useCases": [],
+  "summary": "",
+  "qualityNotes": [],
+  "risks": [],
+  "analysis": null,
+  "sourceUrl": "",
+  "notes": "",
+  "deletedAt": "2026-05-03T16:09:30.611Z"
+}
