@@ -1,111 +1,36 @@
-# YouTube Channel Analytics Tool
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Dashboard phan tich kenh YouTube gom 3 lop du lieu:
+## Getting Started
 
-- `Public analysis`: danh cho moi kenh public chi voi link kenh
-- `Estimated metrics`: RPM, monthly revenue, growth score duoc uoc tinh tu public signals
-- `Owner verified analytics`: YouTube Analytics API cho chu kenh hoac manager
-
-## Tinh nang da co
-
-- So luot xem trung binh moi video
-- Total views
-- Last updated tu video public moi nhat
-- Phat hien `Has Short`
-- Bieu do `Views` tu recent uploads
-- Bieu do `Views & Subscribers Graph` theo ngay khi co quyen owner
-- `Estimated RPM range`
-- `Estimated monthly revenue`
-- `Geographic analytics`
-- `Age / gender analytics`
-- `Top recent videos`
-- `Posting cadence`
-- `Recent median views`
-- `Engagement rate`
-- `Growth score`
-- `Content profile`
-
-## Link-only mode
-
-Tool nay da duoc chinh de hoat dong theo kieu:
-
-1. Dan link kenh YouTube
-2. Tool tu resolve handle/channel ID
-3. Tool tu dong phan tich public metrics
-4. Tool bo sung estimated RPM va revenue
-5. Neu co them owner OAuth token thi nang cap sang verified analytics
-
-Neu server da duoc cau hinh bien moi truong sau, nguoi dung cuoi khong can nhap API key:
+First, run the development server:
 
 ```bash
-YOUTUBE_API_KEY=AIza...
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-Hoac don gian tao file `.env.local` trong root project:
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```bash
-YOUTUBE_API_KEY=your_youtube_data_api_key
-GEMINI_API_KEY=your_gemini_api_key
-GEMINI_MODEL=gemini-2.0-flash
-```
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## Gioi han quan trong
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-- `Estimated RPM` va `estimated revenue` la so lieu mo phong, khong phai doanh thu YouTube xac thuc.
-- `Geographic`, `age/gender`, subscriber trend chi tiet va RPM xac thuc can owner-authorized YouTube Analytics access.
-- Tool ben thu ba co the hien thi nhung chi so nay cho kenh bat ky, nhung thuong la uoc tinh hoac mo hinh du doan.
+## Learn More
 
-## Cach chay
+To learn more about Next.js, take a look at the following resources:
 
-```bash
-node server.js
-```
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-hoac:
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-```bash
-npm start
-```
+## Deploy on Vercel
 
-Mo:
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-```text
-http://localhost:3000
-```
-
-Sau khi mo web:
-
-1. Dan link kenh YouTube
-2. Bam `Analyze Channel`
-3. Dashboard se tu hien public metrics
-4. Neu `GEMINI_API_KEY` da co, phan `Gemini Insights` se tu sinh nhan dinh
-
-## API local
-
-### `GET /api/public`
-
-Query params:
-
-- `channel`: handle, URL, hoac channel ID
-- `apiKey`: tuy chon, co the bo qua neu server da co `YOUTUBE_API_KEY`
-
-### `POST /api/owner`
-
-Body JSON:
-
-```json
-{
-  "channelId": "UCxxxxxxxx",
-  "accessToken": "ya29....",
-  "startDate": "2026-01-01",
-  "endDate": "2026-05-01"
-}
-```
-
-## Mo rong tiep theo
-
-- Export CSV / JSON
-- Compare nhieu channel cung luc
-- Snapshot lich su local de ve growth chart dai han
-- Estimated niche classifier de tinh RPM range sat hon
-- Watchlist nhieu kenh va auto refresh
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

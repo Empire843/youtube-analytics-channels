@@ -1,0 +1,10 @@
+{
+  "name": "youtube-channels-analytics",
+  "version": "1.0.0",
+  "description": "YouTube channel analytics dashboard with public and owner-only metrics.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "MIT"
+}
