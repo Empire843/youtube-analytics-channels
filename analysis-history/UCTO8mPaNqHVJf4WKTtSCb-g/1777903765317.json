@@ -1,0 +1,140 @@
+{
+  "channelId": "UCTO8mPaNqHVJf4WKTtSCb-g",
+  "channelTitle": "Bin Tài Chính",
+  "channelThumbnail": "https://yt3.ggpht.com/XNAZsu9zksNAYIaL1iWuhpzgCvmRRT4sDZEb0hTDFRocgOmVenLEqBqz4L6_hBey1Yvr7ybIXtA=s800-c-k-c0x00ffffff-no-rj",
+  "customUrl": "@bintaichinh",
+  "country": "VN",
+  "subscriberCount": 12300,
+  "totalViews": 345756,
+  "videoCount": 15,
+  "analyzedAt": "2026-05-04T14:09:25.317Z",
+  "timestamp": 1777903765317,
+  "publicMetrics": {
+    "avgViewsPerVideo": 23050.4,
+    "totalViews": 345756,
+    "totalVideos": 15,
+    "lastUpdated": "2026-05-03T10:00:15Z",
+    "hasShort": false,
+    "shortCount": 0,
+    "shortRatio": 0,
+    "recentAvgViews": 23267.266666666666,
+    "recentMedianViews": 3760,
+    "avgLikes": 518.8666666666667,
+    "avgComments": 60.53333333333333,
+    "avgDurationSeconds": 1227.8666666666666,
+    "engagementRate": 2.4901936626276115,
+    "avgDaysBetweenUploads": 3.211301256613757,
+    "contentProfile": "long-form deep",
+    "uploadConsistencyScore": 90.36609623015873,
+    "growthScore": 52,
+    "growthBand": "healthy",
+    "fetchedAt": "2026-05-04T14:09:25.315Z"
+  },
+  "estimates": {
+    "estimatedMonthlyViews": 217363,
+    "estimatedRpmLow": 0.422823485927297,
+    "estimatedRpmHigh": 3.2886271127678657,
+    "estimatedMonthlyRevenueLow": 91.90617149112215,
+    "estimatedMonthlyRevenueHigh": 714.8257782642835,
+    "channelMaturityScore": 33.98830798384378,
+    "confidence": "medium-high",
+    "notes": [
+      "RPM/Doanh thu ước tính được mô phỏng từ số lượt xem gần đây, tần suất đăng video, mức độ tương tác và tỷ lệ shorts.",
+      "Những con số này chỉ mang tính định hướng và không phải là dữ liệu YouTube Analytics được chủ kênh xác thực."
+    ]
+  },
+  "aiInsights": {
+    "model": "gemini-2.5-pro",
+    "generatedAt": "2026-05-04T14:10:06.131Z",
+    "insights": {
+      "summary": "Bin Tài Chính là một kênh YouTube về tài chính còn non trẻ nhưng có tốc độ phát triển rất ấn tượng. Kênh có tỷ lệ lượt xem trên mỗi người đăng ký rất cao, cho thấy nội dung có sức lan tỏa tốt. Tuy nhiên, sự thành công này phụ thuộc nhiều vào một vài video đột phá, trong khi hiệu suất của các video khác chưa đồng đều. Thách thức chính là duy trì đà tăng trưởng bằng cách nhân rộng công thức thành công và nâng cao mức hiệu suất cơ bản của tất cả các video.",
+      "strengths": [
+        "Hiệu suất video vượt trội: Tỷ lệ xem trung bình trên mỗi video (23K) cao hơn nhiều so với số lượng người đăng ký (12.3K), cho thấy nội dung có khả năng tiếp cận và thu hút khán giả mới rất tốt.",
+        "Nội dung chuyên sâu, giá trị cao: Thời lượng video trung bình dài (~20 phút) và đi sâu vào chủ đề ('long-form deep') giúp xây dựng một lượng khán giả trung thành và có giá trị cao, đồng thời tối ưu hóa thời gian xem.",
+        "Lịch đăng tải nhất quán: Tần suất đăng video đều đặn (khoảng 3 ngày/video) và điểm nhất quán cao (90.36) giúp 'huấn luyện' thuật toán và tạo thói quen cho khán giả, góp phần vào sự tăng trưởng ổn định.",
+        "Tương tác tốt: Tỷ lệ tương tác gần 2.5% là một con số khỏe mạnh đối với kênh kiến thức tài chính, cho thấy khán giả thực sự quan tâm và tham gia vào nội dung."
+      ],
+      "risks": [
+        "Phụ thuộc vào các video 'bom tấn': Lượt xem trung bình (23K) cao hơn nhiều so với lượt xem trung vị (3.7K) cho thấy sự chênh lệch lớn về hiệu suất. Kênh đang phụ thuộc vào một vài video lan truyền để kéo toàn bộ chỉ số, nếu không thể lặp lại thành công này, kênh có thể chững lại.",
+        "Thư viện nội dung còn nhỏ: Với chỉ 15 video, kênh dễ bị ảnh hưởng bởi những thay đổi thuật toán và chưa đủ nội dung để giữ chân người xem mới ở lại lâu (binge-watch), làm chậm tốc độ tăng trưởng người đăng ký.",
+        "Rủi ro về sự ổn định: Sự chênh lệch hiệu suất lớn giữa các video tạo ra sự không chắc chắn trong việc dự báo tăng trưởng và doanh thu. Việc không xác định được công thức thành công chung có thể dẫn đến lãng phí nguồn lực."
+      ],
+      "opportunities": [
+        "Nhân rộng công thức thành công: Phân tích sâu các video có lượt xem cao nhất để tìm ra các yếu tố chung (chủ đề, cách đặt tiêu đề, thiết kế thumbnail, cấu trúc kể chuyện) và áp dụng cho các video trong tương lai.",
+        "Xây dựng cộng đồng cốt lõi: Với lượng người đăng ký ban đầu, kênh có thể tạo một nhóm riêng (Zalo, Facebook Group, Discord) để thảo luận sâu hơn, tăng cường sự gắn kết và nhận phản hồi trực tiếp cho các ý tưởng nội dung.",
+        "Đa dạng hóa định dạng với Shorts: Tận dụng các đoạn hấp dẫn, cô đọng từ các video dài để tạo YouTube Shorts. Điều này giúp tiếp cận tệp khán giả mới, rộng hơn và có thể kéo traffic về cho các video chính.",
+        "Tối ưu hóa tỷ lệ nhấp chuột (CTR): Thử nghiệm các phong cách thumbnail và tiêu đề khác nhau cho các video có hiệu suất thấp để cải thiện CTR, thu hút sự chú ý ngay từ đầu."
+      ],
+      "nextActions": [
+        "Phân tích video thành công: Chọn ra 2 video có lượt xem cao nhất. Ghi lại chi tiết chủ đề, cấu trúc, tiêu đề, và thumbnail. Lên kế hoạch sản xuất 3 video tiếp theo mô phỏng lại các yếu tố này.",
+        "Tạo chuỗi nội dung (Series): Biến chủ đề của video thành công nhất thành một series nhiều tập. Đặt tên cho series và quảng bá nó trong các video khác và trên tab Cộng đồng để tạo sự mong đợi.",
+        "Thử nghiệm A/B cho Thumbnail và Tiêu đề: Với 2 video có lượt xem thấp nhất, hãy thiết kế một thumbnail và tiêu đề mới hoàn toàn và sử dụng tính năng 'Test & Compare' của YouTube (nếu có) hoặc thay đổi thủ công để đo lường sự cải thiện.",
+        "Thăm dò ý kiến khán giả: Sử dụng tab Cộng đồng để tạo một cuộc bình chọn hỏi khán giả về chủ đề phân tích sâu họ muốn xem tiếp theo. Việc này vừa tăng tương tác vừa giúp kênh định hướng nội dung chính xác hơn."
+      ],
+      "monetizationView": "Kênh đang ở vị thế rất tốt để kiếm tiền. Doanh thu ước tính hiện tại (91 - 715 USD/tháng) là một khởi đầu vững chắc, với RPM tiềm năng cao do thuộc lĩnh vực tài chính. Trước mắt, cần tập trung tối đa vào việc tăng lượt xem để tối ưu doanh thu từ quảng cáo (YouTube Partner Program). Khi kênh lớn mạnh hơn, có thể triển khai thêm các hình thức: tiếp thị liên kết (affiliate marketing) cho các sàn giao dịch, khóa học, sách tài chính; nhận quảng cáo từ các thương hiệu phù hợp; và trong dài hạn, có thể phát triển sản phẩm số của riêng mình như khóa học hoặc cộng đồng trả phí.",
+      "contentStrategy": "Chiến lược nội dung nên là 'Nhân đôi thế mạnh và Mở rộng thử nghiệm'. Tiếp tục tập trung vào định dạng 'long-form deep' vốn là thế mạnh cốt lõi. 'Nhân đôi' bằng cách phân tích và tái tạo lại công thức của các video thành công nhất để nâng cao mức hiệu suất sàn (median views). 'Mở rộng' bằng cách thử nghiệm tái sử dụng các đoạn hay từ video dài thành YouTube Shorts để làm phễu thu hút khán giả mới. Duy trì lịch đăng 2 video/tuần. Mục tiêu chiến lược không phải là thay đổi những gì đang hoạt động, mà là làm cho thành công trở nên dễ đoán và lặp lại được, biến sự tăng trưởng đột biến thành một quỹ đạo tăng trưởng bền vững."
+    }
+  },
+  "topRecentVideos": [
+    {
+      "id": "r7l8YWPc2fs",
+      "title": "Nguyên Lý Peter: Tại Sao Từ Chối Thăng Chức Đôi Khi Lại Là Quyết Định Thông Minh?",
+      "publishedAt": "2026-03-20T14:01:26Z",
+      "views": 162748,
+      "likes": 3528,
+      "comments": 314,
+      "durationSeconds": 1269,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/r7l8YWPc2fs/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=r7l8YWPc2fs"
+    },
+    {
+      "id": "H6jRkpXmBuY",
+      "title": "Cuộc Sống Ở Mỗi Mức Thu Nhập - Từ 5 Triệu Đến 500 Triệu, Tiền Thay Đổi Gì Ngoài Con Số?",
+      "publishedAt": "2026-03-19T11:00:25Z",
+      "views": 113809,
+      "likes": 2302,
+      "comments": 315,
+      "durationSeconds": 976,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/H6jRkpXmBuY/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=H6jRkpXmBuY"
+    },
+    {
+      "id": "iSruWTDxXT0",
+      "title": "Mỗi Cấp Độ Của Người Đầu Tư - Từ Tiết Kiệm Đến Thông Tin, Bạn Đang Ở Tầng Nào?",
+      "publishedAt": "2026-03-24T14:01:10Z",
+      "views": 20603,
+      "likes": 488,
+      "comments": 44,
+      "durationSeconds": 1352,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/iSruWTDxXT0/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=iSruWTDxXT0"
+    },
+    {
+      "id": "8rkiDpmbIx8",
+      "title": "Tại Sao 1 Tỷ Đầu Tiên Lại Khó Hơn Những Tỷ Tiếp Theo - Từ 0 Đến 1 Tỷ, Bạn Đang Ở Mức Nào?",
+      "publishedAt": "2026-03-28T14:00:00Z",
+      "views": 12255,
+      "likes": 334,
+      "comments": 50,
+      "durationSeconds": 1624,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/8rkiDpmbIx8/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=8rkiDpmbIx8"
+    },
+    {
+      "id": "pvssg3nPZAc",
+      "title": "Sếp hay Chuyên gia: Vị Trí Nào Phù Hợp Với Bạn? Đâu là lựa chọn để giàu bền vững?",
+      "publishedAt": "2026-03-30T14:00:00Z",
+      "views": 9836,
+      "likes": 203,
+      "comments": 28,
+      "durationSeconds": 1118,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/pvssg3nPZAc/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=pvssg3nPZAc"
+    }
+  ]
+}

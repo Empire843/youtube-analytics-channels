@@ -1,0 +1,141 @@
+{
+  "channelId": "UCQS6vvJzq928w2fcnDQhE8g",
+  "channelTitle": "Nous Psychology",
+  "channelThumbnail": "https://yt3.ggpht.com/ADJFxWKOiHo5pFjvivt_p0C9RKjdMaNMAo9mwR7zXKHy-Kvs30pNCUNCQLfy3g2YPckIen_6=s800-c-k-c0x00ffffff-no-rj",
+  "customUrl": "@nouspsychology159",
+  "country": "PK",
+  "subscriberCount": 24300,
+  "totalViews": 3123134,
+  "videoCount": 51,
+  "analyzedAt": "2026-05-04T15:03:45.310Z",
+  "timestamp": 1777907025310,
+  "publicMetrics": {
+    "avgViewsPerVideo": 61237.92156862745,
+    "totalViews": 3123134,
+    "totalVideos": 51,
+    "lastUpdated": "2026-05-03T14:01:00Z",
+    "hasShort": false,
+    "shortCount": 0,
+    "shortRatio": 0,
+    "recentAvgViews": 54778.666666666664,
+    "recentMedianViews": 4009,
+    "avgLikes": 1855.6,
+    "avgComments": 270.06666666666666,
+    "avgDurationSeconds": 518.7333333333333,
+    "engagementRate": 3.8804644143705573,
+    "avgDaysBetweenUploads": 1.9933608716475093,
+    "contentProfile": "long-form",
+    "uploadConsistencyScore": 94.01991738505747,
+    "growthScore": 59,
+    "growthBand": "healthy",
+    "fetchedAt": "2026-05-04T15:03:45.309Z"
+  },
+  "estimates": {
+    "estimatedMonthlyViews": 824417,
+    "estimatedRpmLow": 0.44784835945867,
+    "estimatedRpmHigh": 3.483265018011878,
+    "estimatedMonthlyRevenueLow": 369.21366846722395,
+    "estimatedMonthlyRevenueHigh": 2871.661865856186,
+    "channelMaturityScore": 78.27185765748223,
+    "confidence": "medium-high",
+    "notes": [
+      "RPM/Doanh thu ước tính được mô phỏng từ số lượt xem gần đây, tần suất đăng video, mức độ tương tác và tỷ lệ shorts.",
+      "Những con số này chỉ mang tính định hướng và không phải là dữ liệu YouTube Analytics được chủ kênh xác thực."
+    ]
+  },
+  "aiInsights": {
+    "model": "gemini-2.5-pro",
+    "generatedAt": "2026-05-04T15:04:23.084Z",
+    "insights": {
+      "summary": "Kênh 'Nous Psychology' có nền tảng vững chắc với lượng khán giả trung thành (tương tác cao) và lịch đăng video rất nhất quán. Kênh đã đạt được thành công đáng kể nhờ một vài video viral, dẫn đến lượt xem trung bình cao. Tuy nhiên, rủi ro lớn nhất là sự chênh lệch khổng lồ giữa lượt xem trung bình và trung vị gần đây, cho thấy hiệu suất video không ổn định. Trọng tâm chính cần là ổn định hiệu suất và đa dạng hóa các nguồn doanh thu ngoài AdSense.",
+      "strengths": [
+        "Lượt xem trung bình trên mỗi video rất cao (khoảng 61.000), cho thấy nội dung có sức hút lớn.",
+        "Tần suất đăng video đều đặn và nhất quán (khoảng 2 ngày/video, điểm nhất quán 94%).",
+        "Tỷ lệ tương tác của khán giả mạnh mẽ (tỷ lệ 3,88%), thể hiện qua số lượt thích và bình luận cao.",
+        "Tập trung vào một ngách cụ thể (Tâm lý học) đã xây dựng được một cộng đồng khán giả trung thành."
+      ],
+      "risks": [
+        "Sự phụ thuộc quá lớn vào một vài video viral. Chênh lệch lớn giữa lượt xem trung bình (55k) và trung vị (4k) gần đây cho thấy nhiều video gần đây hoạt động kém hiệu quả.",
+        "Hiệu suất video không ổn định. Nếu không tạo ra được các video viral tiếp theo, lượt xem và doanh thu có thể sụt giảm nghiêm trọng.",
+        "Chỉ tập trung vào một định dạng nội dung (video dài), bỏ lỡ tiềm năng từ YouTube Shorts để thu hút khán giả mới.",
+        "Doanh thu có thể phụ thuộc nhiều vào quảng cáo AdSense, vốn không ổn định và có RPM thấp hơn do vị trí địa lý (Pakistan)."
+      ],
+      "opportunities": [
+        "Tạo các chuỗi nội dung (series) dựa trên chủ đề của các video viral thành công nhất để tạo ra hiệu suất ổn định và dễ đoán hơn.",
+        "Thử nghiệm với YouTube Shorts: Tạo các video ngắn về 'sự thật tâm lý học' hoặc 'mẹo nhanh' để tiếp cận tệp khán giả mới và quảng bá cho các video dài.",
+        "Xây dựng cộng đồng sâu sắc hơn bằng cách sử dụng tab Cộng đồng (Community Tab) để tổ chức thăm dò ý kiến, hỏi đáp và kết nối với khán giả.",
+        "Đa dạng hóa nguồn thu: Tích hợp tiếp thị liên kết cho sách, các khóa học tâm lý học trực tuyến, hoặc tạo sản phẩm số riêng (e-book, tài liệu hướng dẫn)."
+      ],
+      "nextActions": [
+        "Phân tích sâu 3-5 video có lượt xem cao nhất: Xác định chủ đề, tiêu đề, hình thu nhỏ và cách mở đầu đã thu hút khán giả. Sản xuất 3 video mới mô phỏng lại các yếu tố thành công này.",
+        "Bắt đầu chiến lược YouTube Shorts: Tạo và đăng 3-5 video Shorts mỗi tuần, tập trung vào các khái niệm tâm lý học ngắn gọn, hấp dẫn. Kêu gọi người xem xem video dài liên quan.",
+        "Xây dựng lịch đăng nội dung: Lên kế hoạch mỗi tuần bao gồm 1 video 'tiềm năng cao' (dựa trên chủ đề viral) và 1 video 'thử nghiệm' để cân bằng giữa việc duy trì sự ổn định và đổi mới.",
+        "Nghiên cứu và đăng ký 1-2 chương trình tiếp thị liên kết liên quan đến tâm lý học (ví dụ: sách trên Amazon, khóa học trên Coursera). Bắt đầu thêm link vào phần mô tả video."
+      ],
+      "monetizationView": "Doanh thu hiện tại ước tính từ 369$ - 2,871$ mỗi tháng, chủ yếu đến từ quảng cáo AdSense. Con số này khá tốt nhưng không ổn định vì phụ thuộc vào các video viral và RPM có thể thấp do tệp khán giả chính ở Pakistan. Kênh có tiềm năng lớn chưa được khai thác từ tiếp thị liên kết (sách, khóa học), bán sản phẩm số (e-book), và hợp tác thương hiệu khi kênh phát triển. Cần chuyển hướng từ việc chỉ tối đa hóa lượt xem sang việc xây dựng các nguồn thu nhập đa dạng và bền vững hơn.",
+      "contentStrategy": "Chiến lược cốt lõi nên là 'Nhân đôi thành công & Đa dạng hóa'. Nhân đôi thành công: Phân tích và nhân rộng các yếu tố thành công từ những video viral. Tạo các chuỗi video xoay quanh những chủ đề ăn khách này để xây dựng thói quen xem và duy trì lượt xem ổn định. Đa dạng hóa: Giới thiệu YouTube Shorts để thu hút khán giả mới. Thử nghiệm với các định dạng mới như phỏng vấn chuyên gia, phân tích tình huống thực tế, hoặc các phiên Hỏi & Đáp dựa trên bình luận của cộng đồng. Điều này sẽ giúp tìm ra các trụ cột nội dung mới và giảm sự phụ thuộc vào một công thức thành công duy nhất."
+    }
+  },
+  "topRecentVideos": [
+    {
+      "id": "H0t_6-wDqf4",
+      "title": "The Psychology of People Who Would Rather Fix Than Replace",
+      "publishedAt": "2026-03-24T14:00:35Z",
+      "views": 629400,
+      "likes": 18420,
+      "comments": 3240,
+      "durationSeconds": 486,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/H0t_6-wDqf4/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=H0t_6-wDqf4"
+    },
+    {
+      "id": "-BsJb_k4GbA",
+      "title": "The Psychology of People Who Know How To Work On Cars",
+      "publishedAt": "2026-03-12T17:20:32Z",
+      "views": 601595,
+      "likes": 25098,
+      "comments": 2941,
+      "durationSeconds": 481,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/-BsJb_k4GbA/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=-BsJb_k4GbA"
+    },
+    {
+      "id": "Zq_MrN0mK1Q",
+      "title": "The Psychology of People Who Fix Everything Themselves",
+      "publishedAt": "2026-04-19T14:00:49Z",
+      "views": 129651,
+      "likes": 2495,
+      "comments": 458,
+      "durationSeconds": 567,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/Zq_MrN0mK1Q/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=Zq_MrN0mK1Q"
+    },
+    {
+      "id": "OIZWR94ZhP0",
+      "title": "The Psychology of People Who Know Every Car on the Road",
+      "publishedAt": "2026-04-03T14:00:37Z",
+      "views": 79366,
+      "likes": 4239,
+      "comments": 303,
+      "durationSeconds": 494,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/OIZWR94ZhP0/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=OIZWR94ZhP0"
+    },
+    {
+      "id": "F_lwTwR3SL0",
+      "title": "The Psychology of People Who Keep Their Cars Spotless",
+      "publishedAt": "2026-04-21T14:00:22Z",
+      "views": 68539,
+      "likes": 1355,
+      "comments": 282,
+      "durationSeconds": 496,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/F_lwTwR3SL0/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=F_lwTwR3SL0"
+    }
+  ]
+}

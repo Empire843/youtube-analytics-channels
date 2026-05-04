@@ -1,0 +1,140 @@
+{
+  "channelId": "UCr4g4RqDYqMiActaYOhCfCA",
+  "channelTitle": "Another Story",
+  "channelThumbnail": "https://yt3.ggpht.com/06fM8K6Efrb7yOfE5zVHIGN83ONHR0Gj3oDBZ_e6OYjIeu3akVP3YtfAnNwUFpQc2vNsVf_4ka8=s800-c-k-c0x00ffffff-no-rj",
+  "customUrl": "@justanotherstoryyyt",
+  "country": "US",
+  "subscriberCount": 8680,
+  "totalViews": 956743,
+  "videoCount": 41,
+  "analyzedAt": "2026-05-04T15:39:05.110Z",
+  "timestamp": 1777909145110,
+  "publicMetrics": {
+    "avgViewsPerVideo": 23335.19512195122,
+    "totalViews": 956743,
+    "totalVideos": 41,
+    "lastUpdated": "2026-05-03T16:00:03Z",
+    "hasShort": false,
+    "shortCount": 0,
+    "shortRatio": 0,
+    "recentAvgViews": 25196.766666666666,
+    "recentMedianViews": 3100,
+    "avgLikes": 592.9666666666667,
+    "avgComments": 62.53333333333333,
+    "avgDurationSeconds": 820.5,
+    "engagementRate": 2.6015242696483547,
+    "avgDaysBetweenUploads": 1.4827286877394636,
+    "contentProfile": "long-form",
+    "uploadConsistencyScore": 95.55181393678161,
+    "growthScore": 53,
+    "growthBand": "healthy",
+    "fetchedAt": "2026-05-04T15:39:05.110Z"
+  },
+  "estimates": {
+    "estimatedMonthlyViews": 509805,
+    "estimatedRpmLow": 0.4248274368536704,
+    "estimatedRpmHigh": 3.30421339775077,
+    "estimatedMonthlyRevenueLow": 216.5792950897749,
+    "estimatedMonthlyRevenueHigh": 1684.505628476027,
+    "channelMaturityScore": 57.173055411926754,
+    "confidence": "medium-high",
+    "notes": [
+      "RPM/Doanh thu ước tính được mô phỏng từ số lượt xem gần đây, tần suất đăng video, mức độ tương tác và tỷ lệ shorts.",
+      "Những con số này chỉ mang tính định hướng và không phải là dữ liệu YouTube Analytics được chủ kênh xác thực."
+    ]
+  },
+  "aiInsights": {
+    "model": "gemini-2.5-pro",
+    "generatedAt": "2026-05-04T15:40:33.481Z",
+    "insights": {
+      "summary": "Kênh 'Another Story' đang trong giaiodephaát triển rất tích cực với lượng xem trung bình trên mỗi video cực kỳ ấn tượng so với số lượng người đăng ký. Tuy nhiên, sự tăng trưởng này không đồng đều và phụ thuộc nhiều vào một vài video lan truyền (viral). Rủi ro về việc người sáng tạo bị kiệt sức là rất cao do tần suất đăng video dày đặc. Cơ hội lớn nhất nằm ở việc khai thác YouTube Shorts và tối ưu hóa chiến lược chuyển đổi người xem thành người đăng ký để xây dựng một nền tảng khán giả bền vững hơn.",
+      "strengths": [
+        "Hiệu suất video xuất sắc: Lượt xem trung bình (23k-25k) cao một cách ấn tượng đối với một kênh dưới 10k người đăng ký, cho thấy nội dung có sức hấp dẫn lớn và được thuật toán YouTube ưu ái.",
+        "Khả năng tạo viral: Sự chênh lệch lớn giữa lượt xem trung bình và trung vị chứng tỏ kênh có khả năng sản xuất những nội dung 'hit' thu hút hàng trăm ngàn lượt xem.",
+        "Tần suất sản xuất đáng nể: Đăng video dài (~13 phút) gần như mỗi ngày (1.5 ngày/video) giúp kênh duy trì sự hiện diện liên tục và giữ chân khán giả.",
+        "Tỷ lệ tương tác tốt: Tỷ lệ tương tác 2.6% là một chỉ số lành mạnh, cho thấy khán giả thực sự kết nối và quan tâm đến nội dung được chia sẻ."
+      ],
+      "risks": [
+        "Sự phụ thuộc vào 'cú hích' viral: Kênh có nguy cơ tăng trưởng chậm lại nếu không liên tục tạo ra các video lan truyền mới. Khán giả đến từ video viral có thể không quan tâm đến các nội dung khác.",
+        "Nguy cơ kiệt sức (Burnout): Duy trì lịch đăng video dài gần như mỗi ngày là không bền vững, có thể dẫn đến giảm sút chất lượng nội dung và ảnh hưởng sức khỏe của người sáng tạo.",
+        "Tỷ lệ chuyển đổi đăng ký thấp: Với gần 1 triệu lượt xem nhưng chỉ có ~8.7k người đăng ký, kênh đang bỏ lỡ cơ hội chuyển đổi một lượng lớn người xem thành khán giả trung thành. Cần có lời kêu gọi hành động (CTA) hiệu quả hơn."
+      ],
+      "opportunities": [
+        "Khai thác YouTube Shorts: Kênh hoàn toàn chưa có Shorts. Đây là một cơ hội lớn để tiếp cận tệp khán giả mới, tăng tốc độ tăng trưởng người đăng ký và quảng bá cho các video dài hiện có.",
+        "Xây dựng cộng đồng: Chuyển những người xem thụ động thành một cộng đồng tích cực bằng cách sử dụng Tab Cộng đồng, tổ chức livestream Q&A, hoặc tạo các nhóm thảo luận trên nền tảng khác.",
+        "Tối ưu hóa lời kêu gọi hành động (CTA): Thử nghiệm các cách kêu gọi đăng ký sáng tạo và thuyết phục hơn để cải thiện tỷ lệ chuyển đổi người xem thành người đăng ký.",
+        "Phân luồng nội dung: Tạo các danh sách phát (playlist) theo chủ đề hoặc series để giữ chân người xem lâu hơn trên kênh, hướng họ từ video viral đến các nội dung liên quan khác."
+      ],
+      "nextActions": [
+        "Thử nghiệm chiến lược Shorts: Ngay lập tức, cắt và đăng 3-5 video Shorts mỗi tuần từ những khoảnh khắc hấp dẫn nhất trong các video dài đã có. Theo dõi số liệu để đánh giá khả năng thu hút người đăng ký mới.",
+        "Tối ưu hóa Lời kêu gọi hành động (CTA): Trong 5 video tiếp theo, tích hợp lời kêu gọi đăng ký một cách tự nhiên vào giữa và cuối video. Ghim một bình luận hấp dẫn kêu gọi thảo luận và đăng ký kênh.",
+        "Phân tích hiệu suất nội dung: So sánh 5 video có lượt xem cao nhất và 5 video thấp nhất để xác định công thức thành công (chủ đề, tiêu đề, thumbnail, thời lượng) và nhân rộng nó.",
+        "Thiết lập lịch đăng bài bền vững: Cân nhắc giảm tần suất đăng video dài xuống còn 2-3 video/tuần để tập trung nâng cao chất lượng và tránh kiệt sức. Dành thời gian còn lại để sản xuất Shorts và tương tác với cộng đồng."
+      ],
+      "monetizationView": "Kênh có tiềm năng doanh thu tốt từ quảng cáo (AdSense) nhờ lượt xem cao và có thể nhắm đến đối tượng khán giả ở các quốc gia có RPM cao như Mỹ. Cần đảm bảo bật quảng cáo giữa video (mid-roll ads) cho tất cả các video trên 8 phút. Ngoài ra, với lượng xem trung bình ấn tượng, kênh nên chủ động xây dựng một bộ 'Media Kit' để tìm kiếm các cơ hội hợp tác với nhãn hàng. Tiếp thị liên kết (Affiliate Marketing) cho các sản phẩm/dịch vụ liên quan đến nội dung cũng là một hướng đi nên được triển khai ngay.",
+      "contentStrategy": "Chiến lược nội dung cần tập trung vào việc biến thành công nhất thời thành sự tăng trưởng bền vững. Đầu tiên, hãy 'nhân bản' thành công bằng cách phân tích sâu các video viral và tạo ra một series nội dung dựa trên công thức đó. Thứ hai, xây dựng các 'trụ cột nội dung' (content pillars) rõ ràng để định hình thương hiệu kênh và thu hút đúng đối tượng khán giả trung thành. Cuối cùng, hãy sử dụng chiến lược kết hợp video dài (để đào sâu) và video Shorts (để tiếp cận rộng) nhằm tối đa hóa sự tăng trưởng và xây dựng phễu khán giả hiệu quả, dẫn dắt người xem mới từ Shorts đến các video dài có giá trị hơn."
+    }
+  },
+  "topRecentVideos": [
+    {
+      "id": "gCYAAp4StVs",
+      "title": "How Banks Treat You at Every Level of Wealth",
+      "publishedAt": "2026-04-29T16:01:16Z",
+      "views": 180959,
+      "likes": 4246,
+      "comments": 385,
+      "durationSeconds": 850,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/gCYAAp4StVs/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=gCYAAp4StVs"
+    },
+    {
+      "id": "qgKNHwxg07g",
+      "title": "8 Levels of Investing — How the Game Changes at Every Stage",
+      "publishedAt": "2026-03-23T16:01:13Z",
+      "views": 122696,
+      "likes": 2137,
+      "comments": 285,
+      "durationSeconds": 711,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/qgKNHwxg07g/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=qgKNHwxg07g"
+    },
+    {
+      "id": "wjTCADOrC7c",
+      "title": "The Dark Reality of Being a CEO (Startup to Fortune 500)",
+      "publishedAt": "2026-03-21T16:01:18Z",
+      "views": 102263,
+      "likes": 2739,
+      "comments": 158,
+      "durationSeconds": 751,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/wjTCADOrC7c/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=wjTCADOrC7c"
+    },
+    {
+      "id": "TI8eYpPBlZ8",
+      "title": "What Happens If You Invest $100 Every Month (Most People Don’t Realize This)",
+      "publishedAt": "2026-04-23T16:00:52Z",
+      "views": 98348,
+      "likes": 2479,
+      "comments": 281,
+      "durationSeconds": 892,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/TI8eYpPBlZ8/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=TI8eYpPBlZ8"
+    },
+    {
+      "id": "pGkauf88_f0",
+      "title": "Your Life If You Invest in Real Estate vs Stocks in Your 20s",
+      "publishedAt": "2026-04-16T16:01:23Z",
+      "views": 82134,
+      "likes": 1765,
+      "comments": 252,
+      "durationSeconds": 1122,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/pGkauf88_f0/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=pGkauf88_f0"
+    }
+  ]
+}

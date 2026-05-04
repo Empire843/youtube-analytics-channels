@@ -9,6 +9,12 @@ const percentFormatter = new Intl.NumberFormat("en-US", {
   maximumFractionDigits: 2,
 });
 
+function escapeHtml(str) {
+  const div = document.createElement("div");
+  div.textContent = str || "";
+  return div.innerHTML;
+}
+
 const publicForm = document.getElementById("public-form");
 const videoForm = document.getElementById("video-form");
 const ownerForm = document.getElementById("owner-form");
@@ -88,6 +94,7 @@ let currentPromptAnalysis = null;
 let currentEditingPromptId = null;
 let currentPromptThumbnailDataUrl = "";
 let currentPromptThumbnailMeta = null;
+let currentHistoryTimestamp = null;
 const pendingPromptDeleteIds = new Set();
 let currentPromptLibraryItems = [];
 let runtimeConfig = {
@@ -105,6 +112,8 @@ const pageToHash = {
   video: "#video-workspace",
   prompt: "#prompt-workspace",
   owner: "#owner-workspace",
+  competitor: "#competitor-workspace",
+  history: "#history-workspace",
 };
 const hashToPage = Object.fromEntries(
   Object.entries(pageToHash).map(([page, hash]) => [hash, page])
@@ -126,6 +135,14 @@ const pageIntroContent = {
   owner: {
     title: "Owner analytics workspace",
     text: "Load verified owner analytics like RPM, subscriber movement, geography, and demographics without unrelated tools on screen.",
+  },
+  competitor: {
+    title: "Competitor Finder",
+    text: "Enter a YouTube channel to discover similar channels in the same niche using AI-powered keyword analysis and YouTube Search.",
+  },
+  history: {
+    title: "Analysis History",
+    text: "Review the complete history of analyzed channels, including multiple analysis sessions for the same channel.",
   },
 };
 
@@ -1073,6 +1090,14 @@ function pageHasResults(page) {
     return Boolean(currentOwnerPayload);
   }
 
+  if (page === "history") {
+    return true;
+  }
+
+  if (page === "competitor") {
+    return true;
+  }
+
   return false;
 }
 
@@ -1124,7 +1149,7 @@ function syncPagePanels() {
 function setActivePage(page, options = {}) {
   const { updateHash = true } = options;
   activePage = page;
-  workspaceGrid.classList.toggle("prompt-mode", page === "prompt");
+  workspaceGrid.classList.toggle("prompt-mode", page === "prompt" || page === "history" || page === "competitor");
 
   pageNavItems.forEach((item) => {
     item.classList.toggle("active", item.dataset.navPage === page);
@@ -1143,6 +1168,9 @@ function setActivePage(page, options = {}) {
   emptyState.classList.toggle("hidden", pageHasResults(page));
   if (page === "prompt") {
     loadPromptLibrary();
+  }
+  if (page === "history") {
+    loadAnalysisHistory();
   }
 
   if (updateHash) {
@@ -1433,6 +1461,7 @@ async function loadAiInsights() {
         publicMetrics: currentPublicPayload.publicMetrics,
         estimates: currentPublicPayload.estimates,
         ownerMetrics: currentOwnerPayload,
+        historyTimestamp: currentHistoryTimestamp,
       }),
     });
 
@@ -1640,6 +1669,7 @@ publicForm.addEventListener("submit", async (event) => {
   resetAiInsights();
   currentOwnerPayload = null;
   lastOwnerCards = [];
+  currentHistoryTimestamp = null;
   renderStatsCards();
   showStatus("Loading public channel metrics and estimated revenue model...");
 
@@ -1654,6 +1684,7 @@ publicForm.addEventListener("submit", async (event) => {
     }
 
     currentPublicPayload = data;
+    currentHistoryTimestamp = data._historyTimestamp || null;
     renderPublicSummary(data);
     drawRecentViewsChart(data.chartFallback || []);
     tablesSection.classList.remove("hidden");
@@ -2121,4 +2152,523 @@ promptLibraryInput.addEventListener("input", () => {
   currentPromptAnalysis = null;
   promptAnalysisContent.innerHTML =
     `<p class="empty">Run AI analysis to get a suggested title, group, tags, and usage notes for this prompt.</p>`;
+});
+
+// ── Competitor Finder ────────────────────────────────────────────
+
+const competitorForm = document.getElementById("competitor-form");
+const competitorChannelInput = document.getElementById("competitor-channel-input");
+const competitorResults = document.getElementById("competitor-results");
+const competitorSourceCard = document.getElementById("competitor-source-card");
+const competitorGrid = document.getElementById("competitor-grid");
+const competitorAiBtn = document.getElementById("competitor-ai-btn");
+const competitorAiPanel = document.getElementById("competitor-ai-panel");
+let currentCompetitorData = null;
+
+competitorForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  const channelInput = competitorChannelInput.value.trim();
+  if (!channelInput) {
+    return;
+  }
+
+  showStatus("Analyzing channel niche and searching for competitors...");
+  competitorResults.classList.add("hidden");
+  competitorAiPanel.classList.add("hidden");
+  currentCompetitorData = null;
+
+  try {
+    const params = new URLSearchParams({ channel: channelInput, maxResults: "10" });
+    const response = await fetch(`/api/competitors?${params}`);
+    const data = await readResponsePayload(response);
+    if (!response.ok) {
+      throw new Error(data.error || "Failed to find competitors.");
+    }
+
+    currentCompetitorData = data;
+    renderCompetitorResults(data);
+    showStatus(`Found ${data.competitors.length} similar channels.`, "success");
+  } catch (error) {
+    showStatus(error.message, "error");
+  }
+});
+
+function renderCompetitorResults(data) {
+  const { source, competitors } = data;
+
+  // Source channel card
+  competitorSourceCard.innerHTML = `
+    <div class="comp-source-inner">
+      <div class="comp-source-avatar">
+        ${source.thumbnail
+          ? `<img src="${source.thumbnail}" alt="${escapeHtml(source.title)}" />`
+          : `<span class="comp-avatar-letter">${escapeHtml((source.title || "?")[0])}</span>`
+        }
+      </div>
+      <div class="comp-source-info">
+        <h3>${escapeHtml(source.title)}</h3>
+        <p class="comp-source-meta">
+          ${source.customUrl ? `@${escapeHtml(source.customUrl)}` : source.channelId}
+          ${source.country ? ` · ${escapeHtml(source.country)}` : ""}
+        </p>
+        <div class="comp-source-stats">
+          <span><strong>${formatNumber(source.subscribers)}</strong> subscribers</span>
+          <span><strong>${formatNumber(source.totalViews)}</strong> views</span>
+          <span><strong>${formatNumber(source.videoCount)}</strong> videos</span>
+        </div>
+        <div class="comp-niche-dna">
+          <div class="dna-item">
+            <span class="dna-label">Topic</span>
+            <span class="dna-value">${escapeHtml(source.topic || "Unknown")}</span>
+          </div>
+          <div class="dna-item">
+            <span class="dna-label">Format</span>
+            <span class="dna-value dna-format">${escapeHtml(source.contentStyle || "Unknown")}</span>
+          </div>
+          <div class="dna-item">
+            <span class="dna-label">Tone</span>
+            <span class="dna-value dna-tone">${escapeHtml(source.tone || "Unknown")}</span>
+          </div>
+          <div class="dna-item">
+            <span class="dna-label">Lang</span>
+            <span class="dna-value">${escapeHtml(source.language || "Unknown")}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+
+  // Competitor grid
+  if (!competitors.length) {
+    competitorGrid.innerHTML = `<p class="empty">No similar channels found for this niche.</p>`;
+  } else {
+    competitorGrid.innerHTML = competitors
+      .map((comp) => renderCompetitorCard(comp, source))
+      .join("");
+  }
+
+  competitorResults.classList.remove("hidden");
+}
+
+function renderCompetitorCard(comp, source) {
+  const subsDiff = comp.subscribers - source.subscribers;
+  const subsClass = subsDiff > 0 ? "comp-badge-higher" : subsDiff < 0 ? "comp-badge-lower" : "";
+  const subsLabel = subsDiff > 0
+    ? `+${formatNumber(subsDiff)}`
+    : subsDiff < 0
+    ? `${formatNumber(subsDiff)}`
+    : "=";
+
+  const viewsDiff = comp.totalViews - source.totalViews;
+  const viewsClass = viewsDiff > 0 ? "comp-badge-higher" : viewsDiff < 0 ? "comp-badge-lower" : "";
+  const viewsLabel = viewsDiff > 0
+    ? `+${formatNumber(viewsDiff)}`
+    : viewsDiff < 0
+    ? `${formatNumber(viewsDiff)}`
+    : "=";
+
+  return `
+    <article class="competitor-card">
+      <div class="comp-card-head">
+        <div class="comp-card-avatar">
+          ${comp.thumbnail
+            ? `<img src="${comp.thumbnail}" alt="${escapeHtml(comp.title)}" loading="lazy" />`
+            : `<span class="comp-avatar-letter">${escapeHtml((comp.title || "?")[0])}</span>`
+          }
+        </div>
+        <div class="comp-card-title">
+          <h4>${escapeHtml(comp.title)}</h4>
+          <p class="comp-card-meta">
+            ${comp.customUrl ? `@${escapeHtml(comp.customUrl)}` : ""}
+            ${comp.country ? ` · ${escapeHtml(comp.country)}` : ""}
+          </p>
+        </div>
+      </div>
+      <div class="comp-card-metrics">
+        <div class="comp-card-metric">
+          <span class="comp-metric-label">Subscribers</span>
+          <span class="comp-metric-value">${formatNumber(comp.subscribers)}</span>
+          <span class="comp-badge ${subsClass}">${subsLabel}</span>
+        </div>
+        <div class="comp-card-metric">
+          <span class="comp-metric-label">Views</span>
+          <span class="comp-metric-value">${formatNumber(comp.totalViews)}</span>
+          <span class="comp-badge ${viewsClass}">${viewsLabel}</span>
+        </div>
+        <div class="comp-card-metric">
+          <span class="comp-metric-label">Videos</span>
+          <span class="comp-metric-value">${formatNumber(comp.videoCount)}</span>
+        </div>
+      </div>
+      ${comp.description ? `<p class="comp-card-desc">${escapeHtml(comp.description.slice(0, 120))}${comp.description.length > 120 ? "..." : ""}</p>` : ""}
+      <div class="comp-card-actions">
+        <button class="ghost-button comp-analyze-btn" type="button" data-comp-channel="${escapeHtml(comp.customUrl || comp.channelId)}">
+          Analyze Channel
+        </button>
+        <a href="https://youtube.com/channel/${encodeURIComponent(comp.channelId)}" target="_blank" rel="noreferrer" class="ghost-button">
+          Open ↗
+        </a>
+      </div>
+    </article>
+  `;
+}
+
+// Click "Analyze Channel" → switch to Channel Analysis with that channel
+competitorGrid.addEventListener("click", (event) => {
+  const btn = event.target.closest(".comp-analyze-btn");
+  if (!btn) {
+    return;
+  }
+  const channel = btn.dataset.compChannel;
+  if (!channel) {
+    return;
+  }
+  // Switch to channel page and fill input
+  setActivePage("channel");
+  const publicInput = document.getElementById("public-channel");
+  if (publicInput) {
+    publicInput.value = channel;
+    publicForm.dispatchEvent(new Event("submit", { bubbles: true }));
+  }
+});
+
+// AI Competitive Analysis
+competitorAiBtn.addEventListener("click", async () => {
+  if (!currentCompetitorData) {
+    return;
+  }
+
+  competitorAiBtn.disabled = true;
+  competitorAiBtn.textContent = "Analyzing...";
+  competitorAiPanel.classList.remove("hidden");
+  competitorAiPanel.innerHTML = `<p class="empty">Running AI competitive analysis...</p>`;
+
+  try {
+    const response = await fetch("/api/competitors/analyze", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        source: currentCompetitorData.source,
+        competitors: currentCompetitorData.competitors,
+      }),
+    });
+    const data = await readResponsePayload(response);
+    if (!response.ok) {
+      throw new Error(data.error || "AI analysis failed.");
+    }
+    renderCompetitorAiAnalysis(data.analysis);
+  } catch (error) {
+    competitorAiPanel.innerHTML = `<p class="empty">${escapeHtml(error.message)}</p>`;
+  } finally {
+    competitorAiBtn.disabled = false;
+    competitorAiBtn.textContent = "Run AI Analysis";
+  }
+});
+
+function renderCompetitorAiAnalysis(analysis) {
+  const sections = [
+    { label: "Position", key: "nichePosition", icon: "📍" },
+    { label: "Summary", key: "summary", icon: "📋" },
+  ];
+
+  const listSections = [
+    { label: "Strengths", key: "strengths", icon: "💪" },
+    { label: "Weaknesses", key: "weaknesses", icon: "⚠️" },
+    { label: "Opportunities", key: "opportunities", icon: "🚀" },
+    { label: "Threats", key: "threats", icon: "🔥" },
+    { label: "Top Competitors", key: "topCompetitors", icon: "🏆" },
+    { label: "Recommendations", key: "recommendations", icon: "💡" },
+  ];
+
+  let html = `<div class="comp-ai-inner">`;
+
+  for (const s of sections) {
+    if (analysis[s.key]) {
+      html += `
+        <div class="comp-ai-section">
+          <h4>${s.icon} ${s.label}</h4>
+          <p>${escapeHtml(analysis[s.key])}</p>
+        </div>`;
+    }
+  }
+
+  for (const s of listSections) {
+    const items = analysis[s.key];
+    if (items?.length) {
+      html += `
+        <div class="comp-ai-section">
+          <h4>${s.icon} ${s.label}</h4>
+          <ul class="insight-list">${items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
+        </div>`;
+    }
+  }
+
+  html += `</div>`;
+  competitorAiPanel.innerHTML = html;
+}
+
+// ── History Feature ───────────────────────────────────────────────
+
+const historyChannelList = document.getElementById("history-channel-list");
+const historyTimelinePanel = document.getElementById("history-timeline-panel");
+const historyTimelineTitle = document.getElementById("history-timeline-title");
+const historyTimelineList = document.getElementById("history-timeline-list");
+const historyBackBtn = document.getElementById("history-back-btn");
+const historySearchInput = document.getElementById("history-search");
+const refreshHistoryBtn = document.getElementById("refresh-history-btn");
+let historyAllChannels = [];
+
+async function loadAnalysisHistory() {
+  try {
+    const response = await fetch("/api/history");
+    const data = await readResponsePayload(response);
+    if (!response.ok) {
+      throw new Error(data.error || "Failed to load analysis history.");
+    }
+    historyAllChannels = data.channels || [];
+    renderHistoryChannelList(historyAllChannels);
+    historyTimelinePanel.classList.add("hidden");
+    historyChannelList.classList.remove("hidden");
+  } catch (error) {
+    historyChannelList.innerHTML = `<p class="empty">${error.message}</p>`;
+  }
+}
+
+function filterHistoryChannels(query) {
+  const q = (query || "").trim().toLowerCase();
+  if (!q) {
+    return historyAllChannels;
+  }
+  return historyAllChannels.filter((ch) => {
+    const haystack = `${ch.channelTitle} ${ch.customUrl} ${ch.channelId}`.toLowerCase();
+    return haystack.includes(q);
+  });
+}
+
+function renderHistoryChannelList(channels) {
+  if (!channels || !channels.length) {
+    historyChannelList.innerHTML = `<p class="empty">No analysis history found.</p>`;
+    return;
+  }
+
+  historyChannelList.innerHTML = channels
+    .map(
+      (ch) => `
+    <article class="history-channel-card" data-history-channel-id="${escapeHtml(ch.channelId)}">
+      <div class="history-channel-thumb">
+        ${ch.channelThumbnail
+          ? `<img src="${ch.channelThumbnail}" alt="${escapeHtml(ch.channelTitle)}" loading="lazy" />`
+          : `<span class="history-channel-avatar">${escapeHtml((ch.channelTitle || "?")[0])}</span>`
+        }
+      </div>
+      <div class="history-channel-info">
+        <h4 class="history-channel-name">${escapeHtml(ch.channelTitle || ch.channelId)}</h4>
+        <p class="history-channel-meta">
+          ${ch.customUrl ? `@${escapeHtml(ch.customUrl)}` : ch.channelId}
+          ${ch.country ? ` · ${escapeHtml(ch.country)}` : ""}
+        </p>
+        <div class="history-channel-stats">
+          <span>${formatNumber(ch.subscriberCount || 0)} subscribers</span>
+          <span>${formatNumber(ch.totalViews || 0)} views</span>
+        </div>
+        <div class="history-channel-foot">
+          <span class="history-badge">${ch.analysisCount} analyses</span>
+          <span class="history-date">Latest: ${formatDate(ch.latestAnalyzedAt)}</span>
+        </div>
+      </div>
+    </article>
+  `
+    )
+    .join("");
+}
+
+async function loadChannelTimeline(channelId) {
+  try {
+    const response = await fetch(`/api/history?channelId=${encodeURIComponent(channelId)}`);
+    const data = await readResponsePayload(response);
+    if (!response.ok) {
+      throw new Error(data.error || "Failed to load timeline.");
+    }
+    const analyses = data.analyses || [];
+    if (!analyses.length) {
+      historyTimelineList.innerHTML = `<p class="empty">No records found.</p>`;
+      return;
+    }
+
+    historyTimelineTitle.textContent = analyses[0]?.channelTitle || channelId;
+    historyChannelList.classList.add("hidden");
+    historyTimelinePanel.classList.remove("hidden");
+
+    historyTimelineList.innerHTML = analyses
+      .map(
+        (entry) => `
+      <article class="history-timeline-entry">
+        <div class="history-timeline-dot"></div>
+        <div class="history-timeline-content">
+          <div class="history-timeline-header">
+            <span class="history-timeline-date">${formatDate(entry.analyzedAt)}</span>
+            <span class="history-timeline-time">${new Date(entry.analyzedAt).toLocaleTimeString("vi-VN")}</span>
+          </div>
+          <div class="history-timeline-metrics">
+            <div class="history-metric">
+              <strong>Subscribers</strong>
+              <span>${formatNumber(entry.subscriberCount || 0)}</span>
+            </div>
+            <div class="history-metric">
+              <strong>Total Views</strong>
+              <span>${formatNumber(entry.totalViews || 0)}</span>
+            </div>
+            <div class="history-metric">
+              <strong>Growth Score</strong>
+              <span>${entry.publicMetrics?.growthScore || "N/A"}/100</span>
+            </div>
+            <div class="history-metric">
+              <strong>RPM Range</strong>
+              <span>$${(entry.estimates?.estimatedRpmLow || 0).toFixed(2)} - $${(entry.estimates?.estimatedRpmHigh || 0).toFixed(2)}</span>
+            </div>
+          </div>
+          ${entry.aiInsights?.insights?.summary
+            ? `<div class="history-ai-summary">
+                <p class="eyebrow">AI Insights</p>
+                <p>${escapeHtml(entry.aiInsights.insights.summary)}</p>
+              </div>`
+            : ""
+          }
+          <div class="history-timeline-actions">
+            <button class="ghost-button" type="button" data-history-load='${JSON.stringify({ channelId: entry.channelId, timestamp: entry.timestamp })}'>
+              View Details
+            </button>
+            <button class="ghost-button history-delete-btn" type="button" data-history-delete='${JSON.stringify({ channelId: entry.channelId, timestamp: entry.timestamp })}'>
+              Delete
+            </button>
+          </div>
+        </div>
+      </article>
+    `
+      )
+      .join("");
+  } catch (error) {
+    historyTimelineList.innerHTML = `<p class="empty">${error.message}</p>`;
+  }
+}
+
+function loadFromHistoryEntry(entry) {
+  const data = {
+    channel: {
+      id: entry.channelId,
+      title: entry.channelTitle,
+      thumbnail: entry.channelThumbnail,
+      customUrl: entry.customUrl,
+      country: entry.country,
+      subscriberCount: entry.subscriberCount,
+      totalViews: entry.totalViews,
+      videoCount: entry.videoCount,
+    },
+    publicMetrics: entry.publicMetrics,
+    estimates: entry.estimates,
+    topRecentVideos: entry.topRecentVideos || [],
+    recentVideos: [],
+    chartFallback: [],
+  };
+
+  currentPublicPayload = data;
+  currentHistoryTimestamp = entry.timestamp;
+  setActivePage("channel");
+  renderPublicSummary(data);
+
+  if (data.topRecentVideos?.length) {
+    tablesSection.classList.remove("hidden");
+    renderTable(
+      topVideosTable,
+      [
+        {
+          label: "Video",
+          render: (row) =>
+            `<a href="${row.url}" target="_blank" rel="noreferrer">${row.title}</a>`,
+        },
+        { label: "Views", render: (row) => formatNumber(row.views) },
+        { label: "Likes", render: (row) => formatNumber(row.likes) },
+      ],
+      data.topRecentVideos
+    );
+  }
+
+  if (entry.aiInsights) {
+    renderAiInsights(entry.aiInsights);
+  }
+
+  showStatus(`Loaded analysis history from ${formatDate(entry.analyzedAt)}.`, "success");
+}
+
+// History event handlers
+historyChannelList.addEventListener("click", (event) => {
+  const card = event.target.closest("[data-history-channel-id]");
+  if (card) {
+    const channelId = card.dataset.historyChannelId;
+    loadChannelTimeline(channelId);
+  }
+});
+
+historyTimelineList.addEventListener("click", async (event) => {
+  const loadBtn = event.target.closest("[data-history-load]");
+  if (loadBtn) {
+    try {
+      const info = JSON.parse(loadBtn.dataset.historyLoad);
+      const response = await fetch(`/api/history?channelId=${encodeURIComponent(info.channelId)}`);
+      const data = await readResponsePayload(response);
+      const entry = (data.analyses || []).find((a) => a.timestamp === info.timestamp);
+      if (entry) {
+        loadFromHistoryEntry(entry);
+      } else {
+        showStatus("Record not found.", "error");
+      }
+    } catch (error) {
+      showStatus(error.message, "error");
+    }
+    return;
+  }
+
+  const deleteBtn = event.target.closest("[data-history-delete]");
+  if (deleteBtn) {
+    try {
+      const info = JSON.parse(deleteBtn.dataset.historyDelete);
+      const confirmed = await openConfirmModal({
+        title: "Delete analysis record?",
+        message: "This record will be permanently deleted.",
+        confirmLabel: "Delete",
+        cancelLabel: "Cancel",
+      });
+      if (!confirmed) {
+        return;
+      }
+      const response = await fetch("/api/history/delete", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(info),
+      });
+      const result = await readResponsePayload(response);
+      if (!response.ok) {
+        throw new Error(result.error || "Failed to delete.");
+      }
+      showStatus("Record deleted.", "success");
+      loadChannelTimeline(info.channelId);
+    } catch (error) {
+      showStatus(error.message, "error");
+    }
+  }
+});
+
+historyBackBtn.addEventListener("click", () => {
+  historyTimelinePanel.classList.add("hidden");
+  historyChannelList.classList.remove("hidden");
+  loadAnalysisHistory();
+});
+
+refreshHistoryBtn.addEventListener("click", () => {
+  loadAnalysisHistory();
+});
+
+historySearchInput.addEventListener("input", () => {
+  const filtered = filterHistoryChannels(historySearchInput.value);
+  renderHistoryChannelList(filtered);
 });

@@ -40,6 +40,14 @@
               <strong>Owner Analytics</strong>
               <span>Verified revenue and audience analytics</span>
             </a>
+            <a href="#competitor-workspace" class="main-nav-link" data-nav-page="competitor">
+              <strong>Competitors</strong>
+              <span>Find similar channels in the same niche</span>
+            </a>
+            <a href="#history-workspace" class="main-nav-link" data-nav-page="history">
+              <strong>History</strong>
+              <span>Review previously analyzed channels</span>
+            </a>
           </nav>
           <div class="main-nav-foot">
             <div id="config-badges" class="config-badges"></div>
@@ -197,6 +205,72 @@
               insights. Use <strong>Video Tools</strong> when you want a script,
               thumbnail, or downloadable video from a YouTube link.
             </p>
+          </section>
+
+          <section class="panel history-workspace" id="history-workspace" data-workspace-page="history">
+            <div class="history-hero">
+              <div>
+                <p class="eyebrow">Analysis History</p>
+                <h2>Analyzed Channels</h2>
+                <p class="summary-text">
+                  Review previous analysis results. Each channel retains its full analysis history.
+                </p>
+              </div>
+              <div class="history-toolbar">
+                <input
+                  id="history-search"
+                  type="text"
+                  placeholder="Search channels..."
+                />
+                <button id="refresh-history-btn" class="ghost-button" type="button">
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <div id="history-channel-list" class="history-channel-list">
+              <p class="empty">No analysis history found.</p>
+            </div>
+            <div id="history-timeline-panel" class="history-timeline-panel hidden">
+              <div class="history-timeline-head">
+                <button id="history-back-btn" class="ghost-button" type="button">
+                  ← Back to list
+                </button>
+                <h3 id="history-timeline-title">Timeline</h3>
+              </div>
+              <div id="history-timeline-list" class="history-timeline-list"></div>
+            </div>
+          </section>
+
+          <section class="panel competitor-workspace" id="competitor-workspace" data-workspace-page="competitor">
+            <div class="competitor-hero">
+              <div>
+                <p class="eyebrow">Competitor Finder</p>
+                <h2>Find Similar Channels</h2>
+                <p class="summary-text">
+                  Enter a YouTube channel to discover competitors in the same niche using AI-powered keyword analysis.
+                </p>
+              </div>
+            </div>
+            <form id="competitor-form" class="competitor-form">
+              <div class="competitor-form-row">
+                <input
+                  id="competitor-channel-input"
+                  type="text"
+                  placeholder="Channel URL, @handle, or channel ID"
+                  required
+                />
+                <button type="submit">Find Competitors</button>
+              </div>
+            </form>
+            <div id="competitor-results" class="competitor-results hidden">
+              <div id="competitor-source-card" class="competitor-source-card"></div>
+              <div class="competitor-grid-header">
+                <h3>Similar Channels</h3>
+                <button id="competitor-ai-btn" class="ghost-button" type="button">Run AI Analysis</button>
+              </div>
+              <div id="competitor-grid" class="competitor-grid"></div>
+              <div id="competitor-ai-panel" class="competitor-ai-panel hidden"></div>
+            </div>
           </section>
 
           <section id="channel-summary" class="panel hidden" data-workspace-page="channel"></section>

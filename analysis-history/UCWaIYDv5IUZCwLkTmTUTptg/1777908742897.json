@@ -1,0 +1,141 @@
+{
+  "channelId": "UCWaIYDv5IUZCwLkTmTUTptg",
+  "channelTitle": "AI4Next",
+  "channelThumbnail": "https://yt3.ggpht.com/NuB0TL_UIi5fmm-Iu5DxZZrI9W8xAbKw0qem3oHNjv4SnxoLhKVK891s5XKCxND2fbNhEnFrKA=s800-c-k-c0x00ffffff-no-rj",
+  "customUrl": "@ai4next",
+  "country": "CA",
+  "subscriberCount": 40400,
+  "totalViews": 1387665,
+  "videoCount": 30,
+  "analyzedAt": "2026-05-04T15:32:22.897Z",
+  "timestamp": 1777908742897,
+  "publicMetrics": {
+    "avgViewsPerVideo": 46255.5,
+    "totalViews": 1387665,
+    "totalVideos": 30,
+    "lastUpdated": "2026-05-01T08:47:45Z",
+    "hasShort": true,
+    "shortCount": 8,
+    "shortRatio": 0.26666666666666666,
+    "recentAvgViews": 46361.26666666667,
+    "recentMedianViews": 5891,
+    "avgLikes": 1687.5333333333333,
+    "avgComments": 107.6,
+    "avgDurationSeconds": 363.1333333333333,
+    "engagementRate": 3.8720541141383826,
+    "avgDaysBetweenUploads": 6.224561382503193,
+    "contentProfile": "long-form",
+    "uploadConsistencyScore": 81.32631585249042,
+    "growthScore": 56,
+    "growthBand": "healthy",
+    "fetchedAt": "2026-05-04T15:32:22.897Z"
+  },
+  "estimates": {
+    "estimatedMonthlyViews": 223444,
+    "estimatedRpmLow": 0.3820347511931656,
+    "estimatedRpmHigh": 2.9713813981690653,
+    "estimatedMonthlyRevenueLow": 85.36319535278155,
+    "estimatedMonthlyRevenueHigh": 663.9359638549676,
+    "channelMaturityScore": 71.16884978988686,
+    "confidence": "medium-high",
+    "notes": [
+      "RPM/Doanh thu ước tính được mô phỏng từ số lượt xem gần đây, tần suất đăng video, mức độ tương tác và tỷ lệ shorts.",
+      "Những con số này chỉ mang tính định hướng và không phải là dữ liệu YouTube Analytics được chủ kênh xác thực."
+    ]
+  },
+  "aiInsights": {
+    "model": "gemini-2.5-pro",
+    "generatedAt": "2026-05-04T15:33:03.445Z",
+    "insights": {
+      "summary": "AI4Next là một kênh về Trí tuệ nhân tạo (AI) có tốc độ tăng trưởng tốt và tiềm năng lớn. Kênh có khả năng tạo ra nội dung lan truyền với số lượt xem trung bình trên mỗi video rất cao. Tuy nhiên, sự thành công không đồng đều giữa các video (chênh lệch lớn giữa lượt xem trung bình và trung vị) cho thấy một chiến lược nội dung \"hit-or-miss\" đầy rủi ro. Tỷ lệ tương tác tốt nhưng khả năng kiếm tiền hiện tại còn hạn chế. Ưu tiên hàng đầu là ổn định hóa hiệu suất nội dung bằng cách phân tích và nhân rộng các yếu tố thành công, đồng thời đa dạng hóa nguồn doanh thu.",
+      "strengths": [
+        "Số lượt xem trung bình trên mỗi video cực kỳ cao (hơn 46.000), cho thấy khả năng tạo ra nội dung thu hút mạnh mẽ.",
+        "Chủ đề AI là một thị trường ngách có nhu cầu cao và đang phát triển, giúp kênh dễ dàng thu hút khán giả mới.",
+        "Tỷ lệ tương tác (3.87%) rất tốt, chứng tỏ kênh đã xây dựng được một cộng đồng khán giả gắn kết và quan tâm đến nội dung.",
+        "Lịch đăng video nhất quán (khoảng 6 ngày/video) giúp duy trì sự mong đợi và giữ chân người đăng ký."
+      ],
+      "risks": [
+        "Sự phụ thuộc vào một vài video lan truyền (viral) là rủi ro lớn nhất. Chênh lệch giữa lượt xem trung bình (46k) và trung vị (5.9k) cho thấy nhiều video có hiệu suất dưới mức trung bình.",
+        "Chiến lược nội dung 'hit-or-miss' không bền vững, tạo áp lực phải liên tục tạo ra các video đột phá để duy trì sự tăng trưởng.",
+        "Số lượng video còn ít (30 video) làm giảm tổng thời gian xem của kênh và cơ hội khám phá cho khán giả mới.",
+        "Doanh thu trên mỗi nghìn lượt xem (RPM) ước tính còn thấp, có thể do thời lượng video ngắn và chưa tối ưu hóa cho các quảng cáo giá trị cao."
+      ],
+      "opportunities": [
+        "Phân tích sâu các video thành công nhất để tìm ra công thức về chủ đề, định dạng, tiêu đề, và hình thu nhỏ để áp dụng cho các video trong tương lai.",
+        "Tăng thời lượng video trung bình lên trên 8 phút để đủ điều kiện chèn quảng cáo giữa video (mid-roll ads), giúp tăng đáng kể doanh thu từ quảng cáo.",
+        "Xây dựng các chuỗi nội dung (series/playlist) dựa trên các chủ đề đã được chứng minh là thành công để tăng thời gian xem và giữ chân khán giả.",
+        "Khám phá các hình thức kiếm tiền khác ngoài quảng cáo như tiếp thị liên kết (affiliate marketing) cho các công cụ AI, nhận tài trợ từ các thương hiệu công nghệ, hoặc bán các sản phẩm số (khóa học, ebook)."
+      ],
+      "nextActions": [
+        "**Phân tích ngay lập tức:** Kiểm tra 3-5 video có lượt xem cao nhất. Ghi lại các điểm chung về chủ đề, cấu trúc tiêu đề, thiết kế thumbnail, và cách thu hút khán giả trong 30 giây đầu tiên.",
+        "**Sản xuất video tiếp theo:** Dựa trên phân tích trên, hãy tạo 2-3 video mới áp dụng 'công thức thành công' đã tìm ra. Đặt mục tiêu thời lượng video từ 8-10 phút.",
+        "**Tương tác với cộng đồng:** Tạo một cuộc thăm dò ý kiến (poll) trên tab Cộng đồng để hỏi khán giả về chủ đề họ muốn xem tiếp theo, dựa trên các video thành công nhất của kênh.",
+        "**Tối ưu hóa kiếm tiền:** Nghiên cứu và thêm các liên kết tiếp thị liên kết cho các phần mềm hoặc công cụ AI được đề cập trong các video phổ biến nhất của bạn vào phần mô tả."
+      ],
+      "monetizationView": "Doanh thu hiện tại từ quảng cáo YouTube (AdSense) còn khiêm tốn, phần lớn do RPM ước tính thấp và thời lượng video ngắn. Tuy nhiên, tiềm năng kiếm tiền là rất lớn. Kênh nên tập trung vào việc đa dạng hóa nguồn thu: (1) **Tiếp thị liên kết** cho các công cụ AI được giới thiệu. (2) **Tìm kiếm cơ hội tài trợ** từ các công ty công nghệ muốn tiếp cận đối tượng khán giả của kênh. (3) **Tăng thời lượng video** lên trên 8 phút để tối ưu hóa doanh thu quảng cáo. Trong dài hạn, kênh có thể phát triển các sản phẩm số như khóa học hoặc ebook chuyên sâu.",
+      "contentStrategy": "Chiến lược nội dung cần chuyển từ 'may rủi' sang 'dựa trên dữ liệu'. Trọng tâm là **'Nhân rộng những gì đã hiệu quả'**. Cần xác định các 'trụ cột nội dung' (content pillars) từ các video thành công nhất và xây dựng các video vệ tinh xoay quanh chúng. Ví dụ, nếu video 'Top 5 Công cụ AI' thành công, hãy làm thêm 'Đánh giá chi tiết Công cụ X' hoặc 'Hướng dẫn sử dụng Công cụ Y cho người mới bắt đầu'. Nên sử dụng Video Shorts một cách có chủ đích để quảng bá cho video dài hoặc chia sẻ các mẹo nhanh, thay vì coi nó là định dạng chính để bảo vệ RPM của kênh."
+    }
+  },
+  "topRecentVideos": [
+    {
+      "id": "ylezKJG7rb8",
+      "title": "Create Unlimited AI Videos in Bulk (One Click) | Consistent Characters & FREE Automation (2026)",
+      "publishedAt": "2026-01-17T09:46:09Z",
+      "views": 323587,
+      "likes": 10787,
+      "comments": 685,
+      "durationSeconds": 538,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/ylezKJG7rb8/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=ylezKJG7rb8"
+    },
+    {
+      "id": "K5j47JWr9_g",
+      "title": "Grok AI Long Video Hack: Unlimited 60s Stories in Minutes",
+      "publishedAt": "2025-11-21T07:07:10Z",
+      "views": 308909,
+      "likes": 10402,
+      "comments": 819,
+      "durationSeconds": 485,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/K5j47JWr9_g/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=K5j47JWr9_g"
+    },
+    {
+      "id": "QQVmuuSqv18",
+      "title": "How to Create Stickman Animation with AI 100% FREE",
+      "publishedAt": "2026-03-04T16:27:49Z",
+      "views": 247377,
+      "likes": 9059,
+      "comments": 299,
+      "durationSeconds": 282,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/QQVmuuSqv18/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=QQVmuuSqv18"
+    },
+    {
+      "id": "mRNtqoLH4hU",
+      "title": "I Made a Full AI Music Video Using Grok + Suno… FOR FREE (Insane Results!)",
+      "publishedAt": "2025-11-27T17:59:32Z",
+      "views": 137373,
+      "likes": 3950,
+      "comments": 348,
+      "durationSeconds": 417,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/mRNtqoLH4hU/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=mRNtqoLH4hU"
+    },
+    {
+      "id": "XQXwNdR3J7I",
+      "title": "Grok AI Cinematography Masterclass 🚀 38 Cinematic Camera Movement Prompts",
+      "publishedAt": "2026-01-06T09:58:17Z",
+      "views": 134264,
+      "likes": 8021,
+      "comments": 425,
+      "durationSeconds": 834,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/XQXwNdR3J7I/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=XQXwNdR3J7I"
+    }
+  ]
+}

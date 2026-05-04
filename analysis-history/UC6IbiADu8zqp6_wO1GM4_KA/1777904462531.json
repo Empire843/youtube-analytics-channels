@@ -1,0 +1,141 @@
+{
+  "channelId": "UC6IbiADu8zqp6_wO1GM4_KA",
+  "channelTitle": "Psychology Insight",
+  "channelThumbnail": "https://yt3.ggpht.com/qMDxyX2vEJ_hIM1WlR56j1tI7E9dEyCyYhLlwiqFsdPyUKJpKX33kjC-HN_S_MT6C7RHM6rA=s800-c-k-c0x00ffffff-no-rj",
+  "customUrl": "@psychologyinsight-s8k",
+  "country": "IN",
+  "subscriberCount": 35000,
+  "totalViews": 4552076,
+  "videoCount": 25,
+  "analyzedAt": "2026-05-04T14:21:02.531Z",
+  "timestamp": 1777904462531,
+  "publicMetrics": {
+    "avgViewsPerVideo": 182083.04,
+    "totalViews": 4552076,
+    "totalVideos": 25,
+    "lastUpdated": "2026-05-04T00:30:16Z",
+    "hasShort": false,
+    "shortCount": 0,
+    "shortRatio": 0,
+    "recentAvgViews": 182295.4,
+    "recentMedianViews": 6739,
+    "avgLikes": 4172.92,
+    "avgComments": 481.28,
+    "avgDurationSeconds": 405.56,
+    "engagementRate": 2.553108855187789,
+    "avgDaysBetweenUploads": 2.7647579089506173,
+    "contentProfile": "long-form",
+    "uploadConsistencyScore": 91.70572627314814,
+    "growthScore": 49,
+    "growthBand": "watch",
+    "fetchedAt": "2026-05-04T14:21:02.531Z"
+  },
+  "estimates": {
+    "estimatedMonthlyViews": 1978062,
+    "estimatedRpmLow": 0.4239559593933802,
+    "estimatedRpmHigh": 3.2974352397262905,
+    "estimatedMonthlyRevenueLow": 838.6110872470654,
+    "estimatedMonthlyRevenueHigh": 6522.530678588286,
+    "channelMaturityScore": 66.46243542075115,
+    "confidence": "medium-high",
+    "notes": [
+      "RPM/Doanh thu ước tính được mô phỏng từ số lượt xem gần đây, tần suất đăng video, mức độ tương tác và tỷ lệ shorts.",
+      "Những con số này chỉ mang tính định hướng và không phải là dữ liệu YouTube Analytics được chủ kênh xác thực."
+    ]
+  },
+  "aiInsights": {
+    "model": "gemini-2.5-pro",
+    "generatedAt": "2026-05-04T14:21:39.043Z",
+    "insights": {
+      "summary": "Kênh có hiệu suất vượt trội với lượt xem trung bình mỗi video rất cao, chủ yếu nhờ vào một vài video lan truyền (viral). Tuy nhiên, có sự chênh lệch lớn giữa lượt xem trung bình và lượt xem trung vị, cho thấy sự phụ thuộc vào các video nổi bật này. Mặc dù có tỷ lệ tương tác tốt và lịch đăng bài nhất quán, sự phụ thuộc vào sự lan truyền là một rủi ro cho sự tăng trưởng bền vững.",
+      "strengths": [
+        "Lượt xem trung bình trên mỗi video cực kỳ cao (hơn 182k), cho thấy khả năng tạo ra nội dung có sức lan tỏa lớn.",
+        "Tỷ lệ tương tác (thích, bình luận) mạnh mẽ, xây dựng một cộng đồng gắn kết.",
+        "Lịch đăng video rất nhất quán (khoảng 2-3 ngày một video), giữ chân khán giả quay trở lại.",
+        "Chủ đề tâm lý học có chiều sâu, thu hút được đối tượng khán giả trung thành và có giá trị cao đối với nhà quảng cáo."
+      ],
+      "risks": [
+        "Sự chênh lệch khổng lồ giữa lượt xem trung bình (182k) và lượt xem trung vị (6.7k) cho thấy sự tăng trưởng không bền vững, phụ thuộc nặng nề vào một vài video lan truyền.",
+        "Nếu không thể tái tạo thành công của các video lan truyền, kênh có nguy cơ sụt giảm lượt xem nghiêm trọng và mất đà tăng trưởng.",
+        "Tốc độ tăng trưởng người đăng ký có thể không tương xứng với lượt xem, cho thấy tỷ lệ chuyển đổi từ người xem sang người đăng ký chưa cao.",
+        "Đối tượng khán giả chính ở Ấn Độ có thể dẫn đến RPM (doanh thu trên 1000 lượt xem) thấp hơn so với các thị trường Âu-Mỹ."
+      ],
+      "opportunities": [
+        "Chưa khai thác YouTube Shorts. Việc cắt các đoạn clip hấp dẫn từ video dài để đăng lên Shorts có thể thúc đẩy mạnh mẽ việc khám phá kênh và thu hút người đăng ký mới.",
+        "Phân tích sâu các video lan truyền thành công để tìm ra công thức (chủ đề, cấu trúc, tiêu đề) và áp dụng cho các video trong tương lai để tăng tính nhất quán.",
+        "Xây dựng cộng đồng sâu hơn bằng cách sử dụng tab Cộng đồng, tổ chức các buổi hỏi đáp (Q&A) để tăng cường sự gắn kết và lòng trung thành.",
+        "Đa dạng hóa nguồn thu nhập ngoài quảng cáo, ví dụ như tiếp thị liên kết cho sách tâm lý học, khóa học online hoặc các sản phẩm, dịch vụ liên quan."
+      ],
+      "nextActions": [
+        "**Bắt đầu chiến lược YouTube Shorts ngay lập tức**: Cắt những đoạn 60 giây hấp dẫn nhất từ các video dài có hiệu suất cao nhất để tạo 3-5 Shorts mỗi tuần nhằm tăng khả năng khám phá.",
+        "**Phân tích 3 video hàng đầu**: Xác định chính xác chủ đề, cấu trúc kể chuyện, và công thức tiêu đề/hình thu nhỏ đã thành công. Lên kế hoạch sản xuất 4 video tiếp theo dựa trên những phân tích này.",
+        "**Tối ưu hóa tỷ lệ chuyển đổi đăng ký**: Thêm các lời kêu gọi hành động (CTA) mạnh mẽ hơn ở giữa và cuối video, cũng như trong bình luận được ghim để khuyến khích người xem nhấn nút đăng ký.",
+        "**Tương tác cộng đồng**: Đăng một cuộc thăm dò ý kiến trên tab Cộng đồng trong tuần này để hỏi khán giả về chủ đề họ muốn xem tiếp theo, nhằm tăng sự gắn kết và thu thập ý tưởng nội dung."
+      ],
+      "monetizationView": "Tiềm năng kiếm tiền từ quảng cáo YouTube (AdSense) là rất lớn nhờ vào lượng xem hàng tháng ước tính cao. Tuy nhiên, doanh thu thực tế sẽ phụ thuộc vào việc giữ chân khán giả xem video lâu hơn để tối đa hóa quảng cáo giữa video (mid-roll ads). Kênh nên chủ động đa dạng hóa nguồn thu bằng cách tích hợp các liên kết tiếp thị cho sách, khóa học tâm lý học, hoặc các dịch vụ tư vấn, đây là những sản phẩm/dịch vụ có sự liên kết chặt chẽ với nội dung và đối tượng khán giả của kênh.",
+      "contentStrategy": "Chiến lược hiện tại đang phụ thuộc quá nhiều vào 'may mắn' để có video lan truyền. Cần chuyển đổi sang một mô hình bền vững hơn. **Trọng tâm chính**: Phân tích sâu các yếu tố thành công của video viral (chủ đề, cách kể chuyện, góc nhìn độc đáo) và xây dựng một hệ thống để tái tạo chúng một cách nhất quán. **Mô hình đề xuất**: Áp dụng mô hình 'Hub and Spoke' - video dài là nội dung cốt lõi ('Hub'), và sử dụng Shorts cùng các bài đăng Cộng đồng làm nội dung vệ tinh ('Spoke') để thu hút khán giả mới và tăng tương tác. Mục tiêu là nâng cao mức xem 'sàn' của tất cả các video, thay vì chỉ có một vài video đột phá và phần còn lại có hiệu suất thấp."
+    }
+  },
+  "topRecentVideos": [
+    {
+      "id": "DHEDiXy7B-Q",
+      "title": "Psychology of People With Extremely High IQ",
+      "publishedAt": "2026-03-11T00:30:09Z",
+      "views": 2546100,
+      "likes": 35550,
+      "comments": 4441,
+      "durationSeconds": 356,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/DHEDiXy7B-Q/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=DHEDiXy7B-Q"
+    },
+    {
+      "id": "irA2_BrdKVs",
+      "title": "10 Signs You Have Traumatic Intelligence The Rarest Form of Smart | Psychology explain",
+      "publishedAt": "2026-04-07T12:31:00Z",
+      "views": 913920,
+      "likes": 41065,
+      "comments": 4317,
+      "durationSeconds": 373,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/irA2_BrdKVs/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=irA2_BrdKVs"
+    },
+    {
+      "id": "La3WDl3WqjQ",
+      "title": "People Who Think Too Much | Psychology explain ",
+      "publishedAt": "2026-03-20T01:30:20Z",
+      "views": 614299,
+      "likes": 13333,
+      "comments": 1200,
+      "durationSeconds": 381,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/La3WDl3WqjQ/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=La3WDl3WqjQ"
+    },
+    {
+      "id": "FjT0-LU1uvY",
+      "title": "Psychology of Struggles Only High IQ People Face",
+      "publishedAt": "2026-04-10T18:43:14Z",
+      "views": 152722,
+      "likes": 3117,
+      "comments": 467,
+      "durationSeconds": 481,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/FjT0-LU1uvY/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=FjT0-LU1uvY"
+    },
+    {
+      "id": "psEaSfuQ2EU",
+      "title": "10 Signs That Show You’re Gifted  90% of People Don’t Know",
+      "publishedAt": "2026-04-01T12:41:03Z",
+      "views": 107149,
+      "likes": 4516,
+      "comments": 476,
+      "durationSeconds": 559,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/psEaSfuQ2EU/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=psEaSfuQ2EU"
+    }
+  ]
+}

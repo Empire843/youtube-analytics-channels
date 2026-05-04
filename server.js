@@ -13,6 +13,10 @@ const PORT = process.env.PORT || 3000;
 const DEFAULT_YOUTUBE_API_KEY = process.env.YOUTUBE_API_KEY || "";
 const DEFAULT_GEMINI_API_KEY = process.env.GEMINI_API_KEY || "";
 const DEFAULT_GEMINI_MODEL = process.env.GEMINI_MODEL || "gemini-2.0-flash";
+const AI_PROVIDER = process.env.AI_PROVIDER || "gemini";
+const DEFAULT_WOKUSHOP_API_KEY = process.env.WOKUSHOP_API_KEY || "";
+const DEFAULT_WOKUSHOP_MODEL = process.env.WOKUSHOP_MODEL || "gemini-2.5-pro";
+const WOKUSHOP_BASE_URL = process.env.WOKUSHOP_BASE_URL || "https://llm.wokushop.com/v1";
 const YT_DLP_PATH =
   process.env.YT_DLP_PATH ||
   "C:\\Users\\kienq\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\yt-dlp.exe";
@@ -20,6 +24,7 @@ const PUBLIC_DIR = path.join(__dirname, "public");
 const MAX_RECENT_VIDEOS = 30;
 const DOWNLOADS_DIR = path.join(__dirname, "downloads");
 const PROMPT_LIBRARY_DIR = path.join(__dirname, "prompt-library");
+const ANALYSIS_HISTORY_DIR = path.join(__dirname, "analysis-history");
 
 const MIME_TYPES = {
   ".html": "text/html; charset=utf-8",
@@ -86,6 +91,10 @@ if (!fs.existsSync(DOWNLOADS_DIR)) {
 
 if (!fs.existsSync(PROMPT_LIBRARY_DIR)) {
   fs.mkdirSync(PROMPT_LIBRARY_DIR, { recursive: true });
+}
+
+if (!fs.existsSync(ANALYSIS_HISTORY_DIR)) {
+  fs.mkdirSync(ANALYSIS_HISTORY_DIR, { recursive: true });
 }
 
 function logServerEvent(scope, message, extra = null) {
@@ -237,6 +246,44 @@ async function callGemini({ apiKey, model, prompt }) {
   return combined;
 }
 
+async function callWokushop({ apiKey, model, prompt }) {
+  const endpoint = `${WOKUSHOP_BASE_URL}/chat/completions`;
+  const payload = {
+    model: model || DEFAULT_WOKUSHOP_MODEL,
+    messages: [{ role: "user", content: prompt }],
+  };
+
+  const response = await fetch(endpoint, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${apiKey}`,
+    },
+    body: JSON.stringify(payload),
+  });
+
+  const text = await response.text();
+  let json;
+
+  try {
+    json = text ? JSON.parse(text) : {};
+  } catch (error) {
+    throw new Error(`Invalid Wokushop response: ${text.slice(0, 200)}`);
+  }
+
+  if (!response.ok) {
+    const message = json?.error?.message || `Wokushop error ${response.status}`;
+    throw new Error(message);
+  }
+
+  const content = json?.choices?.[0]?.message?.content || "";
+  if (!content) {
+    throw new Error("Wokushop returned no text.");
+  }
+
+  return content;
+}
+
 function runExecFile(file, args, options = {}) {
   return new Promise((resolve, reject) => {
     execFile(file, args, { windowsHide: true, maxBuffer: 20 * 1024 * 1024, ...options }, (error, stdout, stderr) => {
@@ -354,8 +401,8 @@ function estimateMonetization({
     channelMaturityScore,
     confidence: shortRatio >= 0.65 ? "low" : shortRatio >= 0.35 ? "medium" : "medium-high",
     notes: [
-      "Estimated RPM/revenue are modeled from recent views, upload cadence, engagement, and shorts mix.",
-      "These numbers are directional only and are not owner-verified YouTube revenue analytics.",
+      "RPM/Doanh thu ước tính được mô phỏng từ số lượt xem gần đây, tần suất đăng video, mức độ tương tác và tỷ lệ shorts.",
+      "Những con số này chỉ mang tính định hướng và không phải là dữ liệu YouTube Analytics được chủ kênh xác thực.",
     ],
   };
 }
@@ -376,6 +423,7 @@ function buildGeminiPrompt({ channel, publicMetrics, estimates, ownerMetrics }) 
     "Analyze the channel metrics below and return valid JSON only.",
     "Focus on business insight, content strategy, monetization, risks, and next actions.",
     "Keep recommendations specific and practical.",
+    "ALL content values and text inside the JSON MUST be written in Vietnamese.",
     "",
     "Return this exact JSON shape:",
     '{"summary":"string","strengths":["string"],"risks":["string"],"opportunities":["string"],"nextActions":["string"],"monetizationView":"string","contentStrategy":"string"}',
@@ -402,12 +450,17 @@ function buildGeminiPrompt({ channel, publicMetrics, estimates, ownerMetrics }) 
 }
 
 async function buildAiInsights(payload) {
-  const apiKey = payload.geminiApiKey || DEFAULT_GEMINI_API_KEY;
-  const model = payload.geminiModel || DEFAULT_GEMINI_MODEL;
+  const provider = payload.aiProvider || AI_PROVIDER;
+  const apiKey = provider === "wokushop" 
+    ? (payload.wokushopApiKey || DEFAULT_WOKUSHOP_API_KEY)
+    : (payload.geminiApiKey || DEFAULT_GEMINI_API_KEY);
+  const model = provider === "wokushop"
+    ? (payload.wokushopModel || DEFAULT_WOKUSHOP_MODEL)
+    : (payload.geminiModel || DEFAULT_GEMINI_MODEL);
   const { channel, publicMetrics, estimates, ownerMetrics } = payload;
 
   if (!apiKey) {
-    throw new Error("Gemini API key is not configured.");
+    throw new Error(`${provider === "wokushop" ? "Wokushop" : "Gemini"} API key is not configured.`);
   }
 
   if (!channel || !publicMetrics || !estimates) {
@@ -421,7 +474,12 @@ async function buildAiInsights(payload) {
     ownerMetrics,
   });
 
-  const raw = await callGemini({ apiKey, model, prompt });
+  let raw;
+  if (provider === "wokushop") {
+    raw = await callWokushop({ apiKey, model, prompt });
+  } else {
+    raw = await callGemini({ apiKey, model, prompt });
+  }
   const cleaned = raw.replace(/^```json\s*/u, "").replace(/```$/u, "").trim();
   let parsed;
 
@@ -497,6 +555,7 @@ function buildPromptAnalysisPrompt({ title, prompt, renderedPrompt, variables })
     "Analyze the prompt below and return valid JSON only.",
     "Classify the prompt into practical library groups for future retrieval and reuse.",
     "Be concrete, concise, and useful.",
+    "ALL content values and text inside the JSON MUST be written in Vietnamese.",
     "",
     "Return this exact JSON shape:",
     '{"suggestedTitle":"string","summary":"string","primaryGroup":"string","groups":["string"],"tags":["string"],"useCases":["string"],"qualityNotes":["string"],"risks":["string"],"variables":[{"name":"string","purpose":"string","suggestedType":"string"}]}',
@@ -549,7 +608,7 @@ function heuristicPromptAnalysis({ title, prompt, renderedPrompt, variables }) {
   }
   if (variables.length) {
     tags.push("template");
-    useCases.push("Reusable prompt with variable placeholders");
+    useCases.push("Prompt tái sử dụng với các biến thay thế");
   }
   if (/step by step|chain of thought|reason/u.test(source)) {
     tags.push("reasoning");
@@ -565,38 +624,43 @@ function heuristicPromptAnalysis({ title, prompt, renderedPrompt, variables }) {
       .replace(/\s+/gu, " ")
       .trim()
       .slice(0, 72) ||
-    "Untitled prompt";
+    "Prompt chưa có tên";
 
   return {
     suggestedTitle: cleanTitle,
-    summary: `A ${primaryGroup} prompt template intended for reuse${variables.length ? ` with ${variables.length} variables` : ""}.`,
+    summary: `Một prompt template thuộc nhóm ${primaryGroup} dành cho việc tái sử dụng${variables.length ? ` với ${variables.length} biến` : ""}.`,
     primaryGroup,
     groups: uniqueStrings([primaryGroup, ...groups]),
     tags: uniqueStrings(tags),
     useCases: uniqueStrings(
       useCases.length
         ? useCases
-        : ["Reusable prompt for content generation or structured AI assistance"]
+        : ["Prompt tái sử dụng cho việc tạo nội dung hoặc hỗ trợ AI có cấu trúc"]
     ),
     qualityNotes: [
       variables.length
-        ? "Contains reusable variables, which makes the prompt easier to repurpose."
-        : "Works as a direct prompt without additional placeholders.",
+        ? "Chứa các biến có thể tái sử dụng, giúp prompt dễ dàng được sử dụng lại cho nhiều mục đích."
+        : "Hoạt động như một prompt trực tiếp mà không cần thêm các biến thay thế.",
     ],
     risks: [
-      "Review saved prompts before production use because AI-generated classification may not always be perfect.",
+      "Hãy kiểm tra lại các prompt đã lưu trước khi sử dụng chính thức vì phân loại do AI (hoặc thuật toán) tạo ra có thể không hoàn hảo.",
     ],
     variables: (variables || []).map((variable) => ({
       name: variable.name,
-      purpose: "Variable placeholder used in the prompt template.",
+      purpose: "Biến thay thế được sử dụng trong prompt template.",
       suggestedType: "text",
     })),
   };
 }
 
 async function analyzePromptEntry(payload = {}) {
-  const apiKey = payload.geminiApiKey || DEFAULT_GEMINI_API_KEY;
-  const model = payload.geminiModel || DEFAULT_GEMINI_MODEL;
+  const provider = payload.aiProvider || AI_PROVIDER;
+  const apiKey = provider === "wokushop" 
+    ? (payload.wokushopApiKey || DEFAULT_WOKUSHOP_API_KEY)
+    : (payload.geminiApiKey || DEFAULT_GEMINI_API_KEY);
+  const model = provider === "wokushop"
+    ? (payload.wokushopModel || DEFAULT_WOKUSHOP_MODEL)
+    : (payload.geminiModel || DEFAULT_GEMINI_MODEL);
   const prompt = String(payload.prompt || "").trim();
   const renderedPrompt = String(payload.renderedPrompt || "").trim();
   const title = String(payload.title || "").trim();
@@ -608,7 +672,8 @@ async function analyzePromptEntry(payload = {}) {
 
   logServerEvent("prompt-analyze", "analysis requested", {
     length: prompt.length,
-    hasGeminiKey: Boolean(apiKey),
+    hasApiKey: Boolean(apiKey),
+    provider,
     variableCount: Array.isArray(variables) ? variables.length : 0,
   });
 
@@ -634,7 +699,14 @@ async function analyzePromptEntry(payload = {}) {
       renderedPrompt,
       variables,
     });
-    const raw = await callGemini({ apiKey, model, prompt: aiPrompt });
+    
+    let raw;
+    if (provider === "wokushop") {
+      raw = await callWokushop({ apiKey, model, prompt: aiPrompt });
+    } else {
+      raw = await callGemini({ apiKey, model, prompt: aiPrompt });
+    }
+    
     const cleaned = raw.replace(/^```json\s*/u, "").replace(/```$/u, "").trim();
     const parsed = JSON.parse(cleaned);
 
@@ -1544,9 +1616,9 @@ function buildPublicMetrics(channel, videos) {
         title: video.title,
       })),
     notes: [
-      "Public data can estimate channel performance but cannot expose private revenue or demographic analytics.",
-      "Estimated RPM and revenue are modeled approximations for link-only analysis.",
-      "Subscriber trend, RPM, geography, and age/gender require owner-authorized YouTube Analytics access.",
+      "Dữ liệu công khai có thể ước tính hiệu suất kênh nhưng không thể hiển thị doanh thu ẩn hoặc phân tích nhân khẩu học.",
+      "RPM và doanh thu ước tính là những con số mô phỏng dựa trên phân tích từ đường dẫn.",
+      "Xu hướng người đăng ký, RPM, địa lý, và độ tuổi/giới tính yêu cầu quyền truy cập YouTube Analytics từ chủ kênh.",
     ],
   };
 }
@@ -1710,6 +1782,531 @@ async function buildOwnerMetrics(payload) {
   };
 }
 
+// ── Competitor Finder ──────────────────────────────────────────
+
+function buildChannelDnaPrompt(channel, videoTitles) {
+  return `You are an elite YouTube channel analyst. Analyze the following YouTube channel and determine its "Channel DNA".
+
+Channel Name: ${channel.snippet?.title || ""}
+Channel Description: ${channel.snippet?.description || "No description"}
+Channel Keywords: ${channel.brandingSettings?.channel?.keywords || "None"}
+
+Recent Video Titles:
+${videoTitles.map((t, i) => `${i + 1}. ${t}`).join("\n")}
+
+Based on this data, return EXACTLY a JSON object with:
+1. "topic": The core subject matter (1-3 words).
+2. "contentStyle": The format of the videos (e.g. "Faceless Whiteboard Animation", "Talking Head", "Vlog", "Gameplay", "News Voiceover").
+3. "tone": The vibe or tone of the channel (e.g. "Humorous", "Educational & Serious", "Dramatic", "Relaxing").
+4. "searchQueries": An array of 3-5 hyper-specific YouTube search queries that combine the topic and content style to find DIRECT competitors (e.g. ["faceless whiteboard personal finance", "finance animation education"]).
+5. "language": The primary language of the content.
+
+Return ONLY valid JSON, no markdown, no explanation.`;
+}
+
+function buildCompetitorFilterPrompt(sourceDna, candidates) {
+  const candidateList = candidates
+    .map(
+      (c, i) =>
+        `[ID: ${c.channelId}]\nTitle: ${c.title}\nDesc: ${c.description}\n---\n`
+    )
+    .join("\n");
+
+  return `You are a YouTube competitive analysis AI. Your job is to filter a list of potential competitor channels to find only the TRUE competitors.
+
+SOURCE CHANNEL DNA:
+- Topic: ${sourceDna.topic}
+- Content Style: ${sourceDna.contentStyle}
+- Tone: ${sourceDna.tone}
+- Language: ${sourceDna.language}
+
+POTENTIAL COMPETITORS:
+${candidateList}
+
+TASK:
+Filter the potential competitors. Remove any channels that do NOT match the Source Channel's "Content Style", "Tone", or "Language". For example, if the source is "Faceless Animation", remove "Talking Head Vloggers" even if they talk about the same topic.
+
+Return EXACTLY a JSON array containing ONLY the string "channelId" of the true competitors, sorted from most similar to least similar.
+Example: ["UC1234567890", "UC0987654321"]
+Return ONLY the JSON array, no markdown.`;
+}
+
+function buildCompetitorAnalysisPrompt(source, competitors) {
+  const compList = competitors
+    .slice(0, 10)
+    .map(
+      (c, i) =>
+        `${i + 1}. ${c.title} (${c.customUrl || c.channelId}) — ${Number(c.subscribers).toLocaleString()} subs, ${Number(c.totalViews).toLocaleString()} views, ${c.videoCount} videos`
+    )
+    .join("\n");
+
+  return `You are a YouTube competitive analysis expert. Analyze the competitive landscape for the following channel.
+All analysis MUST be written in Vietnamese.
+
+SOURCE CHANNEL:
+- Name: ${source.title}
+- Subscribers: ${Number(source.subscribers).toLocaleString()}
+- Total Views: ${Number(source.totalViews).toLocaleString()}
+- Videos: ${source.videoCount}
+- Niche: ${source.nicheDescription || source.nicheKeywords?.join(", ") || "Unknown"}
+
+COMPETITOR CHANNELS:
+${compList}
+
+Return a JSON object with:
+{
+  "nichePosition": "Vị trí của kênh gốc so với đối thủ (leader/challenger/follower/niche player)",
+  "summary": "Tóm tắt 2-3 câu về bức tranh cạnh tranh",
+  "strengths": ["Điểm mạnh 1", "Điểm mạnh 2"],
+  "weaknesses": ["Điểm yếu 1", "Điểm yếu 2"],
+  "opportunities": ["Cơ hội 1", "Cơ hội 2"],
+  "threats": ["Mối đe dọa 1", "Mối đe dọa 2"],
+  "topCompetitors": ["Tên kênh đối thủ đáng chú ý nhất", "..."],
+  "recommendations": ["Gợi ý chiến lược 1", "Gợi ý chiến lược 2"]
+}
+Return ONLY valid JSON, no markdown.`;
+}
+
+async function extractChannelDna(apiKey, channel) {
+  const uploadsPlaylistId = channel.contentDetails?.relatedPlaylists?.uploads;
+  let videoTitles = [];
+
+  if (uploadsPlaylistId) {
+    try {
+      const uploads = await getUploads(apiKey, uploadsPlaylistId, 15);
+      const videoIds = uploads
+        .map((item) => item.contentDetails?.videoId)
+        .filter(Boolean);
+      const videos = await getVideoDetails(apiKey, videoIds);
+      videoTitles = videos.map((v) => v.snippet?.title || "").filter(Boolean);
+    } catch (error) {
+      logServerEvent("competitors", "failed to fetch videos for dna", {
+        error: error.message,
+      });
+    }
+  }
+
+  const prompt = buildChannelDnaPrompt(channel, videoTitles);
+  const provider = AI_PROVIDER;
+  const geminiKey = DEFAULT_GEMINI_API_KEY;
+  const wokushopKey = DEFAULT_WOKUSHOP_API_KEY;
+
+  let raw;
+  try {
+    if (provider === "wokushop" && wokushopKey) {
+      raw = await callWokushop({
+        apiKey: wokushopKey,
+        model: DEFAULT_WOKUSHOP_MODEL,
+        prompt,
+      });
+    } else if (geminiKey) {
+      raw = await callGemini({
+        apiKey: geminiKey,
+        model: DEFAULT_GEMINI_MODEL,
+        prompt,
+      });
+    } else {
+      const title = channel.snippet?.title || "youtube channel";
+      return {
+        topic: title,
+        contentStyle: "Unknown",
+        tone: "Unknown",
+        searchQueries: [title],
+        language: "Unknown",
+      };
+    }
+  } catch (error) {
+    logServerEvent("competitors", "AI DNA extraction failed", {
+      error: error.message,
+    });
+    return {
+      topic: channel.snippet?.title || "youtube channel",
+      contentStyle: "Unknown",
+      tone: "Unknown",
+      searchQueries: [channel.snippet?.title || "youtube"],
+      language: "Unknown",
+    };
+  }
+
+  const cleaned = raw.replace(/^```json\s*/u, "").replace(/```$/u, "").trim();
+  try {
+    const parsed = JSON.parse(cleaned);
+    return {
+      topic: parsed.topic || channel.snippet?.title || "Unknown",
+      contentStyle: parsed.contentStyle || "Unknown",
+      tone: parsed.tone || "Unknown",
+      searchQueries: parsed.searchQueries || [channel.snippet?.title || "youtube"],
+      language: parsed.language || "Unknown",
+    };
+  } catch (error) {
+    return {
+      topic: channel.snippet?.title || "Unknown",
+      contentStyle: "Unknown",
+      tone: "Unknown",
+      searchQueries: [channel.snippet?.title || "youtube"],
+      language: "Unknown",
+    };
+  }
+}
+
+async function searchCompetitorChannels(
+  apiKey,
+  keywords,
+  sourceChannelId,
+  maxResults = 10
+) {
+  const channelIdSet = new Set();
+  const channelIdOrder = [];
+
+  // Strategy 1: Search for channels directly by each keyword
+  for (const keyword of keywords.slice(0, 3)) {
+    try {
+      const data = await fetchJson(
+        `https://www.googleapis.com/youtube/v3/search?part=snippet&type=channel&maxResults=15&q=${encodeURIComponent(
+          keyword
+        )}&key=${encodeURIComponent(apiKey)}`
+      );
+      for (const item of data.items || []) {
+        const cid = item.snippet?.channelId || item.id?.channelId;
+        if (cid && cid !== sourceChannelId && !channelIdSet.has(cid)) {
+          channelIdSet.add(cid);
+          channelIdOrder.push(cid);
+        }
+      }
+    } catch (error) {
+      logServerEvent("competitors", `channel search failed for "${keyword}"`, {
+        error: error.message,
+      });
+    }
+  }
+
+  // Strategy 2: Search for popular videos in the niche, extract channelIds
+  for (const keyword of keywords.slice(0, 2)) {
+    try {
+      const data = await fetchJson(
+        `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=20&order=viewCount&q=${encodeURIComponent(
+          keyword
+        )}&key=${encodeURIComponent(apiKey)}`
+      );
+      for (const item of data.items || []) {
+        const cid = item.snippet?.channelId;
+        if (cid && cid !== sourceChannelId && !channelIdSet.has(cid)) {
+          channelIdSet.add(cid);
+          channelIdOrder.push(cid);
+        }
+      }
+    } catch (error) {
+      logServerEvent("competitors", `video search failed for "${keyword}"`, {
+        error: error.message,
+      });
+    }
+  }
+
+  if (!channelIdOrder.length) {
+    return [];
+  }
+
+  // Fetch channel details in batches of 50
+  const allChannels = [];
+  const batchIds = channelIdOrder.slice(0, Math.min(channelIdOrder.length, 50));
+  try {
+    const data = await fetchJson(
+      `https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=${encodeURIComponent(
+        batchIds.join(",")
+      )}&key=${encodeURIComponent(apiKey)}`
+    );
+    for (const ch of data.items || []) {
+      allChannels.push({
+        channelId: ch.id,
+        title: ch.snippet?.title || "",
+        thumbnail:
+          ch.snippet?.thumbnails?.medium?.url ||
+          ch.snippet?.thumbnails?.default?.url ||
+          "",
+        customUrl: ch.snippet?.customUrl || "",
+        country: ch.snippet?.country || "",
+        description: (ch.snippet?.description || "").slice(0, 300),
+        publishedAt: ch.snippet?.publishedAt || "",
+        subscribers: Number(ch.statistics?.subscriberCount || 0),
+        totalViews: Number(ch.statistics?.viewCount || 0),
+        videoCount: Number(ch.statistics?.videoCount || 0),
+        hiddenSubscriberCount: Boolean(ch.statistics?.hiddenSubscriberCount),
+      });
+    }
+  } catch (error) {
+    logServerEvent("competitors", "batch channel details failed", {
+      error: error.message,
+    });
+  }
+
+  // Sort by subscribers descending, return top N
+  allChannels.sort((a, b) => b.subscribers - a.subscribers);
+  return allChannels;
+}
+
+async function filterCompetitorsByStyle(sourceDna, candidates, maxResults) {
+  if (!candidates || candidates.length === 0) return [];
+
+  const provider = AI_PROVIDER;
+  const geminiKey = DEFAULT_GEMINI_API_KEY;
+  const wokushopKey = DEFAULT_WOKUSHOP_API_KEY;
+
+  const prompt = buildCompetitorFilterPrompt(sourceDna, candidates);
+  let raw;
+
+  try {
+    if (provider === "wokushop" && wokushopKey) {
+      raw = await callWokushop({
+        apiKey: wokushopKey,
+        model: DEFAULT_WOKUSHOP_MODEL,
+        prompt,
+      });
+    } else if (geminiKey) {
+      raw = await callGemini({
+        apiKey: geminiKey,
+        model: DEFAULT_GEMINI_MODEL,
+        prompt,
+      });
+    } else {
+      return candidates.slice(0, maxResults);
+    }
+
+    const cleaned = raw.replace(/^```json\s*/u, "").replace(/```$/u, "").trim();
+    const approvedIds = JSON.parse(cleaned);
+
+    if (!Array.isArray(approvedIds)) {
+      throw new Error("AI did not return an array");
+    }
+
+    // Filter and sort candidates based on AI response
+    const filtered = [];
+    for (const id of approvedIds) {
+      const found = candidates.find((c) => c.channelId === id);
+      if (found) filtered.push(found);
+    }
+    
+    // If AI filtered out too many, fallback to some of the largest from original list
+    if (filtered.length < 3) {
+      logServerEvent("competitors", "AI filtered out too many, using fallback");
+      return candidates.slice(0, maxResults);
+    }
+
+    return filtered.slice(0, maxResults);
+  } catch (error) {
+    logServerEvent("competitors", "AI filtering failed", { error: error.message });
+    return candidates.slice(0, maxResults);
+  }
+}
+
+async function findCompetitors(apiKey, channelInput, options = {}) {
+  const maxResults = Math.min(Number(options.maxResults) || 10, 20);
+
+  // 1. Resolve source channel
+  const channel = await resolveChannel(apiKey, channelInput);
+
+  // 2. Extract Channel DNA via AI
+  const dna = await extractChannelDna(apiKey, channel);
+  logServerEvent("competitors", "channel dna extracted", dna);
+
+  // 3. Search for broad competitor candidates
+  const candidates = await searchCompetitorChannels(
+    apiKey,
+    dna.searchQueries,
+    channel.id,
+    maxResults // not used in searchCompetitorChannels anymore, but kept for signature
+  );
+  
+  // 4. AI Deep Filtering to ensure matching style and tone
+  const competitors = await filterCompetitorsByStyle(dna, candidates, maxResults);
+
+  return {
+    source: {
+      channelId: channel.id,
+      title: channel.snippet?.title || "",
+      thumbnail:
+        channel.snippet?.thumbnails?.high?.url ||
+        channel.snippet?.thumbnails?.default?.url ||
+        "",
+      customUrl: channel.snippet?.customUrl || "",
+      country: channel.snippet?.country || "",
+      subscribers: Number(channel.statistics?.subscriberCount || 0),
+      totalViews: Number(channel.statistics?.viewCount || 0),
+      videoCount: Number(channel.statistics?.videoCount || 0),
+      description: (channel.snippet?.description || "").slice(0, 300),
+      topic: dna.topic,
+      contentStyle: dna.contentStyle,
+      tone: dna.tone,
+      searchQueries: dna.searchQueries,
+      language: dna.language,
+    },
+    competitors,
+  };
+}
+
+async function runCompetitorAiAnalysis(source, competitors) {
+  const provider = AI_PROVIDER;
+  const geminiKey = DEFAULT_GEMINI_API_KEY;
+  const wokushopKey = DEFAULT_WOKUSHOP_API_KEY;
+
+  const prompt = buildCompetitorAnalysisPrompt(source, competitors);
+  let raw;
+
+  if (provider === "wokushop" && wokushopKey) {
+    raw = await callWokushop({
+      apiKey: wokushopKey,
+      model: DEFAULT_WOKUSHOP_MODEL,
+      prompt,
+    });
+  } else if (geminiKey) {
+    raw = await callGemini({
+      apiKey: geminiKey,
+      model: DEFAULT_GEMINI_MODEL,
+      prompt,
+    });
+  } else {
+    throw new Error("No AI API key configured.");
+  }
+
+  const cleaned = raw.replace(/^```json\s*/u, "").replace(/```$/u, "").trim();
+  try {
+    return JSON.parse(cleaned);
+  } catch (error) {
+    return { summary: raw };
+  }
+}
+
+function saveAnalysisHistory(data) {
+  const channelId = data.channel?.id || "unknown";
+  const channelDir = path.join(ANALYSIS_HISTORY_DIR, channelId);
+  fs.mkdirSync(channelDir, { recursive: true });
+
+  const timestamp = Date.now();
+  const record = {
+    channelId,
+    channelTitle: data.channel?.title || "",
+    channelThumbnail: data.channel?.thumbnail || "",
+    customUrl: data.channel?.customUrl || "",
+    country: data.channel?.country || "",
+    subscriberCount: data.channel?.subscriberCount || 0,
+    totalViews: data.channel?.totalViews || 0,
+    videoCount: data.channel?.videoCount || 0,
+    analyzedAt: new Date().toISOString(),
+    timestamp,
+    publicMetrics: data.publicMetrics || null,
+    estimates: data.estimates || null,
+    aiInsights: data.aiInsights || null,
+    topRecentVideos: (data.topRecentVideos || []).slice(0, 5),
+  };
+
+  const filename = `${timestamp}.json`;
+  const fullPath = path.join(channelDir, filename);
+  fs.writeFileSync(fullPath, JSON.stringify(record, null, 2), "utf8");
+  logServerEvent("history", "saved analysis", { channelId, path: fullPath });
+  return record;
+}
+
+function updateHistoryAiInsights(channelId, timestamp, aiInsights) {
+  const channelDir = path.join(ANALYSIS_HISTORY_DIR, channelId);
+  const filename = `${timestamp}.json`;
+  const fullPath = path.join(channelDir, filename);
+  if (!fs.existsSync(fullPath)) {
+    return false;
+  }
+  try {
+    const record = JSON.parse(fs.readFileSync(fullPath, "utf8"));
+    record.aiInsights = aiInsights;
+    fs.writeFileSync(fullPath, JSON.stringify(record, null, 2), "utf8");
+    return true;
+  } catch (error) {
+    logServerEvent("history", "failed to update AI insights", { error: error.message });
+    return false;
+  }
+}
+
+function readAllAnalysisHistory() {
+  const channels = [];
+  if (!fs.existsSync(ANALYSIS_HISTORY_DIR)) {
+    return channels;
+  }
+
+  for (const entry of fs.readdirSync(ANALYSIS_HISTORY_DIR, { withFileTypes: true })) {
+    if (!entry.isDirectory()) {
+      continue;
+    }
+    const channelId = entry.name;
+    const channelDir = path.join(ANALYSIS_HISTORY_DIR, channelId);
+    const analyses = [];
+
+    for (const file of fs.readdirSync(channelDir).sort().reverse()) {
+      if (!file.endsWith(".json")) {
+        continue;
+      }
+      try {
+        const record = JSON.parse(fs.readFileSync(path.join(channelDir, file), "utf8"));
+        analyses.push(record);
+      } catch (error) {
+        // skip corrupt files
+      }
+    }
+
+    if (analyses.length) {
+      const latest = analyses[0];
+      channels.push({
+        channelId,
+        channelTitle: latest.channelTitle,
+        channelThumbnail: latest.channelThumbnail,
+        customUrl: latest.customUrl,
+        country: latest.country,
+        subscriberCount: latest.subscriberCount,
+        totalViews: latest.totalViews,
+        latestAnalyzedAt: latest.analyzedAt,
+        analysisCount: analyses.length,
+      });
+    }
+  }
+
+  channels.sort((a, b) => new Date(b.latestAnalyzedAt) - new Date(a.latestAnalyzedAt));
+  return channels;
+}
+
+function readChannelAnalysisHistory(channelId) {
+  const channelDir = path.join(ANALYSIS_HISTORY_DIR, channelId);
+  if (!fs.existsSync(channelDir)) {
+    return [];
+  }
+
+  const analyses = [];
+  for (const file of fs.readdirSync(channelDir).sort().reverse()) {
+    if (!file.endsWith(".json")) {
+      continue;
+    }
+    try {
+      const record = JSON.parse(fs.readFileSync(path.join(channelDir, file), "utf8"));
+      analyses.push(record);
+    } catch (error) {
+      // skip corrupt files
+    }
+  }
+  return analyses;
+}
+
+function deleteAnalysisHistoryEntry(channelId, timestamp) {
+  const channelDir = path.join(ANALYSIS_HISTORY_DIR, channelId);
+  const fullPath = path.join(channelDir, `${timestamp}.json`);
+  if (!fs.existsSync(fullPath)) {
+    throw new Error("Không tìm thấy bản ghi phân tích.");
+  }
+  fs.unlinkSync(fullPath);
+  logServerEvent("history", "deleted entry", { channelId, timestamp });
+
+  // Clean up empty channel dir
+  const remaining = fs.readdirSync(channelDir).filter((f) => f.endsWith(".json"));
+  if (!remaining.length) {
+    fs.rmdirSync(channelDir);
+  }
+  return { deleted: true, channelId, timestamp };
+}
+
 function serveStatic(req, res, pathname) {
   const relativePath = pathname === "/" ? "/index.html" : pathname;
   const targetPath = path.normalize(path.join(PUBLIC_DIR, relativePath));
@@ -1777,6 +2374,14 @@ const server = http.createServer(async (req, res) => {
       const videos = await getVideoDetails(apiKey, videoIds);
       const metrics = buildPublicMetrics(channel, videos);
 
+      // Save to analysis history
+      try {
+        const historyRecord = saveAnalysisHistory(metrics);
+        metrics._historyTimestamp = historyRecord.timestamp;
+      } catch (historyError) {
+        logServerEvent("history", "failed to save", { error: historyError.message });
+      }
+
       sendJson(res, 200, metrics);
       return;
     }
@@ -1819,6 +2424,16 @@ const server = http.createServer(async (req, res) => {
       const rawBody = await readBody(req);
       const payload = rawBody ? JSON.parse(rawBody) : {};
       const insights = await buildAiInsights(payload);
+
+      // Update history with AI insights if timestamp provided
+      if (payload.historyTimestamp && payload.channel?.id) {
+        try {
+          updateHistoryAiInsights(payload.channel.id, payload.historyTimestamp, insights);
+        } catch (err) {
+          logServerEvent("history", "failed to update AI insights", { error: err.message });
+        }
+      }
+
       sendJson(res, 200, insights);
       return;
     }
@@ -1872,6 +2487,63 @@ const server = http.createServer(async (req, res) => {
       const group = url.searchParams.get("group") || "";
       const result = queryPromptLibrary({ search, group });
       sendJson(res, 200, result);
+      return;
+    }
+
+    if (req.method === "GET" && url.pathname === "/api/history") {
+      const channelId = url.searchParams.get("channelId") || "";
+      if (channelId) {
+        const analyses = readChannelAnalysisHistory(channelId);
+        sendJson(res, 200, { channelId, analyses });
+      } else {
+        const channels = readAllAnalysisHistory();
+        sendJson(res, 200, { channels });
+      }
+      return;
+    }
+
+    if (req.method === "POST" && url.pathname === "/api/history/delete") {
+      const rawBody = await readBody(req);
+      const payload = rawBody ? JSON.parse(rawBody) : {};
+      const result = deleteAnalysisHistoryEntry(payload.channelId, payload.timestamp);
+      sendJson(res, 200, result);
+      return;
+    }
+
+    if (req.method === "GET" && url.pathname === "/api/competitors") {
+      const apiKey = url.searchParams.get("apiKey") || DEFAULT_YOUTUBE_API_KEY;
+      const channelInput = url.searchParams.get("channel");
+      const maxResults = url.searchParams.get("maxResults") || "10";
+
+      if (!apiKey || !channelInput) {
+        sendJson(res, 400, {
+          error: "channel is required, and apiKey must be provided either in query params or as YOUTUBE_API_KEY env.",
+        });
+        return;
+      }
+
+      const result = await findCompetitors(apiKey, channelInput, {
+        maxResults: Number(maxResults),
+      });
+      sendJson(res, 200, result);
+      return;
+    }
+
+    if (req.method === "POST" && url.pathname === "/api/competitors/analyze") {
+      const rawBody = await readBody(req);
+      const payload = rawBody ? JSON.parse(rawBody) : {};
+      if (!payload.source || !payload.competitors?.length) {
+        sendJson(res, 400, { error: "source and competitors are required." });
+        return;
+      }
+      const analysis = await runCompetitorAiAnalysis(
+        payload.source,
+        payload.competitors
+      );
+      sendJson(res, 200, {
+        generatedAt: new Date().toISOString(),
+        analysis,
+      });
       return;
     }
 

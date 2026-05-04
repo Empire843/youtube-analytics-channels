@@ -1,0 +1,141 @@
+{
+  "channelId": "UCioDUh-qj1J_wBZ1NjgWyHA",
+  "channelTitle": "Veda",
+  "channelThumbnail": "https://yt3.ggpht.com/1ZG5zOvGEyKWS-s3XibkR2aR3HdDfhavK6rdqDNcUH2qdTf1miJZkxX96DyKnXqqMDquAJKwlg=s800-c-k-c0x00ffffff-no-rj",
+  "customUrl": "@vedaofficialhq",
+  "country": "US",
+  "subscriberCount": 18,
+  "totalViews": 2270,
+  "videoCount": 6,
+  "analyzedAt": "2026-05-04T15:35:07.539Z",
+  "timestamp": 1777908907539,
+  "publicMetrics": {
+    "avgViewsPerVideo": 378.3333333333333,
+    "totalViews": 2270,
+    "totalVideos": 6,
+    "lastUpdated": "2026-05-04T14:44:12Z",
+    "hasShort": false,
+    "shortCount": 0,
+    "shortRatio": 0,
+    "recentAvgViews": 402.6666666666667,
+    "recentMedianViews": 262.5,
+    "avgLikes": 7.833333333333333,
+    "avgComments": 4.333333333333333,
+    "avgDurationSeconds": 526.6666666666666,
+    "engagementRate": 3.021523178807947,
+    "avgDaysBetweenUploads": 1.6328310185185189,
+    "contentProfile": "long-form",
+    "uploadConsistencyScore": 95.10150694444444,
+    "growthScore": 74,
+    "growthBand": "healthy",
+    "fetchedAt": "2026-05-04T15:35:07.539Z"
+  },
+  "estimates": {
+    "estimatedMonthlyViews": 7398,
+    "estimatedRpmLow": 0.43238741721854307,
+    "estimatedRpmHigh": 3.3630132450331125,
+    "estimatedMonthlyRevenueLow": 3.1988858251474728,
+    "estimatedMonthlyRevenueHigh": 24.880223084480342,
+    "channelMaturityScore": 13.84417604856512,
+    "confidence": "medium-high",
+    "notes": [
+      "RPM/Doanh thu ước tính được mô phỏng từ số lượt xem gần đây, tần suất đăng video, mức độ tương tác và tỷ lệ shorts.",
+      "Những con số này chỉ mang tính định hướng và không phải là dữ liệu YouTube Analytics được chủ kênh xác thực."
+    ]
+  },
+  "aiInsights": {
+    "model": "gemini-2.5-pro",
+    "generatedAt": "2026-05-04T15:35:37.264Z",
+    "insights": {
+      "summary": "Đây là một kênh mới với tiềm năng tăng trưởng bùng nổ. Mặc dù chỉ có 18 người đăng ký, kênh có số lượt xem trung bình trên mỗi video rất cao (~400), cho thấy nội dung có sức hút mạnh mẽ và có khả năng được thuật toán YouTube đề xuất. Tần suất đăng tải video gần như mỗi ngày là một lợi thế lớn, nhưng cũng là một rủi ro về sự bền vững. Thách thức lớn nhất hiện tại là chuyển đổi lượng người xem lớn này thành người đăng ký.",
+      "strengths": [
+        "Lượt xem trung bình rất cao so với số người đăng ký, cho thấy khả năng khám phá tự nhiên của nội dung.",
+        "Tần suất đăng tải video dài cực kỳ nhất quán và dày đặc (gần như mỗi ngày), giúp xây dựng thư viện nội dung nhanh chóng.",
+        "Tỷ lệ tương tác (likes/comments) ở mức tốt (3.02%), thể hiện khán giả có kết nối với nội dung.",
+        "Thời lượng video trung bình lý tưởng (~9 phút), tạo điều kiện để giữ chân người xem và tối đa hóa doanh thu quảng cáo trong tương lai."
+      ],
+      "risks": [
+        "Tỷ lệ chuyển đổi từ lượt xem sang người đăng ký cực kỳ thấp, là dấu hiệu đáng báo động về việc thiếu lời kêu gọi hành động (CTA) hiệu quả.",
+        "Nguy cơ kiệt sức (burnout) cho nhà sáng tạo do lịch đăng video dài quá dày đặc, có thể ảnh hưởng đến chất lượng và tính bền vững.",
+        "Sự phụ thuộc vào việc được 'ăn may' đề xuất từ thuật toán. Nếu không xác định được yếu tố thành công, kênh có thể không duy trì được đà tăng trưởng.",
+        "Chưa xây dựng được thương hiệu hoặc sự kết nối đủ mạnh để người xem cảm thấy cần phải nhấn nút 'Đăng ký'."
+      ],
+      "opportunities": [
+        "Tối ưu hóa lời kêu gọi hành động (Call-to-Action) trong video để tăng mạnh số lượng người đăng ký.",
+        "Tái sử dụng nội dung video dài thành các video Shorts để tăng độ phủ và thu hút thêm người xem mới.",
+        "Xây dựng cộng đồng bằng cách tích cực tương tác với mọi bình luận để biến người xem ngẫu nhiên thành người hâm mộ trung thành.",
+        "Phân tích sâu hơn các video hoạt động tốt nhất để tìm ra 'công thức' thành công và nhân rộng nó."
+      ],
+      "nextActions": [
+        "Thêm lời kêu gọi đăng ký rõ ràng (bằng lời nói và đồ họa) vào đầu và cuối mỗi video.",
+        "Cắt 1-2 clip nổi bật từ mỗi video dài đã đăng để tạo và đăng dưới dạng YouTube Shorts.",
+        "Xem xét giảm tần suất đăng bài xuống 2-3 video/tuần để tập trung hơn vào chất lượng và quảng bá.",
+        "Dành thời gian trả lời tất cả các bình luận, đặt câu hỏi để khuyến khích thảo luận và ghim các bình luận hay nhất."
+      ],
+      "monetizationView": "Kênh đang ở giai đoạn quá sớm để nghĩ về việc kiếm tiền. Mục tiêu duy nhất lúc này nên là đạt được 1,000 người đăng ký và 4,000 giờ xem. Hãy bỏ qua các con số doanh thu ước tính. Tiềm năng kiếm tiền trong tương lai là rất tốt nhờ thời lượng video dài, nhưng đó là câu chuyện của sau này. Đừng tập trung vào tiền, hãy tập trung vào việc xây dựng khán giả.",
+      "contentStrategy": "Tiếp tục sản xuất nội dung theo chủ đề đang hoạt động tốt nhất. Phân tích kỹ 2 video có lượt xem cao nhất: tìm ra điểm chung về tiêu đề, ảnh thumbnail, và cấu trúc nội dung. Hãy thử nghiệm tạo một chuỗi video (series) có liên quan để khuyến khích người xem quay lại. Trước khi sản xuất, luôn tự hỏi: 'Video này mang lại giá trị gì cho người xem?'. Ưu tiên chất lượng và giá trị hơn là số lượng."
+    }
+  },
+  "topRecentVideos": [
+    {
+      "id": "EOrE2OjD2j4",
+      "title": "What Was the First JOB in Human History?",
+      "publishedAt": "2026-04-27T18:59:34Z",
+      "views": 1087,
+      "likes": 15,
+      "comments": 4,
+      "durationSeconds": 498,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/EOrE2OjD2j4/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=EOrE2OjD2j4"
+    },
+    {
+      "id": "VCau7WO5YtI",
+      "title": "What Were the First Words of Humanity?",
+      "publishedAt": "2026-05-01T13:24:24Z",
+      "views": 769,
+      "likes": 16,
+      "comments": 12,
+      "durationSeconds": 519,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/VCau7WO5YtI/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=VCau7WO5YtI"
+    },
+    {
+      "id": "DZmQLlvMM-o",
+      "title": "How Ancient Humans Survived Winter Without Houses?",
+      "publishedAt": "2026-04-26T10:47:49Z",
+      "views": 367,
+      "likes": 10,
+      "comments": 8,
+      "durationSeconds": 487,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/DZmQLlvMM-o/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=DZmQLlvMM-o"
+    },
+    {
+      "id": "YYbOYdWOv1M",
+      "title": "Why Do We Laugh?",
+      "publishedAt": "2026-05-03T13:00:55Z",
+      "views": 158,
+      "likes": 5,
+      "comments": 2,
+      "durationSeconds": 581,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/YYbOYdWOv1M/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=YYbOYdWOv1M"
+    },
+    {
+      "id": "O_eWS8Xgd2Y",
+      "title": "Why Do We Fall In Our Dreams?",
+      "publishedAt": "2026-04-29T10:53:00Z",
+      "views": 35,
+      "likes": 1,
+      "comments": 0,
+      "durationSeconds": 531,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/O_eWS8Xgd2Y/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=O_eWS8Xgd2Y"
+    }
+  ]
+}
