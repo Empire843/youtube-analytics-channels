@@ -1,0 +1,86 @@
+{
+  "id": "UCW4wnirSSCH9viT-NhqVMVg",
+  "channelId": "UCW4wnirSSCH9viT-NhqVMVg",
+  "analyzedAt": "2026-05-05T16:03:15.432Z",
+  "channel": {
+    "id": "UCW4wnirSSCH9viT-NhqVMVg",
+    "title": "Revers Hub",
+    "description": "📩 Business Contact: If you want to collaborate, sponsor, or offer any business opportunity, you can reach me at \nbusinessreverse8@gmail.com\n\nRevers Hub 🧡🤍\n\nThe internet is full of distractions, addictions, and empty content that keeps people stuck, lonely, and unfulfilled. Platforms like Pornhub are designed to capture attention and give temporary pleasure — but they take away focus, ambition, and purpose.\n\nRevers Hub is the opposite. It’s not just a page or a channel — it’s a movement to reverse the destructive patterns of modern life.We provide content that inspires discipline, growth, meaningful habits, and mental strength. Every post, video, and tip helps you take control of your life, sharpen your mind, and build the future you want..\n\nIn the future, Revers Hub will become a platform that turns the internet upside down — filled with content that educates, inspires, and empowers, where people can learn, share, and grow together.\n\n",
+    "customUrl": "@revershub",
+    "publishedAt": "2025-08-25T22:49:57.139011Z",
+    "country": "",
+    "subscriberCount": 120000,
+    "hiddenSubscriberCount": false,
+    "videoCount": 89,
+    "totalViews": 25110018,
+    "thumbnail": "https://yt3.ggpht.com/zLvvspNg_ohJsUflOj2RMLnWW8R1erYbrXzuHsTyH9Vpj-r3TR4zpMHKbWsAuq_oHmjs7fJp=s800-c-k-c0x00ffffff-no-rj",
+    "banner": "https://yt3.googleusercontent.com/HIgZNpU83yISIL7Wky7VJf9OkDKHuxlHKErCudQNt84x0dA6XE2YW1J4qqnOwgRKNqYbXPAy",
+    "uploadsPlaylistId": "UUW4wnirSSCH9viT-NhqVMVg"
+  },
+  "publicMetrics": {
+    "avgViewsPerVideo": 282135.03370786516,
+    "totalViews": 25110018,
+    "totalVideos": 89,
+    "lastUpdated": "2026-04-08T15:59:50Z",
+    "hasShort": true,
+    "shortCount": 3,
+    "shortRatio": 0.1,
+    "recentAvgViews": 99270.63333333333,
+    "recentMedianViews": 7462.5,
+    "avgLikes": 3356.133333333333,
+    "avgComments": 404.7,
+    "avgDurationSeconds": 248.73333333333332,
+    "engagementRate": 3.7884651352078276,
+    "avgDaysBetweenUploads": 4.832062579821201,
+    "contentProfile": "long-form",
+    "uploadConsistencyScore": 85.50381226053639,
+    "growthScore": 55,
+    "growthBand": "healthy",
+    "fetchedAt": "2026-05-05T16:03:15.432Z"
+  },
+  "estimates": {
+    "estimatedMonthlyViews": 616325,
+    "estimatedRpmLow": 0.4216517919498851,
+    "estimatedRpmHigh": 3.2795139373879953,
+    "estimatedMonthlyRevenueLow": 259.87436881176836,
+    "estimatedMonthlyRevenueHigh": 2021.2450907581983,
+    "channelMaturityScore": 87.40386054083132,
+    "confidence": "medium-high",
+    "notes": [
+      "RPM/Doanh thu ước tính được mô phỏng từ số lượt xem gần đây, tần suất đăng video, mức độ tương tác và tỷ lệ shorts.",
+      "Những con số này chỉ mang tính định hướng và không phải là dữ liệu YouTube Analytics được chủ kênh xác thực."
+    ]
+  },
+  "insights": {
+    "model": "gemini-2.5-pro",
+    "generatedAt": "2026-05-05T16:03:48.243Z",
+    "insights": {
+      "summary": "Revers Hub là một kênh đã trưởng thành với 120.000 người đăng ký và nền tảng lượt xem tổng thể mạnh mẽ, cho thấy khả năng tạo ra nội dung lan truyền (viral). Tuy nhiên, hiệu suất gần đây rất bất ổn, với sự chênh lệch lớn giữa lượt xem trung bình (99k) và lượt xem trung vị (7.5k). Điều này cho thấy kênh đang phụ thuộc quá nhiều vào một vài video 'hit' để kéo view, trong khi phần lớn nội dung hoạt động kém hiệu quả. Đây là một rủi ro lớn cho sự phát triển bền vững. Kênh duy trì lịch đăng video nhất quán, nhưng tiềm năng tăng trưởng chỉ ở mức 'lành mạnh', có thể đang tiến vào giai đoạn bão hòa.",
+      "strengths": [
+        "Cộng đồng người đăng ký lớn (120.000) và trung thành.",
+        "Khả năng tạo ra các video có sức lan tỏa lớn, bằng chứng là lượt xem trung bình trên mỗi video rất cao (282k).",
+        "Lịch đăng video đều đặn và nhất quán (điểm nhất quán 85.5), giúp duy trì sự tương tác với khán giả.",
+        "Tỷ lệ tương tác tốt (khoảng 3.8%), cho thấy nội dung vẫn kết nối được với một phần khán giả."
+      ],
+      "risks": [
+        "Sự bất ổn về lượt xem: Rủi ro lớn nhất là sự chênh lệch cực lớn giữa lượt xem trung bình và trung vị gần đây. Điều này cho thấy mô hình 'được ăn cả, ngã về không', không bền vững và khó dự đoán doanh thu.",
+        "Nguy cơ bão hòa: Tốc độ tăng trưởng ở mức 'lành mạnh' đối với một kênh đã trưởng thành có thể là dấu hiệu của việc đạt đến giới hạn khán giả với chiến lược nội dung hiện tại.",
+        "Thời lượng video ngắn: Thời lượng trung bình khoảng 4 phút hạn chế khả năng đặt quảng cáo giữa video (mid-roll ads), làm giảm tiềm năng doanh thu trên mỗi nghìn lượt xem (RPM)."
+      ],
+      "opportunities": [
+        "Ổn định lượt xem: Thay vì theo đuổi các video triệu view, hãy tập trung vào việc tạo ra các chuỗi nội dung có thể mang lại lượt xem ổn định và dễ dự đoán hơn (ví dụ: 50k - 100k view/video).",
+        "Tăng thời lượng video: Thử nghiệm sản xuất các video có thời lượng trên 8 phút về các chủ đề đã được chứng minh là thành công. Điều này sẽ mở khóa quảng cáo mid-roll và có khả năng tăng đáng kể RPM.",
+        "Phân tích và nhân rộng thành công: Phân tích sâu các video 'hit' (chủ đề, tiêu đề, ảnh thumbnail, cấu trúc) để tìm ra công thức chung. Áp dụng các nguyên tắc đó một cách có hệ thống cho các video trong tương lai.",
+        "Tương tác sâu hơn với khán giả: Tận dụng cơ sở 120.000 người đăng ký để hiểu rõ hơn nhu cầu của họ thông qua các cuộc thăm dò ý kiến trên tab Cộng đồng, hỏi họ muốn xem gì tiếp theo."
+      ],
+      "nextActions": [
+        "Thực hiện khảo sát khán giả: Sử dụng Tab Cộng đồng để hỏi người đăng ký về 3 video họ yêu thích nhất và lý do. Điều này cung cấp dữ liệu trực tiếp về sở thích của họ.",
+        "Thử nghiệm A/B cho Thumbnail và Tiêu đề: Với 4 video tiếp theo, hãy tạo 2 phiên bản thumbnail và tiêu đề khác nhau cho mỗi video. Đăng phiên bản có khả năng thu hút cao nhất để tối ưu hóa tỷ lệ nhấp (CTR).",
+        "Phát triển một chuỗi nội dung (Series): Dựa trên video thành công nhất, hãy tạo một series thử nghiệm gồm 3 phần. Thông báo trước cho khán giả để xây dựng sự mong đợi.",
+        "Sản xuất video dài hơn 8 phút: Trong tháng tới, sản xuất ít nhất 2 video có thời lượng trên 8 phút. Theo dõi chặt chẽ chỉ số 'Tỷ lệ giữ chân khán giả' để xem người xem rời đi ở điểm nào và cải thiện."
+      ],
+      "monetizationView": "Doanh thu ước tính hiện tại ($260 - $2021) có biên độ rất rộng và tương đối khiêm tốn, phản ánh sự bất ổn về lượt xem và thời lượng video ngắn. Có tiềm năng rất lớn để tăng doanh thu bằng cách: (1) Ổn định lượt xem để có một nguồn thu nhập cơ bản hàng tháng dễ dự đoán hơn, và (2) Tăng thời lượng video lên hơn 8 phút để bật quảng cáo giữa video, có thể tăng gấp đôi hoặc gấp ba RPM. Ngoài ra, kênh nên xem xét đa dạng hóa nguồn thu nhập qua tiếp thị liên kết (affiliate marketing) hoặc bán sản phẩm riêng (merchandise) cho tệp 120.000 người đăng ký.",
+      "contentStrategy": "Chiến lược cần chuyển từ 'săn hit' sang 'ưu tiên sự ổn định'. Mục tiêu chính là nâng cao mức sàn về lượt xem (lượt xem trung vị) thay vì chỉ đuổi theo các video lan truyền. Hãy xây dựng các 'trụ cột nội dung' dựa trên các chủ đề thành công nhất và phát triển các định dạng có thể lặp lại (ví dụ: hướng dẫn, phân tích, đánh giá). Tập trung vào việc tăng thời gian xem bằng cách tạo một 'móc câu' hấp dẫn trong 30 giây đầu, cung cấp giá trị xuyên suốt và có lời kêu gọi hành động rõ ràng ở cuối. Mặc dù là kênh video dài, nên sử dụng YouTube Shorts một cách chiến lược để quảng bá các video dài sắp ra mắt hoặc tái sử dụng các đoạn nổi bật từ các video cũ để thu hút người đăng ký mới."
+    }
+  }
+}

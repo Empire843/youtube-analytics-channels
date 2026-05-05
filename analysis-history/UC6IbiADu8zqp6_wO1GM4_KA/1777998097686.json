@@ -1,0 +1,87 @@
+{
+  "id": "UC6IbiADu8zqp6_wO1GM4_KA",
+  "channelId": "UC6IbiADu8zqp6_wO1GM4_KA",
+  "analyzedAt": "2026-05-05T16:20:54.351Z",
+  "channel": {
+    "id": "UC6IbiADu8zqp6_wO1GM4_KA",
+    "title": "Psychology Insight",
+    "description": "'Psychology Insight' is a channel that explores the fascinating world of human psychology. It shares ideas about how people think, how they behave, and how they understand the world; it presents concepts in such a clear and engaging way that anyone can learn something useful from it.\nEvery video on this channel is created very carefully. It begins with writing an original script, which is developed through research and thoughtful explanation; after that, voice narration is recorded to bring the concepts to life.\nVisual elements that match the topic of the video are designed, which help explain ideas in an easy and visual way. Finally, everything is carefully edited so that the narration and visuals together provide a smooth and clear viewing experience.\nIt is created with complete dedication, which is why a lot of time and effort goes into completing each video. This ensures that all the content on the channel is original, thoughtfully made, and focused on quality.\n",
+    "customUrl": "@psychologyinsight-s8k",
+    "publishedAt": "2025-11-17T16:18:12.680435Z",
+    "country": "IN",
+    "subscriberCount": 35200,
+    "hiddenSubscriberCount": false,
+    "videoCount": 25,
+    "totalViews": 4584964,
+    "thumbnail": "https://yt3.ggpht.com/qMDxyX2vEJ_hIM1WlR56j1tI7E9dEyCyYhLlwiqFsdPyUKJpKX33kjC-HN_S_MT6C7RHM6rA=s800-c-k-c0x00ffffff-no-rj",
+    "banner": "https://yt3.googleusercontent.com/5LcE33R4Wn_q9OqQ8EBld9IjsO_8d-fSk0iFmFjX8aQLlHby3onRQQQNQjq_ieb79lqqLOJSMw",
+    "uploadsPlaylistId": "UU6IbiADu8zqp6_wO1GM4_KA"
+  },
+  "publicMetrics": {
+    "avgViewsPerVideo": 183398.56,
+    "totalViews": 4584964,
+    "totalVideos": 25,
+    "lastUpdated": "2026-05-04T00:30:16Z",
+    "hasShort": false,
+    "shortCount": 0,
+    "shortRatio": 0,
+    "recentAvgViews": 183701.4,
+    "recentMedianViews": 6859,
+    "avgLikes": 4194.04,
+    "avgComments": 483.48,
+    "avgDurationSeconds": 405.56,
+    "engagementRate": 2.54626257611537,
+    "avgDaysBetweenUploads": 2.7647579089506173,
+    "contentProfile": "long-form",
+    "uploadConsistencyScore": 91.70572627314814,
+    "growthScore": 49,
+    "growthBand": "watch",
+    "fetchedAt": "2026-05-05T16:20:54.351Z"
+  },
+  "estimates": {
+    "estimatedMonthlyViews": 1993318,
+    "estimatedRpmLow": 0.4238327263700767,
+    "estimatedRpmHigh": 3.296476760656152,
+    "estimatedMonthlyRevenueLow": 844.8334476006812,
+    "estimatedMonthlyRevenueHigh": 6570.926814671965,
+    "channelMaturityScore": 66.43505030446148,
+    "confidence": "medium-high",
+    "notes": [
+      "RPM/Doanh thu ước tính được mô phỏng từ số lượt xem gần đây, tần suất đăng video, mức độ tương tác và tỷ lệ shorts.",
+      "Những con số này chỉ mang tính định hướng và không phải là dữ liệu YouTube Analytics được chủ kênh xác thực."
+    ]
+  },
+  "insights": {
+    "model": "gemini-2.5-pro",
+    "generatedAt": "2026-05-05T16:21:37.682Z",
+    "insights": {
+      "summary": "Kênh 'Psychology Insight' đang trải qua giai đoạn tăng trưởng bùng nổ nhưng không ổn định, chủ yếu nhờ vào một vài video lan truyền (viral) có hiệu suất vượt trội. Điều này thể hiện qua sự chênh lệch lớn giữa lượt xem trung bình rất cao (183k) và lượt xem trung vị khiêm tốn (gần 7k). Với số lượng video còn ít (25 video), kênh đã xây dựng được một lượng người đăng ký đáng kể và tỷ lệ tương tác tốt. Rủi ro chính là sự phụ thuộc vào các 'cú hích' viral. Hành động tiếp theo cần tập trung vào việc tái tạo thành công, ổn định hiệu suất nội dung và đa dạng hóa nguồn doanh thu để đảm bảo sự phát triển bền vững.",
+      "strengths": [
+        "Khả năng tạo nội dung lan truyền: Kênh đã chứng minh khả năng sản xuất video có sức hút cực lớn, thể hiện qua lượt xem trung bình trên mỗi video rất cao (~183k).",
+        "Tương tác khán giả tốt: Tỷ lệ tương tác 2.54% và số lượng bình luận, lượt thích trung bình cao cho thấy một cộng đồng gắn kết và quan tâm sâu sắc đến chủ đề.",
+        "Tần suất đăng tải nhất quán: Lịch đăng video đều đặn (trung bình ~3 ngày/video) giúp duy trì sự quan tâm của khán giả và được thuật toán YouTube ưu ái.",
+        "Chủ đề có chiều sâu: Ngách tâm lý học cho phép khai thác nhiều chủ đề hấp dẫn, tạo ra giá trị lâu dài và thu hút đối tượng khán giả chất lượng."
+      ],
+      "risks": [
+        "Phụ thuộc vào sự lan truyền đột biến: Sự chênh lệch cực lớn giữa lượt xem trung bình và trung vị cho thấy thành công của kênh đang dựa vào một vài video nổi bật. Nếu không thể lặp lại thành công này, lượt xem có thể sụt giảm nghiêm trọng.",
+        "Hiệu suất không đồng đều: Hầu hết các video có hiệu suất ở mức khiêm tốn hơn nhiều so với con số trung bình, cho thấy chiến lược nội dung chưa đảm bảo được một mức sàn thành công cho mỗi sản phẩm.",
+        "Rủi ro kiệt sức (Burnout): Tần suất đăng tải cao với nội dung dài có thể dẫn đến việc nhà sáng tạo bị quá tải, ảnh hưởng đến chất lượng sản xuất trong dài hạn.",
+        "RPM tiềm năng thấp: Do có trụ sở tại Ấn Độ (IN), doanh thu trên mỗi nghìn lượt xem (RPM) có thể sẽ ở mức thấp hơn so với các kênh có cùng lượt xem ở thị trường Âu-Mỹ, ảnh hưởng đến tiềm năng doanh thu từ quảng cáo."
+      ],
+      "opportunities": [
+        "Xây dựng chuỗi nội dung (Series): Phát triển các chuỗi video dựa trên chủ đề của các video thành công nhất để tận dụng sự quan tâm hiện có và tạo ra sự mong đợi từ khán giả.",
+        "Tối ưu hóa video cũ: Cập nhật lại tiêu đề, ảnh đại diện (thumbnail) và mô tả cho các video có hiệu suất thấp để cải thiện tỷ lệ nhấp (CTR) và thu hút lại sự chú ý.",
+        "Tăng cường tương tác cộng đồng: Sử dụng Tab Cộng đồng, các buổi phát trực tiếp (livestream) hỏi đáp để xây dựng mối quan hệ sâu sắc hơn với 35,200 người đăng ký, biến họ thành những người hâm mộ trung thành.",
+        "Thử nghiệm định dạng ngắn (Shorts): Tạo các video YouTube Shorts trích dẫn những kiến thức tâm lý ngắn gọn, thú vị từ video dài để tiếp cận tệp khán giả mới và quảng bá cho kênh."
+      ],
+      "nextActions": [
+        "Phân tích sâu các video viral: Trong tuần tới, hãy xác định chính xác các yếu tố (chủ đề, cấu trúc, tiêu đề, thumbnail) đã làm nên thành công của 2-3 video có lượt xem cao nhất.",
+        "Lên kế hoạch nội dung dựa trên dữ liệu: Dựa trên phân tích, hãy lên kế hoạch sản xuất 3 video tiếp theo mô phỏng lại công thức thành công để duy trì đà tăng trưởng.",
+        "Kích hoạt tương tác trên Tab Cộng đồng: Đăng ít nhất 2 lần/tuần trên Tab Cộng đồng, sử dụng các cuộc thăm dò ý kiến (polls) hoặc câu hỏi liên quan đến chủ đề video sắp ra mắt để tạo sự chờ đợi.",
+        "Thử nghiệm A/B Thumbnail: Đối với video tiếp theo, hãy tạo 2 phiên bản thumbnail khác nhau và sử dụng tính năng 'Test & Compare' của YouTube để xác định phong cách nào thu hút tỷ lệ nhấp chuột cao hơn."
+      ],
+      "monetizationView": "Doanh thu ước tính hàng tháng ($845 - $6,570) có tiềm năng cao nhưng không ổn định vì phụ thuộc vào lượt xem từ các video viral. Doanh thu thực tế có thể sẽ nghiêng về mức thấp hơn trong khoảng ước tính này do RPM của thị trường Ấn Độ thường không cao. Để tối ưu hóa, kênh cần sản xuất video dài trên 8 phút để bật quảng cáo giữa video (mid-roll ads). Ngoài AdSense, kênh nên khẩn trương đa dạng hóa nguồn thu nhập thông qua tiếp thị liên kết (sách, khóa học tâm lý), bán sản phẩm số (ebooks, tài liệu), hoặc nhận tài trợ từ các thương hiệu phù hợp.",
+      "contentStrategy": "Chiến lược nội dung cần chuyển từ việc trông chờ vào sự may mắn sang xây dựng một hệ thống bền vững. Áp dụng mô hình 'Trụ cột & Vệ tinh': xác định các chủ đề 'trụ cột' (đã viral) và xây dựng các video 'vệ tinh' khai thác sâu hơn các khía cạnh liên quan. Thay vì đăng tải dồn dập, hãy cân nhắc giảm tần suất xuống 1 video/tuần để tập trung vào chất lượng nghiên cứu và sản xuất, đảm bảo mỗi video đều được đầu tư kỹ lưỡng. Tối ưu hóa tiêu đề và mô tả cho cả tìm kiếm (SEO) và đề xuất để tạo ra nguồn xem ổn định theo thời gian, thay vì chỉ phụ thuộc vào các đợt bùng nổ nhất thời."
+    }
+  }
+}

@@ -17,7 +17,12 @@ export function initDirectories() {
 export function saveHistoryEntry(channelId: string, data: HistoryEntry) {
   initDirectories();
   const safeId = channelId.replace(/[^a-zA-Z0-9_-]/gu, "");
-  const targetPath = path.join(ANALYSIS_HISTORY_DIR, `${safeId}.json`);
+  const channelDir = path.join(ANALYSIS_HISTORY_DIR, safeId);
+  if (!fs.existsSync(channelDir)) {
+    fs.mkdirSync(channelDir, { recursive: true });
+  }
+  const timestamp = Date.now();
+  const targetPath = path.join(channelDir, `${timestamp}.json`);
   fs.writeFileSync(targetPath, JSON.stringify(data, null, 2), "utf8");
 }
 
@@ -27,13 +32,18 @@ export function readHistoryRecords(): HistoryEntry[] {
   
   try {
     for (const entry of fs.readdirSync(ANALYSIS_HISTORY_DIR, { withFileTypes: true })) {
-      if (entry.isFile() && entry.name.endsWith(".json")) {
-        const fullPath = path.join(ANALYSIS_HISTORY_DIR, entry.name);
-        try {
-          const data = JSON.parse(fs.readFileSync(fullPath, "utf8"));
-          records.push(data);
-        } catch (error) {
-          console.error(`Failed to parse history entry ${entry.name}`, error);
+      if (entry.isDirectory()) {
+        const channelDir = path.join(ANALYSIS_HISTORY_DIR, entry.name);
+        const files = fs.readdirSync(channelDir).filter(f => f.endsWith(".json")).sort().reverse();
+        for (const file of files) {
+          const filePath = path.join(channelDir, file);
+          try {
+            const data = JSON.parse(fs.readFileSync(filePath, "utf8"));
+            data.id = entry.name;
+            records.push(data);
+          } catch (error) {
+            console.error(`Failed to parse history entry ${file}`, error);
+          }
         }
       }
     }
@@ -41,7 +51,7 @@ export function readHistoryRecords(): HistoryEntry[] {
     console.error("Failed to read history records", error);
   }
 
-  return records.sort((a, b) => new Date(b.analyzedAt).getTime() - new Date(a.analyzedAt).getTime());
+  return records.sort((a, b) => new Date(b.analyzedAt || 0).getTime() - new Date(a.analyzedAt || 0).getTime());
 }
 
 export function readPromptLibraryRecords(): PromptLibraryEntry[] {

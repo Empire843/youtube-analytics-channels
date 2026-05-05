@@ -340,3 +340,71 @@ export async function filterCompetitorsByStyle(
     return candidates.slice(0, maxResults);
   }
 }
+
+function buildCompetitorAnalysisPrompt(source: any, competitors: any[]) {
+  const compList = competitors
+    .slice(0, 10)
+    .map(
+      (c, i) =>
+        `${i + 1}. ${c.title} (${c.customUrl || c.channelId}) - ${Number(c.subscribers).toLocaleString()} subs, ${Number(c.totalViews).toLocaleString()} views, ${c.videoCount} videos`
+    )
+    .join("\n");
+
+  return `You are a YouTube competitive analysis expert. Analyze the competitive landscape for the following channel.
+All analysis MUST be written in Vietnamese.
+
+SOURCE CHANNEL:
+- Name: ${source.title}
+- Subscribers: ${Number(source.subscribers).toLocaleString()}
+- Total Views: ${Number(source.totalViews).toLocaleString()}
+- Videos: ${source.videoCount}
+- Niche: ${source.nicheDescription || source.nicheKeywords?.join(", ") || "Unknown"}
+
+COMPETITOR CHANNELS:
+${compList}
+
+Return a JSON object with:
+{
+  "nichePosition": "Vị trí của kênh gốc so với đối thủ (leader/challenger/follower/niche player)",
+  "summary": "Tóm tắt 2-3 câu về bức tranh cạnh tranh",
+  "strengths": ["Điểm mạnh 1", "Điểm mạnh 2"],
+  "weaknesses": ["Điểm yếu 1", "Điểm yếu 2"],
+  "opportunities": ["Cơ hội 1", "Cơ hội 2"],
+  "threats": ["Mối đe dọa 1", "Mối đe dọa 2"],
+  "topCompetitors": ["Tên kênh đối thủ đáng chú ý nhất", "..."],
+  "recommendations": ["Gợi ý chiến lược 1", "Gợi ý chiến lược 2"]
+}
+Return ONLY valid JSON, no markdown.`;
+}
+
+export async function runCompetitorAiAnalysis(source: any, competitors: any[]) {
+  const provider = process.env.AI_PROVIDER || "gemini";
+  const geminiKey = process.env.GEMINI_API_KEY;
+  const wokushopKey = process.env.WOKUSHOP_API_KEY;
+
+  const prompt = buildCompetitorAnalysisPrompt(source, competitors);
+  let raw;
+
+  if (provider === "wokushop" && wokushopKey) {
+    raw = await callWokushop({
+      apiKey: wokushopKey,
+      model: process.env.WOKUSHOP_MODEL || "gemini-2.5-pro",
+      prompt,
+    });
+  } else if (geminiKey) {
+    raw = await callGemini({
+      apiKey: geminiKey,
+      model: process.env.GEMINI_MODEL || "gemini-2.0-flash",
+      prompt,
+    });
+  } else {
+    throw new Error("No AI API key configured.");
+  }
+
+  const cleaned = raw.replace(/^```json\s*/u, "").replace(/```$/u, "").trim();
+  try {
+    return JSON.parse(cleaned);
+  } catch (error) {
+    return { summary: raw };
+  }
+}

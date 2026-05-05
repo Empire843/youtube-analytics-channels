@@ -1,0 +1,140 @@
+{
+  "channelId": "UCfm4JWpTN_fG2K6Blf9kPHA",
+  "channelTitle": "The Faceless Philosopher",
+  "channelThumbnail": "https://yt3.ggpht.com/ZBxHKa2J1nJjhLnQ_hWuVDP9lmPQRvCMEmZ__LAwAjLWaxC2xa71UPrhcOHc7SDv_--yyE__xg=s800-c-k-c0x00ffffff-no-rj",
+  "customUrl": "@facelessphilosopher680",
+  "country": "US",
+  "subscriberCount": 10700,
+  "totalViews": 523802,
+  "videoCount": 40,
+  "analyzedAt": "2026-05-04T16:56:01.137Z",
+  "timestamp": 1777913761137,
+  "publicMetrics": {
+    "avgViewsPerVideo": 13095.05,
+    "totalViews": 523802,
+    "totalVideos": 40,
+    "lastUpdated": "2026-04-21T02:18:37Z",
+    "hasShort": true,
+    "shortCount": 1,
+    "shortRatio": 0.03333333333333333,
+    "recentAvgViews": 16628.333333333332,
+    "recentMedianViews": 2355.5,
+    "avgLikes": 607.7666666666667,
+    "avgComments": 60.06666666666667,
+    "avgDurationSeconds": 1124.8666666666666,
+    "engagementRate": 4.0162373458955605,
+    "avgDaysBetweenUploads": 10.529403336526183,
+    "contentProfile": "long-form deep",
+    "uploadConsistencyScore": 68.41178999042145,
+    "growthScore": 53,
+    "growthBand": "healthy",
+    "fetchedAt": "2026-05-04T16:56:01.135Z"
+  },
+  "estimates": {
+    "estimatedMonthlyViews": 47377,
+    "estimatedRpmLow": 0.4420369139019746,
+    "estimatedRpmHigh": 3.4380648859042466,
+    "estimatedMonthlyRevenueLow": 20.942318140198605,
+    "estimatedMonthlyRevenueHigh": 162.88469664598912,
+    "channelMaturityScore": 47.47416605024891,
+    "confidence": "medium-high",
+    "notes": [
+      "RPM/Doanh thu ước tính được mô phỏng từ số lượt xem gần đây, tần suất đăng video, mức độ tương tác và tỷ lệ shorts.",
+      "Những con số này chỉ mang tính định hướng và không phải là dữ liệu YouTube Analytics được chủ kênh xác thực."
+    ]
+  },
+  "aiInsights": {
+    "model": "gemini-2.5-pro",
+    "generatedAt": "2026-05-04T16:56:34.754Z",
+    "insights": {
+      "summary": "Kênh 'The Faceless Philosopher' đang trên đà tăng trưởng tốt với nền tảng là các video chuyên sâu, thời lượng dài, thu hút lượt xem trung bình rất cao. Tuy nhiên, sự tăng trưởng này phụ thuộc nhiều vào các video 'hit', cho thấy sự thiếu ổn định. Rủi ro chính nằm ở lịch đăng bài không nhất quán và khả năng khó mở rộng tệp khán giả. Cơ hội lớn nhất đến từ việc tối ưu hóa doanh thu quảng cáo và xây dựng cộng đồng gắn kết hơn. Các hành động tiếp theo cần tập trung vào việc ổn định lịch sản xuất và nhân rộng các yếu tố thành công từ những video phổ biến nhất.",
+      "strengths": [
+        "Lượt xem trung bình trên mỗi video rất cao (13k-16k), cho thấy nội dung có sức hấp dẫn và khả năng lan truyền mạnh mẽ.",
+        "Nội dung chuyên sâu, có giá trị (thời lượng trung bình ~19 phút) xây dựng uy tín và thu hút một lượng khán giả trung thành, sẵn sàng dành thời gian để xem.",
+        "Tỷ lệ tương tác tốt (~4%) chứng tỏ khán giả thực sự kết nối với thông điệp của kênh, đặc biệt là với các nội dung dài.",
+        "Đà tăng trưởng tích cực, với các video gần đây có hiệu suất cao hơn mức trung bình chung của kênh."
+      ],
+      "risks": [
+        "Phụ thuộc vào các video 'hit': Sự chênh lệch lớn giữa lượt xem trung bình (16.6k) và lượt xem trung vị (2.3k) cho thấy sự tăng trưởng không đồng đều. Kênh có thể gặp khó khăn nếu không thể liên tục tạo ra các video 'bom tấn'.",
+        "Tần suất đăng bài không nhất quán: Lịch đăng video không đều đặn (trung bình 10.5 ngày/lần) có thể làm giảm sự mong đợi của khán giả và ảnh hưởng tiêu cực đến thuật toán đề xuất của YouTube.",
+        "Thị trường ngách hẹp: Chủ đề triết học, dù chuyên sâu, có thể giới hạn khả năng mở rộng đối tượng khán giả so với các chủ đề phổ thông hơn."
+      ],
+      "opportunities": [
+        "Tối ưu hóa doanh thu quảng cáo: Với thời lượng video dài và tệp khán giả ở Mỹ (RPM cao), kênh có thể đặt nhiều quảng cáo giữa video (mid-roll ads) để tăng đáng kể doanh thu.",
+        "Xây dựng cộng đồng: Sử dụng Tab Cộng đồng (Community Tab) để đăng các câu hỏi, trích dẫn triết học, hoặc khảo sát ý kiến nhằm giữ tương tác với khán giả giữa các lần đăng video.",
+        "Sử dụng YouTube Shorts một cách chiến lược: Tạo các video ngắn tóm tắt một khái niệm phức tạp hoặc đặt một câu hỏi gợi mở để quảng bá cho các video dài và thu hút người đăng ký mới.",
+        "Phát triển series nội dung: Tạo các chuỗi video theo chủ đề cụ thể (ví dụ: 'Nhập môn Chủ nghĩa Khắc kỷ', 'Phân tích các nhà tư tưởng vĩ đại') để giữ chân khán giả và khuyến khích họ xem nhiều video hơn."
+      ],
+      "nextActions": [
+        "Chuẩn hóa lịch đăng bài: Đặt mục tiêu đăng video vào một ngày/giờ cố định hàng tuần hoặc hai tuần một lần (ví dụ: 8 giờ tối Chủ Nhật) để xây dựng thói quen cho khán giả.",
+        "Phân tích và nhân rộng thành công: Xác định chủ đề, định dạng, tiêu đề của các video có lượt xem đột biến. Tạo thêm nội dung xoay quanh các yếu tố thành công đó.",
+        "Tối ưu hóa SEO cho các video cũ: Rà soát lại tiêu đề, mô tả và thẻ tags của các video có lượt xem thấp để cải thiện khả năng được khám phá qua công cụ tìm kiếm của YouTube.",
+        "Kêu gọi hành động mạnh mẽ hơn: Trong video, hãy trực tiếp kêu gọi người xem 'Đăng ký kênh' và 'Bình luận' quan điểm của họ để tăng tỷ lệ chuyển đổi và tương tác."
+      ],
+      "monetizationView": "Kênh đã đủ điều kiện tham gia Chương trình Đối tác YouTube. Trọng tâm chính nên là tối ưu hóa doanh thu từ quảng cáo (AdSense) bằng cách bật tất cả các định dạng quảng cáo và chèn quảng cáo giữa video (mid-rolls) một cách hợp lý. Trong tương lai, khi cộng đồng phát triển, kênh có thể xem xét các hình thức khác như Hội viên kênh (Channel Memberships) cho nội dung độc quyền, Super Thanks, hoặc bán các sản phẩm kỹ thuật số (sách tóm tắt, khóa học mini) liên quan đến triết học.",
+      "contentStrategy": "Tiếp tục tập trung vào nội dung chuyên sâu, dài hơi vì đây là lợi thế cạnh tranh cốt lõi. Đồng thời, hãy tạo các 'series' có cấu trúc rõ ràng để tăng tỷ lệ xem liên tiếp. Thử nghiệm các định dạng dễ tiếp cận hơn như '5 bài học triết học cho cuộc sống hiện đại' để thu hút khán giả mới. Sử dụng video Shorts như một công cụ 'phễu' để giới thiệu các khái niệm và dẫn người xem đến các video dài chi tiết hơn."
+    }
+  },
+  "topRecentVideos": [
+    {
+      "id": "Be19ZnNFAcA",
+      "title": "The 5 Levels of Intelligence (Which Level Are You In?) - Machiavelli",
+      "publishedAt": "2025-09-18T19:06:27Z",
+      "views": 302747,
+      "likes": 10794,
+      "comments": 1498,
+      "durationSeconds": 1161,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/Be19ZnNFAcA/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=Be19ZnNFAcA"
+    },
+    {
+      "id": "gC609jgtlPw",
+      "title": "7 Dark Laws of Power | How to Think Like a Machiavellian Prince",
+      "publishedAt": "2025-06-21T17:51:28Z",
+      "views": 66299,
+      "likes": 2215,
+      "comments": 59,
+      "durationSeconds": 1215,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/gC609jgtlPw/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=gC609jgtlPw"
+    },
+    {
+      "id": "hrkLzaVwS2U",
+      "title": "The Prince Explained in 20 Minutes | Machiavelli's Ruthless Guide to Power",
+      "publishedAt": "2025-09-07T23:10:46Z",
+      "views": 44849,
+      "likes": 1264,
+      "comments": 39,
+      "durationSeconds": 1299,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/hrkLzaVwS2U/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=hrkLzaVwS2U"
+    },
+    {
+      "id": "48H1zISN9OI",
+      "title": "5 Dark Laws of Emotional Control | How to Think Like a Machiavellian Strategist",
+      "publishedAt": "2025-06-30T11:11:33Z",
+      "views": 15045,
+      "likes": 614,
+      "comments": 12,
+      "durationSeconds": 1195,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/48H1zISN9OI/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=48H1zISN9OI"
+    },
+    {
+      "id": "u7mm1N59X0Q",
+      "title": "10 Genius Tactics to Outsmart Manipulators | Machiavelli's playbook",
+      "publishedAt": "2025-07-21T14:02:27Z",
+      "views": 6859,
+      "likes": 315,
+      "comments": 19,
+      "durationSeconds": 1312,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/u7mm1N59X0Q/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=u7mm1N59X0Q"
+    }
+  ]
+}

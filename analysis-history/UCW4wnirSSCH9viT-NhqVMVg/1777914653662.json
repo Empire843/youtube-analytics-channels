@@ -1,0 +1,141 @@
+{
+  "channelId": "UCW4wnirSSCH9viT-NhqVMVg",
+  "channelTitle": "Revers Hub",
+  "channelThumbnail": "https://yt3.ggpht.com/zLvvspNg_ohJsUflOj2RMLnWW8R1erYbrXzuHsTyH9Vpj-r3TR4zpMHKbWsAuq_oHmjs7fJp=s800-c-k-c0x00ffffff-no-rj",
+  "customUrl": "@revershub",
+  "country": "",
+  "subscriberCount": 120000,
+  "totalViews": 25082702,
+  "videoCount": 89,
+  "analyzedAt": "2026-05-04T17:10:53.662Z",
+  "timestamp": 1777914653662,
+  "publicMetrics": {
+    "avgViewsPerVideo": 281828.11235955055,
+    "totalViews": 25082702,
+    "totalVideos": 89,
+    "lastUpdated": "2026-04-08T15:59:50Z",
+    "hasShort": true,
+    "shortCount": 3,
+    "shortRatio": 0.1,
+    "recentAvgViews": 98561.73333333334,
+    "recentMedianViews": 7461.5,
+    "avgLikes": 3340.766666666667,
+    "avgComments": 403.73333333333335,
+    "avgDurationSeconds": 248.73333333333332,
+    "engagementRate": 3.7991417899847537,
+    "avgDaysBetweenUploads": 4.832062579821201,
+    "contentProfile": "long-form",
+    "uploadConsistencyScore": 85.50381226053639,
+    "growthScore": 55,
+    "growthBand": "healthy",
+    "fetchedAt": "2026-05-04T17:10:53.662Z"
+  },
+  "estimates": {
+    "estimatedMonthlyViews": 611923,
+    "estimatedRpmLow": 0.4218334018476406,
+    "estimatedRpmHigh": 3.280926458814983,
+    "estimatedMonthlyRevenueLow": 258.1297152749526,
+    "estimatedMonthlyRevenueHigh": 2007.6755632496318,
+    "channelMaturityScore": 87.44656715993901,
+    "confidence": "medium-high",
+    "notes": [
+      "RPM/Doanh thu ước tính được mô phỏng từ số lượt xem gần đây, tần suất đăng video, mức độ tương tác và tỷ lệ shorts.",
+      "Những con số này chỉ mang tính định hướng và không phải là dữ liệu YouTube Analytics được chủ kênh xác thực."
+    ]
+  },
+  "aiInsights": {
+    "model": "gemini-2.5-pro",
+    "generatedAt": "2026-05-04T17:11:34.253Z",
+    "insights": {
+      "summary": "Kênh 'Revers Hub' là một kênh đã trưởng thành với 120,000 người đăng ký và có khả năng tạo ra nội dung viral mạnh mẽ, thể hiện qua lượt xem trung bình trên mỗi video rất cao. Tuy nhiên, hiệu suất gần đây cho thấy sự thiếu ổn định đáng kể, với khoảng cách lớn giữa lượt xem trung bình và trung vị, báo hiệu một chiến lược nội dung 'được ăn cả, ngã về không'. Kênh cần tập trung vào việc ổn định hóa hiệu suất và đa dạng hóa nguồn doanh thu để phát triển bền vững.",
+      "strengths": [
+        "Khả năng tạo nội dung có sức lan tỏa (viral) đặc biệt mạnh mẽ, với lượt xem trung bình trên toàn kênh rất cao (~281k).",
+        "Sở hữu một cộng đồng 120,000 người đăng ký, là nền tảng vững chắc cho sự phát triển và kiếm tiền.",
+        "Duy trì lịch đăng video đều đặn và nhất quán (khoảng 5 ngày/video), giúp tạo thói quen xem cho khán giả.",
+        "Tỷ lệ tương tác ở mức tốt (gần 4%), cho thấy sự kết nối và quan tâm của khán giả đối với nội dung."
+      ],
+      "risks": [
+        "Hiệu suất video không ổn định nghiêm trọng: Lượt xem trung vị gần đây (~7.4k) thấp hơn rất nhiều so với lượt xem trung bình (~98k), cho thấy kênh đang phụ thuộc vào một vài video nổi bật, trong khi phần lớn nội dung khác không đạt hiệu quả.",
+        "Xu hướng giảm hiệu suất: Lượt xem trung bình gần đây thấp hơn đáng kể so với trung bình toàn kênh, có thể là dấu hiệu cho thấy sự bão hòa của chủ đề hoặc chiến lược nội dung hiện tại không còn hiệu quả như trước.",
+        "Phụ thuộc quá nhiều vào doanh thu quảng cáo: Nguồn thu nhập có vẻ chỉ đến từ YouTube AdSense, khiến kênh dễ bị ảnh hưởng bởi sự biến động của RPM và chính sách của nền tảng.",
+        "Nền tảng nội dung còn mỏng (chỉ 89 video), rủi ro nếu các chủ đề 'hit' cũ không còn thu hút hoặc bị đối thủ cạnh tranh khai thác."
+      ],
+      "opportunities": [
+        "Phân tích sâu các video viral: Xác định chính xác các yếu tố (chủ đề, tiêu đề, thumbnail, cấu trúc) đã làm nên thành công để nhân rộng công thức này một cách có hệ thống, thay vì trông chờ vào may mắn.",
+        "Tối ưu hóa các video hiệu suất thấp: Cải thiện tiêu đề, thumbnail và 15 giây đầu tiên của các video có lượt xem thấp để tăng tỷ lệ nhấp (CTR) và thời gian xem, 'cứu' lại các nội dung tiềm năng.",
+        "Đa dạng hóa nguồn thu: Khai thác các hình thức kiếm tiền khác ngoài quảng cáo như tiếp thị liên kết (affiliate marketing), nhận tài trợ từ các nhãn hàng, hoặc tạo sản phẩm/dịch vụ số của riêng mình (khóa học, ebook).",
+        "Xây dựng cộng đồng sâu sắc hơn: Tích cực sử dụng Tab Cộng đồng, khởi tạo tính năng Hội viên (Memberships) để tạo mối quan hệ bền chặt và nguồn thu nhập ổn định từ những người hâm mộ trung thành nhất."
+      ],
+      "nextActions": [
+        "Phân tích 'A/B' nội bộ: So sánh 5 video thành công nhất và 5 video thất bại nhất trong 6 tháng qua. Ghi lại sự khác biệt về chủ đề, cấu trúc, tiêu đề, và thumbnail. Áp dụng những phát hiện này cho kế hoạch sản xuất 3 video tiếp theo.",
+        "Chiến dịch tối ưu hóa video cũ: Chọn ra 3 video cũ có hiệu suất dưới 15,000 lượt xem nhưng có tỷ lệ giữ chân khán giả tốt. Tạo và thử nghiệm 2 bộ thumbnail và tiêu đề mới cho mỗi video để xem có thể cải thiện CTR và thu hút lượt xem mới hay không.",
+        "Bắt đầu với Tiếp thị liên kết: Nghiên cứu và xác định 3-5 sản phẩm hoặc dịch vụ liên quan đến nội dung kênh có chương trình affiliate. Bắt đầu tích hợp các link này một cách tự nhiên vào mô tả của các video mới và các video cũ có liên quan.",
+        "Tăng cường tương tác cộng đồng: Đăng ít nhất 2 bài viết trên Tab Cộng đồng mỗi tuần (ví dụ: thăm dò ý kiến về chủ đề video, chia sẻ câu chuyện hậu trường) để tăng cường sự gắn kết và hiểu rõ hơn mong muốn của khán giả."
+      ],
+      "monetizationView": "Hiện tại, kênh đang phụ thuộc phần lớn vào doanh thu từ quảng cáo YouTube (AdSense), với mức RPM ước tính có biên độ rộng và tiềm ẩn rủi ro ở mức thấp. Tiềm năng kiếm tiền của kênh chưa được khai thác hết. Cần phải khẩn trương đa dạng hóa nguồn thu nhập. Với một cộng đồng lớn, kênh có thể triển khai thành công các mô hình như tiếp thị liên kết cho các sản phẩm/dịch vụ phù hợp với nội dung, nhận booking quảng cáo trực tiếp từ các nhãn hàng, hoặc phát triển các sản phẩm số (digital products). Kích hoạt Super Thanks và YouTube Memberships cũng là những bước đi nhanh chóng để tăng doanh thu trực tiếp từ người xem.",
+      "contentStrategy": "Chiến lược nội dung cần chuyển từ việc 'săn' các video viral sang việc xây dựng một nền tảng nội dung ổn định và bền vững hơn. Thay vì chỉ tập trung vào các ý tưởng đột phá có rủi ro cao, kênh nên phát triển các chuỗi (series) nội dung có thể dự đoán được hiệu suất. Cần tìm ra 'điểm ngọt' - những chủ đề và định dạng không nhất thiết phải đạt triệu view nhưng có thể đều đặn mang về 50k-150k lượt xem. Hãy phân tích các video thành công nhất để tìm ra 'công thức' và áp dụng nó một cách có hệ thống. Đồng thời, nên thử nghiệm YouTube Shorts với các clip ngắn, hấp dẫn được cắt từ video dài để tiếp cận tệp khán giả mới và quảng bá cho nội dung chính."
+    }
+  },
+  "topRecentVideos": [
+    {
+      "id": "Sbi0UNdCxB4",
+      "title": "Psychology of People Who Grew Up in the 1970s",
+      "publishedAt": "2025-12-04T00:35:13Z",
+      "views": 1303102,
+      "likes": 31581,
+      "comments": 4873,
+      "durationSeconds": 331,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/Sbi0UNdCxB4/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=Sbi0UNdCxB4"
+    },
+    {
+      "id": "Wl9qyfYOWNg",
+      "title": "Psychology of People Who Stay Single",
+      "publishedAt": "2025-12-31T07:02:14Z",
+      "views": 820050,
+      "likes": 42357,
+      "comments": 2577,
+      "durationSeconds": 60,
+      "isShort": true,
+      "thumbnail": "https://i.ytimg.com/vi/Wl9qyfYOWNg/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=Wl9qyfYOWNg"
+    },
+    {
+      "id": "LKeOrklFiOY",
+      "title": "Psychology of Gen X",
+      "publishedAt": "2026-01-24T12:49:35Z",
+      "views": 236802,
+      "likes": 7004,
+      "comments": 860,
+      "durationSeconds": 266,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/LKeOrklFiOY/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=LKeOrklFiOY"
+    },
+    {
+      "id": "pqezHo0MK6w",
+      "title": "Psychology of People Who Get Tattoos",
+      "publishedAt": "2025-11-25T15:47:49Z",
+      "views": 163431,
+      "likes": 2192,
+      "comments": 1427,
+      "durationSeconds": 65,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/pqezHo0MK6w/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=pqezHo0MK6w"
+    },
+    {
+      "id": "Bmvt_jTZ6mE",
+      "title": "Psychology of People Who Treat New Year’s Eve 2026 Like a Normal Day",
+      "publishedAt": "2025-12-30T22:28:27Z",
+      "views": 100226,
+      "likes": 3025,
+      "comments": 634,
+      "durationSeconds": 590,
+      "isShort": false,
+      "thumbnail": "https://i.ytimg.com/vi/Bmvt_jTZ6mE/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=Bmvt_jTZ6mE"
+    }
+  ]
+}

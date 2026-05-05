@@ -33,11 +33,18 @@ export interface CompetitorResponse {
 export interface HistoryEntry {
   id: string;
   channelId: string;
+  channelTitle?: string;
+  channelThumbnail?: string;
+  customUrl?: string;
+  country?: string;
+  subscriberCount?: number;
+  totalViews?: number;
+  videoCount?: number;
   analyzedAt: string;
-  channel: any;
-  publicMetrics: any;
-  estimates: any;
-  insights: any;
+  channel?: any;
+  publicMetrics?: any;
+  estimates?: any;
+  insights?: any;
 }
 
 export interface PromptVariable {
