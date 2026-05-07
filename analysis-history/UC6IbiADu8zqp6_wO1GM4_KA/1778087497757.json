@@ -1,0 +1,55 @@
+{
+  "id": "1778087497756",
+  "channelId": "UC6IbiADu8zqp6_wO1GM4_KA",
+  "analyzedAt": "2026-05-06T17:11:37.756Z",
+  "channel": {
+    "id": "UC6IbiADu8zqp6_wO1GM4_KA",
+    "title": "Psychology Insight",
+    "description": "'Psychology Insight' is a channel that explores the fascinating world of human psychology. It shares ideas about how people think, how they behave, and how they understand the world; it presents concepts in such a clear and engaging way that anyone can learn something useful from it.\nEvery video on this channel is created very carefully. It begins with writing an original script, which is developed through research and thoughtful explanation; after that, voice narration is recorded to bring the concepts to life.\nVisual elements that match the topic of the video are designed, which help explain ideas in an easy and visual way. Finally, everything is carefully edited so that the narration and visuals together provide a smooth and clear viewing experience.\nIt is created with complete dedication, which is why a lot of time and effort goes into completing each video. This ensures that all the content on the channel is original, thoughtfully made, and focused on quality.\n",
+    "customUrl": "@psychologyinsight-s8k",
+    "publishedAt": "2025-11-17T16:18:12.680435Z",
+    "country": "IN",
+    "subscriberCount": 35500,
+    "hiddenSubscriberCount": false,
+    "videoCount": 25,
+    "totalViews": 4609290,
+    "thumbnail": "https://yt3.ggpht.com/qMDxyX2vEJ_hIM1WlR56j1tI7E9dEyCyYhLlwiqFsdPyUKJpKX33kjC-HN_S_MT6C7RHM6rA=s800-c-k-c0x00ffffff-no-rj",
+    "banner": "https://yt3.googleusercontent.com/5LcE33R4Wn_q9OqQ8EBld9IjsO_8d-fSk0iFmFjX8aQLlHby3onRQQQNQjq_ieb79lqqLOJSMw",
+    "uploadsPlaylistId": "UU6IbiADu8zqp6_wO1GM4_KA"
+  },
+  "publicMetrics": {
+    "avgViewsPerVideo": 184371.6,
+    "totalViews": 4609290,
+    "totalVideos": 25,
+    "lastUpdated": "2026-05-04T00:30:16Z",
+    "hasShort": false,
+    "shortCount": 0,
+    "shortRatio": 0,
+    "recentAvgViews": 185348.96,
+    "recentMedianViews": 6918,
+    "avgLikes": 4220.8,
+    "avgComments": 485.76,
+    "avgDurationSeconds": 405.56,
+    "engagementRate": 2.5392966866390836,
+    "avgDaysBetweenUploads": 2.7647579089506173,
+    "contentProfile": "long-form",
+    "uploadConsistencyScore": 91.70572627314814,
+    "growthScore": 49,
+    "growthBand": "watch",
+    "fetchedAt": "2026-05-06T17:11:37.756Z"
+  },
+  "estimates": {
+    "estimatedMonthlyViews": 2011196,
+    "estimatedRpmLow": 0.4237073403595035,
+    "estimatedRpmHigh": 3.2955015361294717,
+    "estimatedMonthlyRevenueLow": 852.1583169262875,
+    "estimatedMonthlyRevenueHigh": 6627.898020537791,
+    "channelMaturityScore": 66.40718674655633,
+    "confidence": "medium-high",
+    "notes": [
+      "RPM/Doanh thu ước tính được mô phỏng từ số lượt xem gần đây, tần suất đăng video, mức độ tương tác và tỷ lệ shorts.",
+      "Những con số này chỉ mang tính định hướng và không phải là dữ liệu YouTube Analytics được chủ kênh xác thực."
+    ]
+  },
+  "insights": null
+}

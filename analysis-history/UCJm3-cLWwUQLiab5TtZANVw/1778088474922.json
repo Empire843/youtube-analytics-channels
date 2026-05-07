@@ -1,0 +1,83 @@
+{
+  "id": "UCJm3-cLWwUQLiab5TtZANVw",
+  "channelId": "UCJm3-cLWwUQLiab5TtZANVw",
+  "analyzedAt": "2026-05-06T17:27:19.602Z",
+  "channel": {
+    "id": "UCJm3-cLWwUQLiab5TtZANVw",
+    "title": "QuietMind",
+    "description": "Welcome to QuietMind… 🥹\n\nQuietMind is a sanctuary for those who feel deeply and think quietly. We explore the hidden corners of human psychology, focusing on emotional healing, childhood wounds, and the silent strength of introverts.\nIf you've ever felt misunderstood, emotionally alone, or carry burdens from your past that are hard to explain, you are not alone. Our mission is to provide clarity through gentle psychology-based insights.\nHere, we dive deep into:\nHealing Childhood Trauma & Wounds\nUnderstanding Attachment Styles & Human Behavior\nNavigating Overthinking & Introversion\nMental Health Awareness & Inner Child Work\nQuietMind is more than just a channel; it's a space for reflection over noise and depth over distraction. Join our community of deep thinkers and start your journey toward emotional clarity.\n\n📩 For business inquiries & collaborations:\n📩 quietmindbusiness1@gmail.com\n📍 Based in: United States",
+    "customUrl": "@quietmind-1",
+    "publishedAt": "2026-03-01T09:43:15.736464Z",
+    "country": "IN",
+    "subscriberCount": 15300,
+    "hiddenSubscriberCount": false,
+    "videoCount": 16,
+    "totalViews": 1390509,
+    "thumbnail": "https://yt3.ggpht.com/K4Ps5ZS30nEDhTdABWBJx26ip-9uvSMDPG4KqIFj7_N4xnIEH3_Sv5E50KH0wSXjjToTI5GTFQ=s800-c-k-c0x00ffffff-no-rj",
+    "banner": "https://yt3.googleusercontent.com/27LKfj7YhSp2Bwlt3F6CPRlzpTNPvgPJK1PESSiFQOP90IbpBTtncZNuBtz8mPWQmRY7GWSgI00",
+    "uploadsPlaylistId": "UUJm3-cLWwUQLiab5TtZANVw"
+  },
+  "publicMetrics": {
+    "avgViewsPerVideo": 86906.8125,
+    "totalViews": 1390509,
+    "totalVideos": 16,
+    "lastUpdated": "2026-05-03T17:30:23Z",
+    "hasShort": false,
+    "shortCount": 0,
+    "shortRatio": 0,
+    "recentAvgViews": 87538.5625,
+    "recentMedianViews": 1891.5,
+    "avgLikes": 1600.125,
+    "avgComments": 123.875,
+    "avgDurationSeconds": 335.8125,
+    "engagementRate": 1.9694177637426935,
+    "avgDaysBetweenUploads": 4.133350308641974,
+    "contentProfile": "long-form",
+    "uploadConsistencyScore": 87.59994907407408,
+    "growthScore": 43,
+    "growthBand": "watch",
+    "fetchedAt": "2026-05-06T17:27:19.602Z"
+  },
+  "estimates": {
+    "estimatedMonthlyViews": 635358,
+    "estimatedRpmLow": 0.4134495197473685,
+    "estimatedRpmHigh": 3.2157184869239774,
+    "estimatedMonthlyRevenueLow": 262.68842891923606,
+    "estimatedMonthlyRevenueHigh": 2043.132224927392,
+    "channelMaturityScore": 61.877671054970776,
+    "confidence": "medium-high",
+    "notes": [
+      "RPM/Doanh thu ước tính được mô phỏng từ số lượt xem gần đây, tần suất đăng video, mức độ tương tác và tỷ lệ shorts.",
+      "Những con số này chỉ mang tính định hướng và không phải là dữ liệu YouTube Analytics được chủ kênh xác thực."
+    ]
+  },
+  "insights": {
+    "model": "gemini-2.5-pro",
+    "generatedAt": "2026-05-06T17:27:54.916Z",
+    "insights": {
+      "summary": "Kênh 'QuietMind' có tiềm năng lan tỏa (viral) rất lớn, thể hiện qua một vài video đạt hàng trăm nghìn lượt xem. Tuy nhiên, hiệu suất tổng thể không đồng đều, với số lượt xem trung vị (median views) thấp hơn đáng kể so với lượt xem trung bình, cho thấy sự phụ thuộc vào các video 'bom tấn'. Kênh duy trì lịch đăng video đều đặn và chỉ tập trung vào nội dung dài (long-form).",
+      "strengths": [
+        "Lượt xem trung bình trên mỗi video rất cao (~87K), cho thấy nội dung có sức hút mạnh mẽ và khả năng lan tỏa (viral) vượt trội so với quy mô kênh.",
+        "Lịch đăng tải video rất nhất quán (trung bình ~4 ngày/video), giúp xây dựng thói quen cho khán giả và được thuật toán YouTube ưu ái.",
+        "Khả năng tạo ra các video 'bom tấn' có vòng đời dài, tiếp tục thu hút một lượng lớn lượt xem hàng tháng ngay cả khi không có video mới."
+      ],
+      "risks": [
+        "Sự phụ thuộc quá lớn vào một vài video lan tỏa. Sự chênh lệch khổng lồ giữa lượt xem trung bình (87K) và trung vị (1.9K) là một rủi ro lớn; nếu không tạo ra được 'hit' mới, kênh sẽ chững lại.",
+        "Hiệu suất không ổn định. Số lượt xem trung vị thấp cho thấy kênh chưa tìm ra được công thức thành công có thể nhân rộng cho mọi video.",
+        "Chỉ số tăng trưởng ở mức 'theo dõi' (growth band: watch) cho thấy kênh không đang trong giai đoạn phát triển bùng nổ, bền vững mà phụ thuộc vào sự may rủi của các video đơn lẻ."
+      ],
+      "opportunities": [
+        "Phân tích sâu các video lan tỏa thành công để tìm ra 'công thức vàng' về chủ đề, định dạng, tiêu đề, và hình thu nhỏ, sau đó áp dụng cho các video trong tương lai.",
+        "Xây dựng cộng đồng khán giả trung thành để nâng cao mức sàn lượt xem (số lượt xem trung vị). Tăng cường tương tác qua tab Cộng đồng, bình luận và kêu gọi hành động rõ ràng.",
+        "Tận dụng lượng khán giả hiện có để thử nghiệm các chủ đề hoặc định dạng liên quan nhằm tìm ra các 'mỏ vàng' nội dung mới."
+      ],
+      "nextActions": [
+        "**Phân tích sâu:** Lập bảng so sánh chi tiết 3 video nhiều lượt xem nhất và 3 video ít lượt xem nhất. Phân tích các yếu tố: Tiêu đề, hình thu nhỏ (thumbnail), 30 giây đầu tiên, chủ đề, và lời kêu gọi hành động (CTA) để tìm ra điểm chung của sự thành công và thất bại.",
+        "**Lên kế hoạch sản xuất:** Dựa trên phân tích, lên kịch bản cho 4 video tiếp theo áp dụng 'công thức thành công' đã tìm ra. Mục tiêu là nâng số lượt xem trung vị lên ngưỡng 5.000 - 10.000, thay vì chỉ trông chờ vào việc tạo 'hit' mới.",
+        "**Xây dựng cộng đồng:** Sử dụng Tab Cộng đồng (Community Tab) ít nhất 2 lần giữa các lần đăng video. Đăng các cuộc thăm dò ý kiến (polls), câu hỏi, hoặc hình ảnh hậu trường để tăng tương tác và tạo sự kết nối với khán giả hiện tại."
+      ],
+      "monetizationView": "Kênh đã đủ điều kiện bật kiếm tiền và có tiềm năng doanh thu tốt nhờ tổng lượt xem cao. Tuy nhiên, RPM cho thị trường Ấn Độ (IN) thường thấp. Để tối ưu hóa, kênh cần tập trung vào việc tăng thời gian xem trung bình (average view duration) và khám phá các nguồn thu nhập khác ngoài AdSense như tiếp thị liên kết (affiliate marketing), bán sản phẩm số (ví dụ: các gói âm thanh, hướng dẫn thiền định) phù hợp với chủ đề 'QuietMind'.",
+      "contentStrategy": "Chiến lược hiện tại là 'rủi ro cao, lợi nhuận cao', phụ thuộc vào việc tạo ra các video lan tỏa. Kênh nên chuyển sang một chiến lược cân bằng hơn: tiếp tục thử nghiệm các chủ đề có khả năng lan tỏa, nhưng đồng thời sản xuất nội dung 'nền tảng' phục vụ ổn định cho nhóm khán giả cốt lõi. Mục tiêu là biến những người xem tình cờ từ video viral thành người đăng ký trung thành bằng cách cung cấp giá trị đều đặn, từ đó nâng cao số lượt xem trung vị và tạo ra một nền tảng tăng trưởng bền vững hơn."
+    }
+  }
+}

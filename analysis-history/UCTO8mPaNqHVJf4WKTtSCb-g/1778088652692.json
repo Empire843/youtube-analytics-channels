@@ -1,0 +1,86 @@
+{
+  "id": "UCTO8mPaNqHVJf4WKTtSCb-g",
+  "channelId": "UCTO8mPaNqHVJf4WKTtSCb-g",
+  "analyzedAt": "2026-05-06T17:30:07.478Z",
+  "channel": {
+    "id": "UCTO8mPaNqHVJf4WKTtSCb-g",
+    "title": "Bin Tài Chính",
+    "description": "Chào bạn, mình là Bin. \nKênh Bin Tài Chính – Không phải lời khuyên. Là bản đồ hệ thống.\nTại sao lương tăng mà không giàu hơn? Tại sao tín dụng, thuế và lạm phát được thiết kế theo cách chúng đang vận hành?\nKênh dùng hoạt hình và dữ liệu thực để giải mã các cơ chế ẩn sau tiền bạc — từ tâm lý chi tiêu đến cấu trúc giai tầng tài chính. Không tư vấn cá nhân. Không động lực rỗng. Chỉ là hệ thống và cách bạn tồn tại trong đó.\n📌 Tâm lý tài chính · Lifestyle Inflation · Các tầng giàu có · Hệ thống kinh tế\n",
+    "customUrl": "@bintaichinh",
+    "publishedAt": "2024-05-11T15:52:36.992955Z",
+    "country": "VN",
+    "subscriberCount": 12700,
+    "hiddenSubscriberCount": false,
+    "videoCount": 15,
+    "totalViews": 370199,
+    "thumbnail": "https://yt3.ggpht.com/XNAZsu9zksNAYIaL1iWuhpzgCvmRRT4sDZEb0hTDFRocgOmVenLEqBqz4L6_hBey1Yvr7ybIXtA=s800-c-k-c0x00ffffff-no-rj",
+    "banner": "https://yt3.googleusercontent.com/8W9bVta5GGERaRVSJt__JhZ6fKnD7JQR8sL5df3j9maU6f2ltJFkcBxtA2MwqcCgAwLdrRUZ",
+    "uploadsPlaylistId": "UUTO8mPaNqHVJf4WKTtSCb-g"
+  },
+  "publicMetrics": {
+    "avgViewsPerVideo": 24679.933333333334,
+    "totalViews": 370199,
+    "totalVideos": 15,
+    "lastUpdated": "2026-05-03T10:00:15Z",
+    "hasShort": false,
+    "shortCount": 0,
+    "shortRatio": 0,
+    "recentAvgViews": 25108.666666666668,
+    "recentMedianViews": 3899,
+    "avgLikes": 555.4,
+    "avgComments": 67.46666666666667,
+    "avgDurationSeconds": 1227.8666666666666,
+    "engagementRate": 2.480683960385524,
+    "avgDaysBetweenUploads": 3.211301256613757,
+    "contentProfile": "long-form deep",
+    "uploadConsistencyScore": 90.36609623015873,
+    "growthScore": 52,
+    "growthBand": "healthy",
+    "fetchedAt": "2026-05-06T17:30:07.477Z"
+  },
+  "estimates": {
+    "estimatedMonthlyViews": 234565,
+    "estimatedRpmLow": 0.4226523112869394,
+    "estimatedRpmHigh": 3.2872957544539734,
+    "estimatedMonthlyRevenueLow": 99.13958690244799,
+    "estimatedMonthlyRevenueHigh": 771.0856759079288,
+    "channelMaturityScore": 35.482044174875426,
+    "confidence": "medium-high",
+    "notes": [
+      "RPM/Doanh thu ước tính được mô phỏng từ số lượt xem gần đây, tần suất đăng video, mức độ tương tác và tỷ lệ shorts.",
+      "Những con số này chỉ mang tính định hướng và không phải là dữ liệu YouTube Analytics được chủ kênh xác thực."
+    ]
+  },
+  "insights": {
+    "model": "gemini-2.5-pro",
+    "generatedAt": "2026-05-06T17:30:52.687Z",
+    "insights": {
+      "summary": "Bin Tài Chính là một kênh tài chính cá nhân trẻ nhưng đang phát triển rất nhanh, nổi bật với tỷ lệ lượt xem trung bình trên mỗi video cực kỳ cao so với lượng người đăng ký. Điều này cho thấy nội dung có sức hấp dẫn lớn và khả năng được thuật toán đề xuất tốt. Tuy nhiên, sự chênh lệch lớn giữa lượt xem trung bình và lượt xem trung vị chỉ ra hiệu suất không ổn định, phụ thuộc vào một vài video 'viral'. Thách thức chính là ổn định hiệu suất và chuyển đổi lượng người xem lớn thành người đăng ký trung thành.",
+      "strengths": [
+        "Tỷ lệ Lượt xem/Người đăng ký rất cao: Lượt xem trung bình mỗi video (~24,7k) cao gần gấp đôi số người đăng ký (12,7k), cho thấy nội dung có khả năng lan truyền và được khám phá hiệu quả.",
+        "Nội dung chuyên sâu, giá trị cao: Thời lượng video trung bình dài (~20.5 phút) giúp xây dựng hình ảnh chuyên gia, tăng thời gian xem và tiềm năng doanh thu quảng cáo.",
+        "Tần suất đăng tải nhất quán: Lịch đăng video đều đặn (khoảng 3 ngày/video) giúp xây dựng thói quen cho khán giả và được thuật toán YouTube ưu ái.",
+        "Tập trung vào ngách có tiềm năng: Ngách 'Tài chính cá nhân' tại Việt Nam có tiềm năng tăng trưởng và kiếm tiền cao."
+      ],
+      "risks": [
+        "Hiệu suất không ổn định: Chênh lệch lớn giữa lượt xem trung bình (25,1k) và trung vị (3,9k) cho thấy kênh phụ thuộc vào vài video thành công đột biến. Các video thông thường có hiệu suất thấp hơn, tạo ra sự tăng trưởng khó đoán.",
+        "Sự phụ thuộc vào thuật toán: Với lượng người đăng ký còn khiêm tốn, kênh phụ thuộc nhiều vào việc được thuật toán đề xuất thay vì có một lượng xem nền tảng ổn định từ fan trung thành.",
+        "Rủi ro kiệt sức (Burnout): Việc sản xuất liên tục các video chuyên sâu dài hơn 20 phút đòi hỏi nỗ lực rất lớn, có thể dẫn đến giảm chất lượng hoặc tần suất đăng bài."
+      ],
+      "opportunities": [
+        "Chuyển đổi người xem thành người đăng ký: Lượng xem dồi dào là cơ hội vàng để tăng cường lời kêu gọi hành động (CTA) trong video, biến người xem vãng lai thành người đăng ký.",
+        "Xây dựng cộng đồng: Tăng cường tương tác qua Tab Cộng đồng, tổ chức các buổi hỏi đáp (Q&A) để xây dựng một cộng đồng gắn kết, từ đó tăng lượng xem nền tảng cho các video mới.",
+        "Nhân rộng công thức thành công: Phân tích các video có lượt xem cao nhất để tìm ra chủ đề, tiêu đề, và thumbnail hiệu quả, sau đó tạo thêm các nội dung tương tự.",
+        "Đa dạng hóa định dạng: Thử nghiệm các video ngắn hơn (10-15 phút) về các chủ đề tài chính cơ bản để thu hút tệp khán giả rộng hơn và dễ sản xuất hơn."
+      ],
+      "nextActions": [
+        "Phân tích và nhân rộng thành công: Xác định 3 video có hiệu suất cao nhất. Lên kế hoạch sản xuất 2-3 video tiếp theo đào sâu hoặc khai thác các góc nhìn liên quan đến những chủ đề thành công đó.",
+        "Tối ưu hóa lời kêu gọi đăng ký (CTA): Thêm lời kêu gọi đăng ký và nhấn chuông một cách rõ ràng ở 30 giây đầu và ở cuối mỗi video. Sử dụng thêm hiệu ứng đồ họa để thu hút sự chú ý.",
+        "Ra mắt chuỗi video 'Nhập môn tài chính': Tạo một series video ngắn hơn (10-15 phút) giải thích các khái niệm cơ bản như 'Lãi kép là gì?', 'Cách lập ngân sách cho người mới', để thu hút người xem mới.",
+        "Kích hoạt Tab Cộng đồng: Đăng bài ít nhất 2 lần/tuần trên Tab Cộng đồng (ví dụ: đặt câu hỏi, thăm dò ý kiến, chia sẻ tin tức tài chính ngắn) để tăng tương tác và giữ kết nối với người đăng ký."
+      ],
+      "monetizationView": "Kênh có tiềm năng kiếm tiền rất tốt. Doanh thu từ quảng cáo (AdSense) được hưởng lợi từ hai yếu tố: (1) Ngách tài chính thường có giá quảng cáo (CPM) cao hơn. (2) Thời lượng video dài trên 20 phút cho phép đặt nhiều quảng cáo giữa video (mid-roll), giúp tối đa hóa doanh thu trên mỗi nghìn lượt xem (RPM). Các hướng kiếm tiền tiếp theo bao gồm: tiếp thị liên kết cho các sản phẩm/dịch vụ tài chính, nhận tài trợ từ các thương hiệu, và bán các sản phẩm số của riêng mình (ví dụ: mẫu kế hoạch tài chính, khóa học nhỏ).",
+      "contentStrategy": "Chiến lược hiện tại tập trung vào nội dung chuyên sâu (pillar content) đang rất hiệu quả trong việc xây dựng uy tín và thu hút lượt xem từ các đề xuất. Cần bổ sung chiến lược để ổn định hiệu suất. Duy trì sản xuất các video 'trụ cột' dài >20 phút về các chủ đề phức tạp. Song song đó, hãy phát triển thêm dòng nội dung 'vệ tinh' (hub content) với thời lượng 10-15 phút, tập trung vào các chủ đề tài chính dễ tiếp cận hơn hoặc theo xu hướng để thu hút khán giả mới và tăng tần suất đăng bài. Phân tích kỹ các từ khóa và chủ đề đã mang lại 'viral' để tối ưu hóa tiêu đề và mô tả cho tất cả các video."
+    }
+  }
+}

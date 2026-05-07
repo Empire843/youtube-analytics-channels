@@ -1,0 +1,88 @@
+{
+  "id": "UCQS6vvJzq928w2fcnDQhE8g",
+  "channelId": "UCQS6vvJzq928w2fcnDQhE8g",
+  "analyzedAt": "2026-05-06T17:13:53.232Z",
+  "channel": {
+    "id": "UCQS6vvJzq928w2fcnDQhE8g",
+    "title": "Nous Psychology",
+    "description": "Welcome to Nous Psychology.\nI explore the hidden mechanisms of the human psyche through psychology and philosophy — revealing why we think, feel, and behave the way we do.\nEvery video is a journey into the unseen parts of the mind, designed to help you understand yourself, and the people around you, a little deeper.\n",
+    "customUrl": "@nouspsychology159",
+    "publishedAt": "2025-07-03T17:57:13.455262Z",
+    "country": "PK",
+    "subscriberCount": 24500,
+    "hiddenSubscriberCount": false,
+    "videoCount": 52,
+    "totalViews": 3151357,
+    "thumbnail": "https://yt3.ggpht.com/ADJFxWKOiHo5pFjvivt_p0C9RKjdMaNMAo9mwR7zXKHy-Kvs30pNCUNCQLfy3g2YPckIen_6=s800-c-k-c0x00ffffff-no-rj",
+    "banner": "https://yt3.googleusercontent.com/Ha5s1Rl3PQmhVXSfA6FZ_dKd8fl-elK0RlfWv7lXZ5o29IYjIxWo52nIPc7zbm5Brb85nhUKuUQ",
+    "uploadsPlaylistId": "UUQS6vvJzq928w2fcnDQhE8g"
+  },
+  "publicMetrics": {
+    "avgViewsPerVideo": 60603.019230769234,
+    "totalViews": 3151357,
+    "totalVideos": 52,
+    "lastUpdated": "2026-05-05T14:00:43Z",
+    "hasShort": false,
+    "shortCount": 0,
+    "shortRatio": 0,
+    "recentAvgViews": 55531.2,
+    "recentMedianViews": 3624,
+    "avgLikes": 1873.8,
+    "avgComments": 271.53333333333336,
+    "avgDurationSeconds": 518.2,
+    "engagementRate": 3.8632936679440273,
+    "avgDaysBetweenUploads": 1.9998367656449552,
+    "contentProfile": "long-form",
+    "uploadConsistencyScore": 94.00048970306514,
+    "growthScore": 58,
+    "growthBand": "healthy",
+    "fetchedAt": "2026-05-06T17:13:53.232Z"
+  },
+  "estimates": {
+    "estimatedMonthlyViews": 833036,
+    "estimatedRpmLow": 0.44753928602299253,
+    "estimatedRpmHigh": 3.480861113512164,
+    "estimatedMonthlyRevenueLow": 372.8163322167698,
+    "estimatedMonthlyRevenueHigh": 2899.6825839082094,
+    "channelMaturityScore": 78.45317467177611,
+    "confidence": "medium-high",
+    "notes": [
+      "RPM/Doanh thu ước tính được mô phỏng từ số lượt xem gần đây, tần suất đăng video, mức độ tương tác và tỷ lệ shorts.",
+      "Những con số này chỉ mang tính định hướng và không phải là dữ liệu YouTube Analytics được chủ kênh xác thực."
+    ]
+  },
+  "insights": {
+    "model": "gemini-2.5-pro",
+    "generatedAt": "2026-05-06T17:14:56.612Z",
+    "insights": {
+      "summary": "Kênh tập trung vào mảng tâm lý học với một cộng đồng khán giả gắn kết và tiềm năng viral đã được chứng minh. Tuy nhiên, kênh đang phụ thuộc quá nhiều vào một vài video 'hit', dẫn đến sự chênh lệch lớn giữa lượt xem trung bình và lượt xem trung vị, cho thấy hiệu suất không ổn định. Tần suất đăng tải video nhất quán là một điểm mạnh cốt lõi, nhưng cũng tiềm ẩn rủi ro về sự kiệt sức của người sáng tạo và chất lượng nội dung không đồng đều. Cơ hội lớn nhất nằm ở việc ổn định hiệu suất và đa dạng hóa nguồn thu ngoài quảng cáo.",
+      "strengths": [
+        "Tỷ lệ xem trung bình trên mỗi video rất cao (gần 61,000), cho thấy nội dung có khả năng tạo ra sức hút lớn và lan truyền mạnh mẽ.",
+        "Tỷ lệ tương tác cao, đặc biệt là số lượng bình luận, chứng tỏ kênh đã xây dựng được một cộng đồng khán giả trung thành và tích cực tham gia.",
+        "Tính nhất quán trong việc đăng tải video gần như hoàn hảo (trung bình 2 ngày/video), giúp duy trì sự mong đợi của khán giả và được thuật toán YouTube đánh giá cao.",
+        "Thị trường ngách rõ ràng (Tâm lý học) giúp thu hút và giữ chân một nhóm đối tượng khán giả cụ thể, có mục tiêu."
+      ],
+      "risks": [
+        "Sự phụ thuộc vào các 'cú hit': Chênh lệch rất lớn giữa lượt xem trung bình gần đây (55k) và lượt xem trung vị (3.6k) là một cảnh báo lớn. Doanh thu và sự tăng trưởng của kênh đang không ổn định và khó đoán.",
+        "Nguy cơ kiệt sức của người sáng tạo: Việc sản xuất video dài, có nghiên cứu sâu với tần suất 2 ngày/video là cực kỳ áp lực và khó duy trì trong dài hạn.",
+        "Doanh thu RPM thấp: Với việc kênh có quốc gia là Pakistan (PK), doanh thu ước tính trên mỗi nghìn lượt xem (RPM) có thể sẽ ở mức thấp, hạn chế tiềm năng kiếm tiền từ quảng cáo YouTube (AdSense).",
+        "Thiếu đa dạng hóa định dạng: Việc chỉ tập trung vào video dài làm tăng rủi ro khi thuật toán YouTube thay đổi và ưu tiên các định dạng khác như video ngắn (Shorts)."
+      ],
+      "opportunities": [
+        "Kiếm tiền từ cộng đồng: Tận dụng lượng tương tác cao để ra mắt tính năng Hội viên kênh (Channel Memberships), tạo nhóm độc quyền trên Discord, hoặc bán các buổi hỏi đáp trực tiếp.",
+        "Đa dạng hóa nguồn thu: Phát triển các sản phẩm số như Ebook, khóa học mini về các chủ đề tâm lý. Triển khai tiếp thị liên kết (affiliate marketing) cho sách, các ứng dụng sức khỏe tinh thần hoặc các khóa học liên quan.",
+        "Tái cấu trúc nội dung thành công: Phân tích các video viral để xác định 'công thức thành công' và tạo ra các series hoặc video phần tiếp theo, đào sâu vào các chủ đề đó để giữ chân khán giả.",
+        "Mở rộng sang thị trường RPM cao: Sản xuất các chủ đề có sức hấp dẫn toàn cầu (như tâm lý trong công việc, quản lý stress, tâm lý đầu tư) để thu hút khán giả từ các quốc gia có RPM cao hơn như Mỹ, Anh, Canada."
+      ],
+      "nextActions": [
+        "Phân tích 5 video có lượt xem cao nhất: Xác định chính xác chủ đề, cách đặt tiêu đề, và hình thu nhỏ (thumbnail) đã hoạt động hiệu quả. Lên kế hoạch sản xuất ngay một video 'Phần 2' hoặc một video đào sâu hơn về chủ đề thành công nhất.",
+        "Thử nghiệm tính năng Hội viên kênh (Memberships): Thiết lập các cấp độ hội viên với các đặc quyền đơn giản ban đầu như huy hiệu, quyền truy cập sớm vào video, và các buổi phát trực tiếp hỏi đáp riêng.",
+        "Bắt đầu ngay với Tiếp thị liên kết: Chọn 3-5 cuốn sách tâm lý học nổi tiếng hoặc một ứng dụng sức khỏe tinh thần. Thêm các đường link affiliate vào phần mô tả của các video liên quan để tạo nguồn thu nhập thụ động.",
+        "Điều chỉnh lịch đăng bài: Thử nghiệm giảm tần suất xuống 1 video mỗi 3 ngày trong vòng một tháng. Thông báo trước cho khán giả và dùng thời gian dư ra để nâng cao chất lượng cho tất cả các video, nhằm mục tiêu nâng cao lượt xem trung vị.",
+        "Tạo một 'Series' nội dung: Chọn một chủ đề lớn đang được quan tâm và chia nhỏ thành một chuỗi 3-4 video. Điều này khuyến khích người xem quay lại và tăng tổng thời gian xem trên kênh."
+      ],
+      "monetizationView": "Doanh thu quảng cáo AdSense hiện tại có thể không phải là nguồn thu nhập chính do vị trí địa lý của phần lớn khán giả. Cơ hội kiếm tiền thực sự của kênh nằm ở việc khai thác cộng đồng trung thành và có tỷ lệ tương tác cao. Lộ trình để tối đa hóa doanh thu là tập trung vào các nguồn thu trực tiếp như: Hội viên kênh, bán sản phẩm số (khóa học, Ebook), tiếp thị liên kết và tìm kiếm cơ hội tài trợ từ các thương hiệu liên quan đến sức khỏe tinh thần và giáo dục.",
+      "contentStrategy": "Chiến lược nội dung cần chuyển đổi từ 'săn tìm các cú hit' sang 'nuôi trồng sự ổn định'. Mục tiêu chính không phải là tạo ra video triệu view tiếp theo, mà là nâng cao 'mức sàn' lượt xem (lượt xem trung vị) của kênh. Điều này đạt được bằng cách: 1) Phân tích và nhân rộng các yếu tố thành công từ các video viral vào tất cả các video mới. 2) Phát triển các chuỗi nội dung (series) xoay quanh các chủ đề 'vàng' đã được chứng minh hiệu quả. 3) Giảm nhẹ tần suất để tăng chất lượng, đảm bảo mỗi video đều có giá trị cao và được đầu tư kỹ lưỡng, từ đó xây dựng một nền tảng tăng trưởng bền vững hơn."
+    }
+  }
+}

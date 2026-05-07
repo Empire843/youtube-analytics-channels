@@ -1,0 +1,55 @@
+{
+  "id": "1778088607477",
+  "channelId": "UCTO8mPaNqHVJf4WKTtSCb-g",
+  "analyzedAt": "2026-05-06T17:30:07.478Z",
+  "channel": {
+    "id": "UCTO8mPaNqHVJf4WKTtSCb-g",
+    "title": "Bin Tài Chính",
+    "description": "Chào bạn, mình là Bin. \nKênh Bin Tài Chính – Không phải lời khuyên. Là bản đồ hệ thống.\nTại sao lương tăng mà không giàu hơn? Tại sao tín dụng, thuế và lạm phát được thiết kế theo cách chúng đang vận hành?\nKênh dùng hoạt hình và dữ liệu thực để giải mã các cơ chế ẩn sau tiền bạc — từ tâm lý chi tiêu đến cấu trúc giai tầng tài chính. Không tư vấn cá nhân. Không động lực rỗng. Chỉ là hệ thống và cách bạn tồn tại trong đó.\n📌 Tâm lý tài chính · Lifestyle Inflation · Các tầng giàu có · Hệ thống kinh tế\n",
+    "customUrl": "@bintaichinh",
+    "publishedAt": "2024-05-11T15:52:36.992955Z",
+    "country": "VN",
+    "subscriberCount": 12700,
+    "hiddenSubscriberCount": false,
+    "videoCount": 15,
+    "totalViews": 370199,
+    "thumbnail": "https://yt3.ggpht.com/XNAZsu9zksNAYIaL1iWuhpzgCvmRRT4sDZEb0hTDFRocgOmVenLEqBqz4L6_hBey1Yvr7ybIXtA=s800-c-k-c0x00ffffff-no-rj",
+    "banner": "https://yt3.googleusercontent.com/8W9bVta5GGERaRVSJt__JhZ6fKnD7JQR8sL5df3j9maU6f2ltJFkcBxtA2MwqcCgAwLdrRUZ",
+    "uploadsPlaylistId": "UUTO8mPaNqHVJf4WKTtSCb-g"
+  },
+  "publicMetrics": {
+    "avgViewsPerVideo": 24679.933333333334,
+    "totalViews": 370199,
+    "totalVideos": 15,
+    "lastUpdated": "2026-05-03T10:00:15Z",
+    "hasShort": false,
+    "shortCount": 0,
+    "shortRatio": 0,
+    "recentAvgViews": 25108.666666666668,
+    "recentMedianViews": 3899,
+    "avgLikes": 555.4,
+    "avgComments": 67.46666666666667,
+    "avgDurationSeconds": 1227.8666666666666,
+    "engagementRate": 2.480683960385524,
+    "avgDaysBetweenUploads": 3.211301256613757,
+    "contentProfile": "long-form deep",
+    "uploadConsistencyScore": 90.36609623015873,
+    "growthScore": 52,
+    "growthBand": "healthy",
+    "fetchedAt": "2026-05-06T17:30:07.477Z"
+  },
+  "estimates": {
+    "estimatedMonthlyViews": 234565,
+    "estimatedRpmLow": 0.4226523112869394,
+    "estimatedRpmHigh": 3.2872957544539734,
+    "estimatedMonthlyRevenueLow": 99.13958690244799,
+    "estimatedMonthlyRevenueHigh": 771.0856759079288,
+    "channelMaturityScore": 35.482044174875426,
+    "confidence": "medium-high",
+    "notes": [
+      "RPM/Doanh thu ước tính được mô phỏng từ số lượt xem gần đây, tần suất đăng video, mức độ tương tác và tỷ lệ shorts.",
+      "Những con số này chỉ mang tính định hướng và không phải là dữ liệu YouTube Analytics được chủ kênh xác thực."
+    ]
+  },
+  "insights": null
+}

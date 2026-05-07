@@ -1,0 +1,87 @@
+{
+  "id": "UC6IbiADu8zqp6_wO1GM4_KA",
+  "channelId": "UC6IbiADu8zqp6_wO1GM4_KA",
+  "analyzedAt": "2026-05-06T17:11:37.756Z",
+  "channel": {
+    "id": "UC6IbiADu8zqp6_wO1GM4_KA",
+    "title": "Psychology Insight",
+    "description": "'Psychology Insight' is a channel that explores the fascinating world of human psychology. It shares ideas about how people think, how they behave, and how they understand the world; it presents concepts in such a clear and engaging way that anyone can learn something useful from it.\nEvery video on this channel is created very carefully. It begins with writing an original script, which is developed through research and thoughtful explanation; after that, voice narration is recorded to bring the concepts to life.\nVisual elements that match the topic of the video are designed, which help explain ideas in an easy and visual way. Finally, everything is carefully edited so that the narration and visuals together provide a smooth and clear viewing experience.\nIt is created with complete dedication, which is why a lot of time and effort goes into completing each video. This ensures that all the content on the channel is original, thoughtfully made, and focused on quality.\n",
+    "customUrl": "@psychologyinsight-s8k",
+    "publishedAt": "2025-11-17T16:18:12.680435Z",
+    "country": "IN",
+    "subscriberCount": 35500,
+    "hiddenSubscriberCount": false,
+    "videoCount": 25,
+    "totalViews": 4609290,
+    "thumbnail": "https://yt3.ggpht.com/qMDxyX2vEJ_hIM1WlR56j1tI7E9dEyCyYhLlwiqFsdPyUKJpKX33kjC-HN_S_MT6C7RHM6rA=s800-c-k-c0x00ffffff-no-rj",
+    "banner": "https://yt3.googleusercontent.com/5LcE33R4Wn_q9OqQ8EBld9IjsO_8d-fSk0iFmFjX8aQLlHby3onRQQQNQjq_ieb79lqqLOJSMw",
+    "uploadsPlaylistId": "UU6IbiADu8zqp6_wO1GM4_KA"
+  },
+  "publicMetrics": {
+    "avgViewsPerVideo": 184371.6,
+    "totalViews": 4609290,
+    "totalVideos": 25,
+    "lastUpdated": "2026-05-04T00:30:16Z",
+    "hasShort": false,
+    "shortCount": 0,
+    "shortRatio": 0,
+    "recentAvgViews": 185348.96,
+    "recentMedianViews": 6918,
+    "avgLikes": 4220.8,
+    "avgComments": 485.76,
+    "avgDurationSeconds": 405.56,
+    "engagementRate": 2.5392966866390836,
+    "avgDaysBetweenUploads": 2.7647579089506173,
+    "contentProfile": "long-form",
+    "uploadConsistencyScore": 91.70572627314814,
+    "growthScore": 49,
+    "growthBand": "watch",
+    "fetchedAt": "2026-05-06T17:11:37.756Z"
+  },
+  "estimates": {
+    "estimatedMonthlyViews": 2011196,
+    "estimatedRpmLow": 0.4237073403595035,
+    "estimatedRpmHigh": 3.2955015361294717,
+    "estimatedMonthlyRevenueLow": 852.1583169262875,
+    "estimatedMonthlyRevenueHigh": 6627.898020537791,
+    "channelMaturityScore": 66.40718674655633,
+    "confidence": "medium-high",
+    "notes": [
+      "RPM/Doanh thu ước tính được mô phỏng từ số lượt xem gần đây, tần suất đăng video, mức độ tương tác và tỷ lệ shorts.",
+      "Những con số này chỉ mang tính định hướng và không phải là dữ liệu YouTube Analytics được chủ kênh xác thực."
+    ]
+  },
+  "insights": {
+    "model": "gemini-2.5-pro",
+    "generatedAt": "2026-05-06T17:12:23.527Z",
+    "insights": {
+      "summary": "Kênh \"Psychology Insight\" có hiệu suất rất ấn tượng với số lượt xem trung bình cực cao, cho thấy nội dung có khả năng lan truyền mạnh mẽ. Tuy nhiên, sự chênh lệch lớn giữa lượt xem trung bình (185k) và lượt xem trung vị (6.9k) là một dấu hiệu cảnh báo, cho thấy sự thành công của kênh đang phụ thuộc nặng nề vào một vài video đột phá. Kênh có tiềm năng phát triển lớn nhưng cần một chiến lược để ổn định hóa hiệu suất và xây dựng một nền tảng tăng trưởng bền vững hơn.",
+      "strengths": [
+        "Hiệu suất video xuất sắc: Lượt xem trung bình trên mỗi video (184k) là con số cực kỳ cao, chứng tỏ khả năng tạo ra nội dung có sức lan truyền mạnh.",
+        "Tương tác cộng đồng tốt: Tỷ lệ tương tác 2.54% cùng số lượng thích và bình luận trung bình cao cho thấy kênh đã xây dựng được một nhóm khán giả gắn kết.",
+        "Tần suất đăng tải nhất quán: Việc đăng video mới gần như 3 ngày một lần với điểm nhất quán 91.7 cho thấy sự chuyên nghiệp và khả năng duy trì sự quan tâm của khán giả.",
+        "Chủ đề có sức hút: Tâm lý học là một chủ đề có chiều sâu và luôn thu hút sự quan tâm lớn từ công chúng."
+      ],
+      "risks": [
+        "Phụ thuộc vào video lan truyền (viral): Lượt xem trung vị rất thấp so với trung bình cho thấy phần lớn video không đạt hiệu suất cao. Kênh có nguy cơ \"chết\" nếu không thể tạo ra thêm các video đột phá tương tự.",
+        "Rủi ro kiệt sức (burnout): Tần suất sản xuất nội dung dài (long-form) quá dày đặc có thể dẫn đến việc giảm sút chất lượng hoặc gây kiệt sức cho nhà sáng tạo.",
+        "RPM thấp: Kênh có trụ sở tại Ấn Độ (IN), một thị trường có RPM (doanh thu trên 1000 lượt xem) thường thấp, giới hạn tiềm năng doanh thu từ quảng cáo so với các thị trường Âu-Mỹ.",
+        "Thiếu đa dạng hóa định dạng: Kênh chỉ tập trung vào video dài, bỏ lỡ cơ hội tiếp cận khán giả mới qua các định dạng khác như Shorts, Livestream."
+      ],
+      "opportunities": [
+        "Xây dựng chuỗi nội dung: Phát triển các series dựa trên chủ đề của những video thành công nhất để giữ chân người xem và tăng tổng thời gian xem trên kênh.",
+        "Tối ưu hóa chuyển đổi: Tận dụng lượng truy cập lớn từ các video lan truyền để kêu gọi đăng ký kênh, tham gia cộng đồng (Facebook group, Discord) hoặc theo dõi trên các mạng xã hội khác.",
+        "Đa dạng hóa nguồn thu: Với chủ đề tâm lý, kênh có thể phát triển các sản phẩm số như khóa học online, sách điện tử (e-book), hoặc các buổi hội thảo trực tuyến có thu phí.",
+        "Hợp tác với chuyên gia: Mời các chuyên gia tâm lý, bác sĩ hoặc các nhà nghiên cứu tham gia phỏng vấn để tăng độ tin cậy và sự đa dạng cho nội dung."
+      ],
+      "nextActions": [
+        "Phân tích và nhân bản thành công: Phân tích sâu 3 video có lượt xem cao nhất để xác định công thức thành công (chủ đề, tiêu đề, thumbnail, cấu trúc kể chuyện). Áp dụng công thức này để tạo ra các video có chủ đề liên quan.",
+        "Chiến lược 'Pillar-Cluster': Chọn ra 3-4 chủ đề 'trụ cột' (pillar) mà kênh làm tốt nhất. Xây dựng các video 'vệ tinh' (cluster) xoay quanh mỗi trụ cột để tạo thành một hệ sinh thái nội dung liên kết chặt chẽ.",
+        "Tối ưu hóa video cũ: Đối với các video có lượt xem thấp, thử nghiệm thay đổi tiêu đề và thumbnail để xem có thể cải thiện tỷ lệ nhấp (CTR) và khả năng được khám phá lại hay không.",
+        "Điều hướng khán giả: Sử dụng tính năng Màn hình kết thúc (End Screen) và Thẻ (Cards) một cách chiến lược trên các video nhiều view để dẫn người xem đến các video khác ít được xem hơn hoặc đến playlist quan trọng."
+      ],
+      "monetizationView": "Doanh thu quảng cáo AdSense hiện tại là nguồn thu chính, nhưng không ổn định do phụ thuộc vào các video lan truyền và RPM tương đối thấp của thị trường Ấn Độ. Để phát triển bền vững, kênh cần đa dạng hóa nguồn thu. Các hướng đi khả thi bao gồm: 1) Hợp tác thương hiệu (brand deals) với các ứng dụng thiền định, nền tảng sức khỏe tinh thần. 2) Affiliate marketing cho các sách về tâm lý học hoặc các khóa học online. 3) Tự tạo sản phẩm số như một khóa học nhỏ về 'Quản lý căng thẳng' hoặc 'Cải thiện kỹ năng giao tiếp', bán trực tiếp cho cộng đồng khán giả trung thành.",
+      "contentStrategy": "Chiến lược cốt lõi cần chuyển từ 'tạo hit' sang 'xây dựng thư viện giá trị'. Thay vì cố gắng tạo ra một video triệu view tiếp theo, mục tiêu nên là nâng dần mức sàn hiệu suất của tất cả các video. Hãy xác định các chủ đề con trong lĩnh vực tâm lý học mà khán giả của kênh quan tâm nhất (dựa trên các video thành công) và xây dựng nội dung sâu hơn xung quanh chúng. Ví dụ, nếu video về 'Thao túng tâm lý' thành công, hãy tạo một series bao gồm: 'Phân tích các kỹ thuật thao túng', 'Câu chuyện người thật việc thật', 'Cách tự bảo vệ bản thân'. Cân nhắc giảm nhẹ tần suất đăng bài (ví dụ: từ 3 ngày/video xuống 5 ngày/video) để đầu tư nhiều thời gian hơn cho việc nghiên cứu và đảm bảo chất lượng cao đồng đều cho mọi sản phẩm."
+    }
+  }
+}

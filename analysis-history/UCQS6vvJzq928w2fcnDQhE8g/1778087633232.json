@@ -1,0 +1,55 @@
+{
+  "id": "1778087633232",
+  "channelId": "UCQS6vvJzq928w2fcnDQhE8g",
+  "analyzedAt": "2026-05-06T17:13:53.232Z",
+  "channel": {
+    "id": "UCQS6vvJzq928w2fcnDQhE8g",
+    "title": "Nous Psychology",
+    "description": "Welcome to Nous Psychology.\nI explore the hidden mechanisms of the human psyche through psychology and philosophy — revealing why we think, feel, and behave the way we do.\nEvery video is a journey into the unseen parts of the mind, designed to help you understand yourself, and the people around you, a little deeper.\n",
+    "customUrl": "@nouspsychology159",
+    "publishedAt": "2025-07-03T17:57:13.455262Z",
+    "country": "PK",
+    "subscriberCount": 24500,
+    "hiddenSubscriberCount": false,
+    "videoCount": 52,
+    "totalViews": 3151357,
+    "thumbnail": "https://yt3.ggpht.com/ADJFxWKOiHo5pFjvivt_p0C9RKjdMaNMAo9mwR7zXKHy-Kvs30pNCUNCQLfy3g2YPckIen_6=s800-c-k-c0x00ffffff-no-rj",
+    "banner": "https://yt3.googleusercontent.com/Ha5s1Rl3PQmhVXSfA6FZ_dKd8fl-elK0RlfWv7lXZ5o29IYjIxWo52nIPc7zbm5Brb85nhUKuUQ",
+    "uploadsPlaylistId": "UUQS6vvJzq928w2fcnDQhE8g"
+  },
+  "publicMetrics": {
+    "avgViewsPerVideo": 60603.019230769234,
+    "totalViews": 3151357,
+    "totalVideos": 52,
+    "lastUpdated": "2026-05-05T14:00:43Z",
+    "hasShort": false,
+    "shortCount": 0,
+    "shortRatio": 0,
+    "recentAvgViews": 55531.2,
+    "recentMedianViews": 3624,
+    "avgLikes": 1873.8,
+    "avgComments": 271.53333333333336,
+    "avgDurationSeconds": 518.2,
+    "engagementRate": 3.8632936679440273,
+    "avgDaysBetweenUploads": 1.9998367656449552,
+    "contentProfile": "long-form",
+    "uploadConsistencyScore": 94.00048970306514,
+    "growthScore": 58,
+    "growthBand": "healthy",
+    "fetchedAt": "2026-05-06T17:13:53.232Z"
+  },
+  "estimates": {
+    "estimatedMonthlyViews": 833036,
+    "estimatedRpmLow": 0.44753928602299253,
+    "estimatedRpmHigh": 3.480861113512164,
+    "estimatedMonthlyRevenueLow": 372.8163322167698,
+    "estimatedMonthlyRevenueHigh": 2899.6825839082094,
+    "channelMaturityScore": 78.45317467177611,
+    "confidence": "medium-high",
+    "notes": [
+      "RPM/Doanh thu ước tính được mô phỏng từ số lượt xem gần đây, tần suất đăng video, mức độ tương tác và tỷ lệ shorts.",
+      "Những con số này chỉ mang tính định hướng và không phải là dữ liệu YouTube Analytics được chủ kênh xác thực."
+    ]
+  },
+  "insights": null
+}
